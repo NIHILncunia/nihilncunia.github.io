@@ -1,2 +1,3 @@
-# nihilncunia.github.io
-Basic WebPrograming Tech Training
+# 웹 프로그래밍 공부 과정.
+
+내가 공부했던 것들을 정리하는 목적으로 만들어짐.
