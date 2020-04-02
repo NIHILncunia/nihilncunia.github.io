@@ -1,0 +1,14 @@
+:global {
+    @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    body {
+        padding: 10px 20px;
+        font-family: 'Noto Sans KR', 'Noto Sans Japanese', sans-serif;
+        max-width: 100%;
+    }
+}
