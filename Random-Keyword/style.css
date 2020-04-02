@@ -1,0 +1,110 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    padding: 10px;
+    text-align: center;
+}
+
+#btn-erea p {
+    font-size: 14pt;
+    font-weight: 900;
+    margin: 10px 0px;
+}
+
+#infobox {
+    background: #333333;
+    color: #eeeeee;
+    padding: 10px;
+    font-size: 12pt;
+    margin-bottom: 20px;
+}
+
+#infobox p {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+input {
+    padding: 10px;
+    background: #555555;
+    color: #eeeeee;
+    font-size: 12pt;
+    text-align: center;
+    border: 0px solid #333333;
+    margin: 0px 5px;
+    border-radius: 10px;
+}
+
+input:hover {
+    background: #222222;
+}
+
+#btn-erea {
+    margin-bottom: 40px;
+}
+
+hr {
+    height: 2px;
+    background: #333333;
+}
+
+#btnresult {
+    color: #333333;
+    font-size: 24pt;
+    margin-top: 40px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.color {
+    color: #cf4444;
+}
+
+.colorplate {
+    width: 200px;
+    height: 40px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+table {
+    border: 1px solid #333333;
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 20px;
+}
+
+table td {
+    border: 1px solid #333333;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.colorplate2 {
+    width: 100px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.wordbox {
+    margin-top: 10px;
+}
+
+#colorcode {
+    margin-top: -10px;
+    color: #333333;
+    font-size: 10pt;
+    font-weight: 500;
+}
+
+.colorcode {
+    color: #333333;
+    font-size: 10pt;
+    font-weight: 500;
+}
