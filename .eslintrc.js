@@ -1,4 +1,5 @@
 module.exports = {
+    parser: 'babel-eslint',
     "env": {
         "browser": true,
         "es6": true,
@@ -27,6 +28,7 @@ module.exports = {
         "no-unexpected-multiline": 0,
         "no-empty": 1,
         "react/prop-types": 0,
-        "react/react-in-jsx-scope": 0
+        "react/react-in-jsx-scope": 0,
+        "no-redeclare": 0
     }
 };

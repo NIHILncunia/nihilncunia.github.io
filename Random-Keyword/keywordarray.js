@@ -19,12 +19,12 @@ function btnrace() {
     var btnresult = document.getElementById("btnresult");
     // 값을 출력할 div 태그를 변수로 지정한다.
 
-    var btntext = '오늘의 종족은 <span class="color">' + racedice + "!</span>";
+    var btntext = '오늘의 종족은 <span class="color">' + racedice + "!</span> (" + race.length + "개)";
     // 랜덤으로 뽑아낸 값을 이용해 메시지를 작성한다.
 
     btnresult.innerHTML = btntext;
     // 메시지를 div 태그 안에 넣는다.
-}
+} // 니힐라 종족
 
 function btnrace2() {
     var race2 = [
@@ -47,9 +47,9 @@ function btnrace2() {
     var race2dice;
     race2dice = race2[Math.floor(Math.random()*race2.length)];
     var btnresult = document.getElementById("btnresult");
-    var btntext = '오늘의 종족은 <span class="color">' + race2dice + "!</span>";
+    var btntext = '오늘의 종족은 <span class="color">' + race2dice + "!</span> (" + race2.length + "개)";
     btnresult.innerHTML = btntext;
-}
+} // 종족
 
 function btnclass() {
     var btnclass = [
@@ -78,9 +78,9 @@ function btnclass() {
     var classdice;
     classdice = btnclass[Math.floor(Math.random()*btnclass.length)];
     var btnresult = document.getElementById("btnresult");
-    var btntext = '오늘의 직업은 <span class="color">' + classdice + "!</span>";
+    var btntext = '오늘의 직업은 <span class="color">' + classdice + "!</span> (" + btnclass.length + "개)";
     btnresult.innerHTML = btntext;
-}
+} // 니힐라 직업
 
 function btnclass2() {
     var btnclass2 = [
@@ -121,9 +121,9 @@ function btnclass2() {
     var class2dice;
     class2dice = btnclass2[Math.floor(Math.random()*btnclass2.length)];
     var btnresult = document.getElementById("btnresult");
-    var btntext = '오늘의 직업은 <span class="color">' + class2dice + "!</span>";
+    var btntext = '오늘의 직업은 <span class="color">' + class2dice + "!</span> (" + btnclass2.length + "개)";
     btnresult.innerHTML = btntext;
-}
+} // 직업
 
 function btngender() {
     var btngender = [
@@ -134,9 +134,9 @@ function btngender() {
     var genderdice;
     genderdice = btngender[Math.floor(Math.random()*btngender.length)];
     var btnresult = document.getElementById("btnresult");
-    var btntext = '오늘의 성별은 <span class="color">' + genderdice + "!</span>";
+    var btntext = '오늘의 성별은 <span class="color">' + genderdice + "!</span> (" + btngender.length + "개)";
     btnresult.innerHTML = btntext;
-}
+} // 성별
 
 function btnbodytype() {
     var btnbodytype =[
@@ -155,9 +155,9 @@ function btnbodytype() {
     var bodytypedice;
     bodytypedice = btnbodytype[Math.floor(Math.random()*btnbodytype.length)];
     var btnresult = document.getElementById("btnresult");
-    var btntext = '오늘의 체형은 <span class="color">' + bodytypedice + " 체형!</span>";
+    var btntext = '오늘의 체형은 <span class="color">' + bodytypedice + " 체형!</span> (" + btnbodytype.length + "개)";
     btnresult.innerHTML = btntext;
-}
+} // 체형
 
 function btnattribute() {
     var btnattribute = [
@@ -178,15 +178,15 @@ function btnattribute() {
         '청각', '시각', '후각', '창조', '파괴',
         '심안', '날씨', '폭풍우', '뼈', '유전자',
         
-        '기억', '정신',
+        '기억', '정신', '안개', '눈(기상)', '진동',
     ];
 
     var attributedice;
     attributedice = btnattribute[Math.floor(Math.random()*btnattribute.length)];
     var btnresult = document.getElementById("btnresult");
-    var btntext = '오늘의 속성은 <span class="color">' + attributedice + "!</span>";
+    var btntext = '오늘의 속성은 <span class="color">' + attributedice + "!</span> (" + btnattribute.length + "개)";
     btnresult.innerHTML = btntext;
-}
+} // 속성
 
 function btnweapon() {
     var btnweapon = [
@@ -222,9 +222,9 @@ function btnweapon() {
     var weapondice;
     weapondice = btnweapon[Math.floor(Math.random()*btnweapon.length)];
     var btnresult = document.getElementById("btnresult");
-    var btntext = '오늘의 무기는 <span class="color">' + weapondice + "!</span>";
+    var btntext = '오늘의 무기는 <span class="color">' + weapondice + "!</span> (" + btnweapon.length + "개)";
     btnresult.innerHTML = btntext;
-}
+} // 무기
 
 function btnshield() {
     var btnshield = [
@@ -286,11 +286,11 @@ function btnshield() {
 
     var btnresult = document.getElementById("btnresult");
     var btntext = `
-        오늘의 방패는 <span class="color">${shielddice}!</span>
-        <img style="width: 200px; display: block; margin: 10px auto;" src="${shieldimage}" alt="이미지가 없습니다.">
+        오늘의 방패는 <span class="color">${shielddice}!</span> (${btnshield.length}개)
+        <img style="width: 350px; display: block; margin: 10px auto;" src="${shieldimage}" alt="이미지가 없습니다.">
     `;
     btnresult.innerHTML = btntext;
-}
+} // 방패
 
 function btnclothes() {
     var btnclothes = [
@@ -352,9 +352,9 @@ function btnclothes() {
     var clothesdice;
     clothesdice = btnclothes[Math.floor(Math.random()*btnclothes.length)];
     var btnresult = document.getElementById("btnresult");
-    var btntext = '오늘의 의상은 <span class="color">' + clothesdice + "!</span>";
+    var btntext = '오늘의 의상은 <span class="color">' + clothesdice + "!</span> (" + btnclothes.length + "개)";
     btnresult.innerHTML = btntext;
-}
+} // 의상
 
 function btnrandom() {
     var btnrandom = [
@@ -534,6 +534,12 @@ function btnrandom() {
     ];
 
     var randomdice;
+    var randomdice2;
+    var randomdice3;
+    var randomdice4;
+    var randomdice5;
+    var randomdice6;
+
     randomdice = btnrandom[Math.floor(Math.random()*btnrandom.length)];
     randomdice2 = btnrandom[Math.floor(Math.random()*btnrandom.length)];
     randomdice3 = btnrandom[Math.floor(Math.random()*btnrandom.length)];
@@ -544,17 +550,17 @@ function btnrandom() {
     var btntext = `
         오늘의 키워드는... 이거다!
         <div class="wordbox color">
-            <p>${randomdice}!</p>
-            <p style="color: #333333; margin: 20px 0px; font-size: 18pt;">보너스</p>
-            <p style="font-size: 18pt;">${randomdice2}!</p>
-            <p style="font-size: 18pt;">${randomdice3}!</p>
-            <p style="font-size: 18pt;">${randomdice4}!</p>
-            <p style="font-size: 18pt;">${randomdice5}!</p>
-            <p style="font-size: 18pt;">${randomdice6}!</p>
+            <p>${randomdice}! (${btnrandom.length}개)</p>
+            <p style="color: #333333; margin: 20px 0px; font-size: 16pt;">보너스</p>
+            <p style="font-size: 16pt;">${randomdice2}!</p>
+            <p style="font-size: 16pt;">${randomdice3}!</p>
+            <p style="font-size: 16pt;">${randomdice4}!</p>
+            <p style="font-size: 16pt;">${randomdice5}!</p>
+            <p style="font-size: 16pt;">${randomdice6}!</p>
         </div>
     `;
     btnresult.innerHTML = btntext;
-}
+} // 랜덤 키워드
 
 function btnAlignment() {
     var btnAlignment = [
@@ -565,9 +571,9 @@ function btnAlignment() {
     var Alignmentdice;
     Alignmentdice = btnAlignment[Math.floor(Math.random()*btnAlignment.length)];
     var btnresult = document.getElementById("btnresult");
-    var btntext = '오늘의 성향은 <span class="color">' + Alignmentdice + "!</span>";
+    var btntext = '오늘의 성향은 <span class="color">' + Alignmentdice + "!</span> (" + btnAlignment.length + "개)";
     btnresult.innerHTML = btntext;
-}
+} // 성향
 
 function btnhair() {
     var btnhair = [
@@ -580,17 +586,26 @@ function btnhair() {
         '트윈빔', '트윈드릴', '투 사이드 업', '만두머리', '베이비펌',
         '볼륨 펌', '다운 펌', '스왈로 펌', '쉐도우 펌', '쉼표머리',
         '여신머리', '히메컷', '단발머리', '민머리', '초코송이 머리',
-        '대머리', '바보털', '아프로머리', '깻잎머리', '땋은머리',
+        '패션 삭발', '바보털', '아프로머리', '깻잎머리', '땋은머리',
 
-        '스포츠컷', '뾰족머리', '호일펌'
+        '스포츠컷', '뾰족머리', '호일펌', '반삭발',
     ];
 
     var hairdice;
-    hairdice = btnhair[Math.floor(Math.random()*btnhair.length)];
+    var d2 = '0123456789';
+    var hairD2 = Number(d2[Math.floor(Math.random()*d2.length)]);
+
+    if(hairD2 <= 2) {
+        hairdice = '대머리';
+    } else if(hairD2 >= 3) {
+        hairdice = btnhair[Math.floor(Math.random()*btnhair.length)];
+    }
+
+    // hairdice = btnhair[Math.floor(Math.random()*btnhair.length)];
     var btnresult = document.getElementById("btnresult");
-    var btntext = '오늘의 헤어스타일은 <span class="color">' + hairdice + "!</span>";
+    var btntext = '오늘의 헤어스타일은 <span class="color">' + hairdice + "!</span> (" + btnhair.length + "개)";
     btnresult.innerHTML = btntext;
-}
+} // 헤어스타일
 
 function btnpersonality1() {
     var btnpersonality1 = [
@@ -620,9 +635,9 @@ function btnpersonality1() {
     var personality1;
     personality1 = btnpersonality1[Math.floor(Math.random()*btnpersonality1.length)];
     var btnresult = document.getElementById("btnresult");
-    var btntext = '오늘의 긍정적 성격은 <span class="color">' + personality1 + " </span>" + "성격!";
+    var btntext = '오늘의 긍정적 성격은 <span class="color">' + personality1 + " </span>" + "성격! (" + btnpersonality1.length + "개)";
     btnresult.innerHTML = btntext;
-}
+} // 긍정성격
 
 function btnpersonality2() {
     var btnpersonality2 = [
@@ -655,9 +670,9 @@ function btnpersonality2() {
     var personality2;
     personality2 = btnpersonality2[Math.floor(Math.random()*btnpersonality2.length)];
     var btnresult = document.getElementById("btnresult");
-    var btntext = '오늘의 부정적 성격은 <span class="color">' + personality2 + " </span>" + "성격!";
+    var btntext = '오늘의 부정적 성격은 <span class="color">' + personality2 + " </span>" + "성격! (" + btnpersonality2.length + "개)";
     btnresult.innerHTML = btntext;
-}
+} // 부정성격
 
 function btninstrument() {
     var btninstrument = [
@@ -713,9 +728,9 @@ function btninstrument() {
     var instrumentdice;
     instrumentdice = btninstrument[Math.floor(Math.random()*btninstrument.length)];
     var btnresult = document.getElementById("btnresult");
-    var btntext = '오늘의 악기는 <span class="color">' + instrumentdice + "!</span>";
+    var btntext = '오늘의 악기는 <span class="color">' + instrumentdice + "!</span> (" + btninstrument.length + "개)";
     btnresult.innerHTML = btntext;
-}
+} // 악기
 
 function btnrondomcolor() {
     var letters = '0123456789ABCDEF';
@@ -741,7 +756,7 @@ function btnrondomcolor() {
         </table>
     `;
     btnresult.innerHTML = btntext;
-}
+} // 랜덤 색상
 
 function btnrondom6color() {
     var letters = '0123456789ABCDEF';
@@ -807,7 +822,7 @@ function btnrondom6color() {
         </table>
     `;
     btnresult.innerHTML = btntext;
-}
+} // 랜덤 6색
 
 function btncharacterType() {
     var btncharacterType = [
@@ -820,9 +835,9 @@ function btncharacterType() {
     var characterTypedice;
     characterTypedice = btncharacterType[Math.floor(Math.random()*btncharacterType.length)];
     var btnresult = document.getElementById("btnresult");
-    var btntext = '오늘의 캐릭터 유형은 <span class="color">' + characterTypedice + "!</span>";
+    var btntext = '오늘의 캐릭터 유형은 <span class="color">' + characterTypedice + "!</span> (" + btncharacterType.length + "개)";
     btnresult.innerHTML = btntext;
-}
+} // 캐릭터 역할
 
 function btncharacterImage() {
     var btncharacterImage = [
@@ -873,9 +888,9 @@ function btncharacterImage() {
     var characterImagedice;
     characterImagedice = btncharacterImage[Math.floor(Math.random()*btncharacterImage.length)];
     var btnresult = document.getElementById("btnresult");
-    var btntext = '오늘의 캐릭터 이미지는 <span class="color">' + characterImagedice + "!</span>";
+    var btntext = '오늘의 캐릭터 이미지는 <span class="color">' + characterImagedice + "!</span> (" + btncharacterImage.length + "개)";
     btnresult.innerHTML = btntext;
-}
+} // 캐릭터 유형
 
 function btnnationality() {
     var btnnationality = [
@@ -977,9 +992,67 @@ function btnnationality() {
     var nationalitydice;
     nationalitydice = btnnationality[Math.floor(Math.random()*btnnationality.length)];
     var btnresult = document.getElementById("btnresult");
-    var btntext = '오늘의 국적은 <span class="color">' + nationalitydice + "!</span>";
+    var btntext = '오늘의 국적은 <span class="color">' + nationalitydice + "!</span> (" + btnnationality.length + "개)";
     btnresult.innerHTML = btntext;
-}
+} // 국가
+
+function btnsuperpower() {
+    var passiveActive = [
+        '패시브', '액티브',
+    ];
+
+    var btnsuperpower = [
+    '신체를 변형하는', '신체를 강화하는', '신체를 여러개로 분열 할 수 있는', '신체에 뭔가를 결합 할 수 있는', '원소를 조종하는',
+    '원소를 생성하는', '원소를 신체의 일부분으로 대체 할 수 있는', '원소와 원소를 합성  할 수 있는', '원소를 분해 할 수 있는', '사물을 조종하는',
+    '사물을 생성하는', '사물을 신체의 일부분으로 대체 할 수 있는', '사물과 사물을 합성 할 수 있는', '사물을 분해 할 수 있는', '생물을 조종하는',
+    '생물을 생성하는', '생물을 신체의 일부분으로 대체할 수 있는', '생물과 생물을 합성할 수 있는', '생물을 분해할 수 있는', '시간 여행',
+    '시간 소거', '시간 창조', '시간 합성', '시간 정지', '공간 이동',
+    '공간 소거', '공간 창조', '공간 합성', '천체를 조종하는', '천체는 생성하는',
+    '천체를 분해할 수 있는', '정신을 강화할 수 있는', '정신을 여러개로 분열할 수 있는', '정신을 말소하는', '기억을 주입할 수 있는',
+    '기억을 소거하는', '정신을 조종하는', '신체를 통해 에너지를 투사할 수 있는', '빠르게 움직일 수 있는 스피드스터', '죽어도 다시 살아나는',
+    '여러개의 목숨을 가질 수 있는', '영원히 살 수 있는', '생명이 무한한', '생명을 강탈할 수 있는', '다른 모습으로 환생할 수 있는',
+    '무언가를 소환할 수 있는', '눈을 마주치면 상대를 조종할 수 있는', '영혼과 대화할 수 있는', '귀신을 볼 수 있는', '투시',
+
+    '바라보는 것으로 상대의 행동을 따라할 수 있는', '순간적으로 다른 곳으로 이동할 수 있는', '죽은자를 일으킬 수 있는', '평행우주의 자신과 대화할 수 있는',
+    '에너지를 빨아들일 수 있는', '만진 물건의 사용법을 바로 알 수 있는', '어떠한 탈 것이든 탈 수 있는', '하늘을 날 수 있는',
+    '신체가 물체를 투과할 수 있는', '타인의 시간을 되돌릴 수 있는', '한 번 보거나 들은 것을 잊지 않는', '차원을 이동할 수 있는',
+    '타인의 무기를 자신의 무기로 만드는', '만지기만 해도 사물이나 생물의 기억을 읽을 수 있는', '동물의 말을 들을 수 있는', '미래에 일어날 일을 미리 알 수 있는',
+    '상상을 현실로 만들 수 있는', '차원 이동을 할 수 있는', '전지전능한', '전능한', '전지한', '타인을 세뇌할 수 있는',
+    '타인의 능력을 강탈할 수 있는', '타인에게 능력을 부여할 수 있는', '타인의 능력을 복사할 수 있는', '문을 통해 다른 곳으로 이동할 수 있는',
+    '능력과 능력을 합성할 수 있는', '타인의 모습으로 변할 수 있는', '동물로 변할 수 있는', '식물과 대화를 할 수 있는', '식물의 말을 들을 수 있는',
+    '눈을 마주치면 기억을 읽는', '눈을 마주치면 마음을 읽을 수 있는', '우주에서도 숨을 쉴 수 있는', '물 속에서 숨을 쉴 수 있는',
+    '어둠 속에서도 밝게 볼 수 있는', '누군가와 합체할 수 있는', '눈에서 레이버 빔이 투사되는', '차가운 입김을 불 수 있는', '몸이 아주 단단한',
+    '타인의 움직임을 예측할 수 있는', '기척을 숨길 수 있는', '피를 원하는 형태로 바꿀 수 있는', '죽음에 가까워지면 더욱 강해지는', '타인의 능력을 알 수 있는',
+
+    '순간적으로 상처를 회복하는', '체내의 뼈를 변형할 수 있는', '꺼지지 않는 불꽃을 다루는', '상상하는 것을 에너지로 구현하는', '블랙홀을 열 수 있는',
+    '특별한 힘이 깃든 갑옷을 입는', '가면을 쓰면 강해지는', '불꽃을 발사할 수 있는', '몸을 고무로 만들 수 있는', '멀리 볼 수 있는',
+    '아주 작은 소리까지 들을 수 있는', '파장을 감지할 수 있는', '아주 희미한 향까지 맡을 수 있는', '고통을 느끼지 않는', '타인의 5감을 반전시키는',
+    '싸울수록 점점 강해지는', '물건 안에 무언가를 가둘 수 있는', '햇빛에 노출되면 강해지는', '달빛에 노출되면 강해지는', '재채기를 하면 인격이 바뀌는',
+    '타인에게 빙의할 수 있는', '음식을 섭취하지 않아도 생존할 수 있는', '큰 소리를 내서 음파를 방출하는'
+    ];
+
+    var superpowerdice;
+    var passiveActivedice;
+    passiveActivedice = passiveActive[Math.floor(Math.random()*passiveActive.length)];
+    var d2 = '0123456789';
+    var superpowerD2 = Number(d2[Math.floor(Math.random()*d2.length)]);
+
+    if(superpowerD2 <= 1) {
+        superpowerdice = '무능력';
+        var btnresult = document.getElementById("btnresult");
+        var btntext = '오늘의 초능력은 <span class="color">' + superpowerdice + "!</span> (" + (btnsuperpower.length * passiveActive.length + 1) + "개)";
+    } else if(superpowerD2 >= 2) {
+        superpowerdice = btnsuperpower[Math.floor(Math.random()*btnsuperpower.length)];
+        var btnresult = document.getElementById("btnresult");
+        var btntext = '오늘의 초능력은 <span class="color">('+ passiveActivedice + ') ' + superpowerdice + " </span>능력! (" + (btnsuperpower.length * passiveActive.length + 1) + "개)";
+    }
+
+    // superpowerdice = btnsuperpower[Math.floor(Math.random()*btnsuperpower.length)];
+    
+    btnresult.innerHTML = btntext;
+} // 초능력
+
+// ---------- 템플릿 ----------
 
 function word() {
     var word = [];
@@ -987,6 +1060,6 @@ function word() {
     var dice;
     dice = word[Math.floor(Math.random()*word.length)];
     var btnresult = document.getElementById("btnresult");
-    var btntext = '<span class="color">' + dice + " </span>" + "문구";
+    var btntext = '<span class="color">' + dice + " </span>" + "문구 (" + word.length + "개)";
     btnresult.innerHTML = btntext;
 }

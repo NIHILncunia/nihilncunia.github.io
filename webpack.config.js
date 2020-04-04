@@ -12,7 +12,7 @@ module.exports = {
     // 모드는 두가지가 있다. 디벨로먼트(개발)와 프로덕션(배포)이다.
 
     // devtool: 'eval',
-    devtool: 'hidden-source-map',
+    devtool: 'source-map',
     // 빠르게 작업하게 한다.
 
     resolve: {
@@ -66,8 +66,8 @@ module.exports = {
                         loader: 'css-loader',
                         options: {
                             modules: {
-                              mode: 'global',
-                              localIdentName: '[name]-[local]-[hash:base64:5]',
+                                mode: 'global',
+                                localIdentName: '[name]-[local]-[hash:base64:5]',
                             },
                         },
                         exclude: /node_modules/,
@@ -77,7 +77,7 @@ module.exports = {
                         test: /\.css|scss?$/,
                         loader: 'sass-loader',
                         options: {
-                          implementation: require('sass'),
+                            implementation: require('sass'),
                         },
                         exclude: /node_modules/,
                     },
