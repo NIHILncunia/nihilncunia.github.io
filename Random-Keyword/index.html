@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./style.css">
-    <script src="./keywordarray.js"></script>
-    <title>랜덤 키워드 :: 아이디어 구상 시간을 덜어드립니다.</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./keywordArray.js"></script>
+  <script src="./nihildArray.js"></script>
+  <script src="./characterdArray.js"></script>
+  <title>랜덤 키워드 :: 아이디어 구상 시간을 덜어드립니다.</title>
 </head>
+
 <body>
-    <div id="infobox"><p>
-        니힐이 편하려고 만든 페이지입니다. 원래는 제가 사용할 용도로 만들어놔서 종족과 직업등등은 제 세계관에 맞게 구성되어있었는데, 타인도 이것을 사용하면 좋을 것 같다는 생각이 들어서 타인이 사용하기에도 괜찮은 수준으로 수정을 해놓았습니다. 캐릭터를 그릴 때에, 혹은 어떠한 설정을 할 때에 있어서 가끔 디자인이 생각이 나지 않거나 소재가 없어서 막막했던 적이 있었을 겁니다. 이 페이지는 그런 때에 사용하기 좋습니다. 각각의 버튼을 누르면 관련된 키워드가 출력됩니다. 종족 버튼을 누르면 어떤 종족을 그리면 좋을 지에 대해서 결저을 대신 해주는 겁니다. 각 버튼은 서로 연계해서 사용해도 됩니다. 물론 결과는 랜덤이기 때문에 키워드간의 조합은 알아서 판단하셔서 사용하시면 됩니다. 이 페이지는 지속적으로 업데이트 되고 있습니다. 제가 단어를 추가할 때마다 여기에도 자동적으로 추가됩니다.
-    </p></div>
-    <div id="btn-erea">
-        <p>니힐 최적화 키워드</p>
-        <input type="button" value="종족 관련" id="btn-race" onclick="btnrace()"/>
-        <input type="button" value="직업 관련" id="btn-class" onclick="btnclass()"/>
-        <p>캐릭 정보 키워드</p>
-        <input type="button" value="역할 관련" id="btn-characterType" onclick="btncharacterType()"/>
-        <input type="button" value="유형 관련" id="btn-characterImage" onclick="btncharacterImage()"/>
-        <input type="button" value="종족 관련" id="btn-race2" onclick="btnrace2()"/>
-        <input type="button" value="직업 관련" id="btn-class2" onclick="btnclass2()"/>
-        <input type="button" value="국적 관련" id="btn-nationality2" onclick="btnnationality()"/>
-        <input type="button" value="성별 관련" id="btn-Gender" onclick="btngender()"/>
-        <input type="button" value="헤어스타일 관련" id="btn-hair" onclick="btnhair()"/>
-        <input type="button" value="긍정성격 관련" id="btn-personality1" onclick="btnpersonality1()"/>
-        <input type="button" value="부정성격 관련" id="btn-personality2" onclick="btnpersonality2()"/>
-        <input type="button" value="성향 관련(D&D)" id="btn-Alignment" onclick="btnAlignment()"/>
-        <input type="button" value="체형 관련" id="btn-body-type" onclick="btnbodytype()"/>
-        <input type="button" value="속성 관련" id="btn-attribute" onclick="btnattribute()"/>
-        <input type="button" value="무기 관련" id="btn-weapon" onclick="btnweapon()"/>
-        <input type="button" value="방패 관련" id="btn-shield" onclick="btnshield()"/>
-        <input type="button" value="의상 관련" id="btn-clothes" onclick="btnclothes()"/>
-        <input type="button" value="초능력 관련" id="btn-superpower" onclick="btnsuperpower()"/>
-        <p>특정 주제 키워드</p>
-        <input type="button" value="악기 관련" id="btn-instrument" onclick="btninstrument()"/>
-        <input type="button" value="랜덤 1색상" id="btn-randomcolor" onclick="btnrondomcolor()"/>
-        <input type="button" value="랜덤 6색상" id="btn-random6color" onclick="btnrondom6color()"/>
-        <p>무작위 단어</p>
-        <input type="button" value="랜덤 키워드" id="btn-random" onclick="btnrandom()"/>
-    </div>
-    <hr />
-    <div id="btnresult">아무 버튼이나 누르세요.</div>
+  <div id="infobox">
+    <p>
+      니힐이 편하려고 만든 페이지입니다. 원래는 제가 사용할 용도로 만들어놔서 종족과 직업등등은 제 세계관에 맞게 구성되어있었는데, 타인도 이것을 사용하면 좋을 것 같다는 생각이 들어서 타인이 사용하기에도 괜찮은 수준으로 수정을 해놓았습니다. 캐릭터를 그릴 때에, 혹은 어떠한 설정을 할 때에 있어서 가끔 디자인이 생각이 나지 않거나 소재가 없어서 막막했던 적이 있었을 겁니다. 이 페이지는 그런 때에 사용하기 좋습니다. 각각의 버튼을 누르면 관련된 키워드가 출력됩니다. 종족 버튼을 누르면 어떤 종족을 그리면 좋을 지에 대해서 결저을 대신 해주는 겁니다. 각 버튼은 서로 연계해서 사용해도 됩니다. 물론 결과는 랜덤이기 때문에 키워드간의 조합은 알아서 판단하셔서 사용하시면 됩니다. 이 페이지는 지속적으로 업데이트 되고 있습니다. 제가 단어를 추가할 때마다 여기에도 자동적으로 추가됩니다.
+    </p>
+  </div>
+  <div id="btn-erea">
+    <p>니힐 최적화 키워드</p>
+    <input type="button" value="종족 관련" id="btn-race" onclick="btnrace()" />
+    <input type="button" value="직업 관련" id="btn-class" onclick="btnclass()" />
+    <p>캐릭 정보 키워드</p>
+    <input type="button" value="역할 관련" id="btn-characterType" onclick="btncharacterType()" />
+    <input type="button" value="유형 관련" id="btn-characterImage" onclick="btncharacterImage()" />
+    <input type="button" value="종족 관련" id="btn-race2" onclick="btnrace2()" />
+    <input type="button" value="직업 관련" id="btn-class2" onclick="btnclass2()" />
+    <input type="button" value="국적 관련" id="btn-nationality2" onclick="btnnationality()" />
+    <input type="button" value="성별 관련" id="btn-Gender" onclick="btngender()" />
+    <input type="button" value="헤어스타일 관련" id="btn-hair" onclick="btnhair()" />
+    <input type="button" value="긍정성격 관련" id="btn-personality1" onclick="btnpersonality1()" />
+    <input type="button" value="부정성격 관련" id="btn-personality2" onclick="btnpersonality2()" />
+    <input type="button" value="성향 관련(D&D)" id="btn-Alignment" onclick="btnAlignment()" />
+    <input type="button" value="체형 관련" id="btn-body-type" onclick="btnbodytype()" />
+    <input type="button" value="속성 관련" id="btn-attribute" onclick="btnattribute()" />
+    <input type="button" value="무기 관련" id="btn-weapon" onclick="btnweapon()" />
+    <input type="button" value="방패 관련" id="btn-shield" onclick="btnshield()" />
+    <input type="button" value="의상 관련" id="btn-clothes" onclick="btnclothes()" />
+    <input type="button" value="초능력 관련" id="btn-superpower" onclick="btnsuperpower()" />
+    <p>특정 주제 키워드</p>
+    <input type="button" value="악기 관련" id="btn-instrument" onclick="btninstrument()" />
+    <input type="button" value="랜덤 1색상" id="btn-randomcolor" onclick="btnrondomcolor()" />
+    <input type="button" value="랜덤 6색상" id="btn-random6color" onclick="btnrondom6color()" />
+    <p>무작위 단어</p>
+    <input type="button" value="랜덤 키워드" id="btn-random" onclick="btnrandom()" />
+  </div>
+  <hr />
+  <div id="btnresult">아무 버튼이나 누르세요.</div>
 </body>
+
 </html>
