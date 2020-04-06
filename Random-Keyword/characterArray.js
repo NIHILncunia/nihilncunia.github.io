@@ -227,75 +227,13 @@ function btnshield() {
 
   var btnresult = document.getElementById("btnresult");
   var btntext = `
-        오늘의 방패는 <span class="color">${shielddice}!</span> (${btnshield.length}개)
-        <img style="width: 350px; display: block; margin: 10px auto;" src="${shieldimage}" alt="이미지가 없습니다.">
-    `;
+    오늘의 방패는 <span class="color">${shielddice}!</span> (${btnshield.length}개)
+    <span style="font-size: 16pt;">
+      <img style="width: 350px; display: block; margin: 10px auto;" src="${shieldimage}" alt="이미지가 없습니다.">
+    </span>
+  `;
   btnresult.innerHTML = btntext;
 } // 방패
-
-function btnclothes() {
-  var btnclothes = [
-    '가죽 갑옷', '가터벨트', '갑주무장(동양/일본)', '갑주무장(동양/중국)', '갑주무장(동양/한국)',
-    '갑주무장(서양)', '갓', '강철 갑옷', '고풍스러운 갑주', '고풍스러운 의상',
-    '기모노', '남바위(모자)', '드레스', '로코코스타일 머리장식', '록커룩',
-    '마린룩', '마이크로비키니', '메이드 머리밴드', '메일 갑옷', '모노클',
-    '모던스타일 머리장식', '무도회 가면', '미늘 갑옷', '밀리터리룩', '바니걸 슈트',
-    '방화복', '버프 코트', '부츠', '블라우스', '비키니',
-    '사제복', '속옷/브래지어', '속옷/팬티(남성)', '속옷/팬티(여성)', '스쿨룩',
-    '앞치마', '애니멀룩', '에스닉 룩', '오프숄더 의상', '오피스룩',
-    '우주복', '원피스', '웨딩 드레스', '유건(모자)', '전신수영복',
-    '전통복식(동)', '전통복식(동양/일본)', '전통복식(동양/중국)', '전통복식(서양)', '전통복식(아라비아권)',
-
-    '전통복식(한국)', '정장', '족두리(머리 장식)', '중절모', '차이나드레스',
-    '천 갑옷', '청동 갑옷', '치파오', '턱시도', '털 갑옷',
-    '풀 플레이트 갑옷', '하우스메이드복', '하이힐', '한복', '개량 한복',
-    '히피룩', '타지(이슬람계 챙없는 모자)', '구두', '가디건', '아쿠아슈즈',
-    '샌들', '등산화', '전투화', '오버니삭스', '니삭스',
-    '숏 케이프(망토)', '롱 케이프(망토)', '베일(얼굴장식)', '털모자', '캡 모자',
-    '모자', '숄(의류 장식)', '란제리', '헤어밴드', '망사 스타킹',
-    '와이셔츠', '티셔츠', '셔츠', '점퍼', '가죽 점퍼',
-    '세일러복', '코르셋(속옷)', '조끼', '폴로셔츠', '민소매셔츠',
-    '후드티', '스웨터', '라운드티', '브이넥 원피스', '브이넥 티셔츠',
-
-    '브이넥 블라우스', '청셔츠', '체크셔츠', '잔체크셔츠', '슬랙스(바지)',
-    '숏팬츠', '버뮤다팬츠', '청바지', '스트레이트 스커트', '랩 스커트',
-    '호블 스커트', '트임 스커트', '요크 스커트', '고어드 스커트', 'A라인 스커트',
-    '롱 원피스', '민소매 원피스', '뷔스티에 드레스', '기모노 드레스', '엠파이어 드레스',
-    '슬립 원피스', '뷔스티에 원피스', '셔츠 원피스', '루즈삭스', '부르마',
-    '트렁크스(속옷)', '가쿠란', '구속복', '각반', '산타복',
-    '속바지', '수의', '스키니진', '반바지', '레깅스',
-    '롱패딩', '롱스커트', '미니스커트', '라이딩 재킷', '래글런 티셔츠',
-    '크롭티셔츠', '헨리넥 티셔츠', '반하이넥 티셔츠', '시스루 블라우스', '카라넥 티셔츠',
-    '터틀넥 티셔츠', '레이스 블라우스', '프릴 블라우스', '유카타(기모노 일종)', '마과(중국 전통의상)',
-
-    '아오자이(베트남 전통의상)', '디른들(독일 전통의상/여성)', '사라판(러시아 전통의상/여성)', '킬트(스코틀랜드 전통의상)', '터번(이슬람/아랍/남성)',
-    '히잡(이슬람/아랍/여성)', '후리소데(일본 전통의상)', '토메소데(일본 전통의상)', '레오타드', '관복',
-    '하쿠란(하얀 가쿠란)', '래쉬가드', '로우레그(속옷)', '하이레그(속옷)', '슬링샷(수영복)',
-    '모노키니(수영복)', '수도복', '우의', '베일(얼굴장식)', '갸루 패션',
-    '라이더 패션', '로리타 패션', '고스로리', '히메로리', '고스 룩',
-    '메탈 룩', '모드 룩', '펑크 룩', '그런지 패션', '페어리 패션',
-    '시스루 룩', '빈티지 패션', '프레피 룩', '바디 컨셔스 룩', '스트리트 패션',
-    '이모 패션', '오피스 룩', '클리비지룩', '레기 룩', '롱패딩',
-    '멜빵', '멜빵 바지', '멜빵 치마', '페도라', '헬멧',
-    '볼러(모자)', '테일 코트', '프록 코트', '니트', '베스트(조끼)',
-
-    '폰초(망토)', '블레이저(재킷)', '야상', '파카', '가운',
-    '바람 막이', '피 코트', '트렌치 코트', '튜브 탑', '하이 삭스',
-    '사이 하이 삭스', '돌핀팬츠', '치노(바지)', '타이츠(스타킹)', '버선',
-    '옆트임(스타일)', '치마바지', '하이웨이스트(긴 바지)', '스패츠(바지)',
-    '투명 스타킹', '보디 스타킹', '팬티 스타킹', '내복', '가슴붕대',
-
-    '드로어즈', '가터 링', '뷔스티에(속옷)', '반팔런닝', '민소매런닝',
-    '브라탑(속옷)', '줄무늬 팬티', '사각팬티', '브리프(속옷)', 'T프런트(속옷)',
-    '갈라팬티', '작스트랩(속옷)', 'T팬티(속옷)', 'C스트링(속옷)', '단화'
-  ];
-
-  var clothesdice;
-  clothesdice = btnclothes[Math.floor(Math.random() * btnclothes.length)];
-  var btnresult = document.getElementById("btnresult");
-  var btntext = '오늘의 의상은 <span class="color">' + clothesdice + "!</span> (" + btnclothes.length + "개)";
-  btnresult.innerHTML = btntext;
-} // 의상
 
 function btnAlignment() {
   var btnAlignment = [
@@ -637,6 +575,33 @@ function btnsuperpower() {
   btnresult.innerHTML = btntext;
 } // 초능력
 
+function btnstatus() {
+  var btnstatus = [
+    '천민', '노예', '평민', '귀족', '왕족',
+    '황족',
+  ];
+
+  var nobility = [
+    '남작', '자작', '백작', '후작', '공작',
+    '대공',
+  ];
+
+  var statusdice;
+  statusdice = btnstatus[Math.floor(Math.random() * btnstatus.length)];
+  var nobilitydice;
+  nobilitydice = nobility[Math.floor(Math.random() * nobility.length)];
+
+  if (statusdice == '귀족') {
+    var btnresult = document.getElementById("btnresult");
+    var btntext = `오늘의 신분은 <span class="color">${statusdice} - ${nobilitydice}!</span> (${(btnstatus.length + nobility.length) - 1}개)`;
+  } else {
+    var btnresult = document.getElementById("btnresult");
+    var btntext = '오늘의 신분은 <span class="color">' + statusdice + "!</span> (" + (btnstatus.length + nobility.length) - 1 + "개)";
+  }
+
+  btnresult.innerHTML = btntext;
+} // 신분
+
 // ---------- 템플릿 ----------
 
 function word() {
@@ -647,4 +612,4 @@ function word() {
   var btnresult = document.getElementById("btnresult");
   var btntext = '<span class="color">' + dice + " </span>" + "문구 (" + word.length + "개)";
   btnresult.innerHTML = btntext;
-}
+} // 항목
