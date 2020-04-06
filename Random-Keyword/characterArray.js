@@ -576,6 +576,7 @@ function btnsuperpower() {
 } // 초능력
 
 function btnstatus() {
+  console.log('문제점?');
   var btnstatus = [
     '천민', '노예', '평민', '귀족', '왕족',
     '황족',
