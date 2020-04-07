@@ -576,7 +576,6 @@ function btnsuperpower() {
 } // 초능력
 
 function btnstatus() {
-  console.log('문제점?');
   var btnstatus = [
     '천민', '노예', '평민', '귀족', '왕족',
     '황족',
@@ -589,10 +588,8 @@ function btnstatus() {
 
   var statusdice;
   statusdice = btnstatus[Math.floor(Math.random() * btnstatus.length)];
-  console.log(statusdice);
   var nobilitydice;
   nobilitydice = nobility[Math.floor(Math.random() * nobility.length)];
-  console.log(nobilitydice);
 
   if (statusdice == '귀족') {
     var btnresult = document.getElementById("btnresult");

@@ -1,9 +1,9 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
 * {
     margin: 0px;
     padding: 0px;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Sans KR', 'Noto Sans JP', sans-serif;
 }
 
 body {
