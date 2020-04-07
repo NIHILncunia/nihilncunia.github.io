@@ -599,7 +599,7 @@ function btnstatus() {
     var btntext = `오늘의 신분은 <span class="color">${statusdice} - ${nobilitydice}!</span> (${(btnstatus.length + nobility.length) - 1}개)`;
   } else {
     var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 신분은 <span class="color">${statusdice}!</span> ("${(btnstatus.length + nobility.length) - 1}개)`;
+    var btntext = `오늘의 신분은 <span class="color">${statusdice}!</span> (${(btnstatus.length + nobility.length) - 1}개)`;
   }
 
   btnresult.innerHTML = btntext;
