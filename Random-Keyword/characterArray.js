@@ -589,15 +589,17 @@ function btnstatus() {
 
   var statusdice;
   statusdice = btnstatus[Math.floor(Math.random() * btnstatus.length)];
+  console.log(statusdice);
   var nobilitydice;
   nobilitydice = nobility[Math.floor(Math.random() * nobility.length)];
+  console.log(nobilitydice);
 
   if (statusdice == '귀족') {
     var btnresult = document.getElementById("btnresult");
     var btntext = `오늘의 신분은 <span class="color">${statusdice} - ${nobilitydice}!</span> (${(btnstatus.length + nobility.length) - 1}개)`;
   } else {
     var btnresult = document.getElementById("btnresult");
-    var btntext = '오늘의 신분은 <span class="color">' + statusdice + "!</span> (" + (btnstatus.length + nobility.length) - 1 + "개)";
+    var btntext = `오늘의 신분은 <span class="color">${statusdice}!</span> ("${(btnstatus.length + nobility.length) - 1}개)`;
   }
 
   btnresult.innerHTML = btntext;
