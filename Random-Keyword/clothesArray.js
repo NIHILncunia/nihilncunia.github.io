@@ -1,8 +1,51 @@
-function btnshoes() {
-  var gender = [
-    '남성', '여성', '공용',
-  ];
+var fassionArray = {
+  neckLine: [
+    '라운드 네크라인', 'U 네크라인', '스쿱 네크라인', '더치 네크라인', '호스슈 네크라인',
+    '키홀 네크라인', '슬릿 네크라인', 'V 네크라인', '트라페즈 네크라인', '오블롱 네크라인',
+    '헨리 네크라인', '턱드 네크라인', '스퀘어 네크라인', '보트 네크라인', '원 숄더 네크라인',
+    '스윗하트 네크라인', '오프 숄더 네크라인', '캐미솔 네크라인', '홀터 네크라인', '슈거백 네크라인',
+    '카울 네크라인', '서플리스 네크라인', '가디건 네크라인', '하이 네크라인', '데콜테 네크라인',
 
+    '오블리크 네크라인', '스칼럽 네크라인', '다이아몬드 네크라인', '하이 네크라인', '터틀 네크라인',
+    '딥 스쿱 네크라인', '러플 네크라인', '딥 V 네크라인', '숄카라 네크라인', '오벌 네크라인',
+    '로 네크라인', '오프 네크라인', '베어드 톱 네크라인', '오픈 프론트 네크라인', '플런징 네크라인',
+    '스캘럽트 네트라인', '랩 오버 네크라인', '크류 네크라인', '플라워 네크라인', '드로스트링 네크라인',
+    '다이빙 네크라인', '이브닝 네크라인',
+  ],
+
+  collar: [
+    '하이넥 칼라', '만다린 칼라', '피터팬 칼라', '스탠드 칼라', '친 칼라',
+    '셔츠 칼라', '버튼 다운 칼라', '이탈리안 칼라', '컨버터블 칼라', '윙 칼라',
+    '스탠드 어웨이 칼라', '리퍼 칼라', '버서 칼라', '호스슈 칼라', '파 어웨이 칼라',
+    '이튼 칼라', '오브롱 칼라', '피크드 칼라', '피시 마우스 칼라', '테일러드 칼라',
+    '나폴레옹 칼라', '사이드 웨이 칼라', '숄 칼라', '보우 칼라', '세일러 칼라',
+    '케이프 칼라', '컷 어웨이 칼라', '노치드 라펠', '피크드 라펠', '더블 칼라',
+    '스탠드 업 칼라', '타이 칼라', '리본 칼라', '스톨 칼라', '스카프 칼라',
+    '넥밴드 칼라', '조니 칼라', '링 칼라', '프릴 칼라', '러프 칼라',
+    '러플드 칼라', '라바 칼라', '피슈 칼라', '스텐 칼라', '터틀넥 칼라',
+    '캐스케이팅 칼라', '모트 칼라', '리플드 칼라', '팬 칼라', '후드 칼라',
+
+    '사이드웨이 칼라', '셰익스피어 칼라', '더치 칼라', '체스터필드 칼라', '베르타 칼라',
+    '첼시 칼라', '차이니즈 칼라', '퓨리턴 칼라', '푸시 보우 칼라', '턱시도 칼라',
+  ],
+
+  silhouette: [
+    '시스 실루엣', '튜블러 실루엣', 'H 라인 실루엣', '트라페즈 실루엣', '엠파이어 실루엣',
+    '시프트 실루엣', '돔 실루엣', '미나렛 실루엣', '머메이드 실루엣', '버슬 실루엣',
+    '프린세스 실루엣', '피티드 실루엣', '크리놀린 실루엣', '박스 실루엣', '배럴 실루엣',
+    '코쿤 실루엣', 'O 라인 실루엣', 'T 라인 실루엣', 'Y 라인 실루엣', '벌룬 실루엣',
+    '볼 실루엣', '케이프 실루엣', '콜드 숄더 실루엣', '하이로우 실루엣', '맥시 실루엣',
+    '미디 실루엣', '마이크로 미니 실루엣', '미니 실루엣', '뉴룩 실루엣', '파고다 숄더 실루엣',
+    '페플럼 실루엣', '트레일 실루엣', '트럼펫 실루엣', '랩 실루엣', '바디콘 실루엣',
+    '베이비돌 실루엣', '슈미즈 실루엣', '드레이프트 실루엣', '스트레이트 실루엣', '스트레치 실루엣',
+    '앰플 실루엣', '와인 글래스 실루엣', '아워글라스 실루엣', '슬림 실루엣', '호블 실루엣',
+    '롱 토르소 실루엣', '포멀 실루엣', '플레어 실루엣', '텐트 실루엣', '피나포어 실루엣',
+
+    '파딩게일 실루엣', '셔츠 웨이스트 실루엣', '드롭 웨이스트 실루엣', '카프탄 실루엣',
+  ],
+};
+
+function btnshoes() {
   var male = [
     '옥스포드', '더비', '몽크 스트랩', '호스 빗 로퍼', '테슬 로퍼',
     '베네시안 로퍼', '드라이빙 슈즈', '페니 로퍼', '블로퍼', '몽크 스트랩',
@@ -12,14 +55,14 @@ function btnshoes() {
 
     '어글리 슈즈', '스니커즈', '발모랄', '원피스 뱀프',
   ];
-  
+
   var common = [
     '고무신', '나막신', '샌들', '슬리퍼', '쪼리',
-    '운동화', '스니커즈', '실내화', '꽂신', '농구화',
+    '운동화', '스니커즈', '실내화', '꽃신', '농구화',
     '등산화', '런닝화', '축구화', '캔버스화', '부츠',
     '전투화', '목화', '장화', '레인부츠', '클릿 슈즈',
   ];
-  
+
   var female = [
     '펌프스', '메리제인슈즈', '슬링백', '플랫슈즈', '뮬',
     '핍 토 펌프', '슬링백 웻지', '웨지 샌들', '통', '웨지힐',
@@ -33,29 +76,21 @@ function btnshoes() {
     '옥스퍼드', '드라이빙 슈즈', '도르세이', '모카신', '몽크',
   ];
 
-  var genderdice;
-  genderdice = gender[Math.floor(Math.random() * gender.length)];
-  var shoesdice;
-  var diceTotal = male.length + common.length + female.length;
-
-  if (genderdice == '남성') {
-    shoesdice = male[Math.floor(Math.random() * male.length)];
-  } else if (genderdice == '여성') {
-    shoesdice = female[Math.floor(Math.random() * female.length)];
-  } else if (genderdice == '공용') {
-    shoesdice = common[Math.floor(Math.random() * common.length)];
-  }
+  var maleshoesdice = male[Math.floor(Math.random() * male.length)];
+  var femaleshoesdice = female[Math.floor(Math.random() * female.length)];
+  var commonshoesdice = common[Math.floor(Math.random() * common.length)];
 
   var btnresult = document.getElementById("btnresult");
-  var btntext = `오늘의 신발은 <span class="color">${genderdice} - ${shoesdice}!</span> (${diceTotal}개)`;
+  var btntext = `
+    <p>오늘의 신발</p>
+    <p style="font-size: 14pt;">공용 신발: <span class="color">${commonshoesdice}!</span> (${common.length}개)</p>
+    <p style="font-size: 14pt;">남성용 신발: <span class="color">${maleshoesdice}!</span> (${male.length}개)</p>
+    <p style="font-size: 14pt;">여성용 신발: <span class="color">${femaleshoesdice}!</span> (${female.length}개)</p>
+  `;
   btnresult.innerHTML = btntext;
-} // 항목
+} // 신발
 
 function btnunderwear() {
-  var gender = [
-    '여성', '남성',
-  ];
-
   var male = [
     '브리프', '드로어즈', '트렁크', '훈도시', 'T백',
     '복서', 'G스트링', '비키니', '힙 숏', '복서 브리프',
@@ -77,25 +112,19 @@ function btnunderwear() {
     '브라렛', '니플 패드', '니플 밴드',
   ];
 
-  var genderdice;
-  genderdice = gender[Math.floor(Math.random() * gender.length)];
-
-  if (genderdice == '여성') {
-    var underweardice = female[Math.floor(Math.random() * female.length)];
-  } else {
-    var underweardice = male[Math.floor(Math.random() * male.length)];
-  }
+  var femaleunderweardice = female[Math.floor(Math.random() * female.length)];
+  var maleunderweardice = male[Math.floor(Math.random() * male.length)];
 
   var btnresult = document.getElementById("btnresult");
-  var btntext = `오늘의 속옷은 <span class="color">${genderdice} - ${underweardice}!</span> (${female.length + male.length}개)`;
+  var btntext = `
+    <p>오늘의 속옷</p>
+    <p style="font-size: 14pt;">여성용 속옷: <span class="color">${femaleunderweardice}!</span> (${female.length}개)</p>
+    <p style="font-size: 14pt;">남성용 속옷: <span class="color">${maleunderweardice}!</span> (${male.length}개)</p>
+  `;
   btnresult.innerHTML = btntext;
 } // 속옷
 
 function btnbikini() {
-  var gender = [
-    '남성', '여성', '공용',
-  ];
-
   var common = [
     '래시가드', '바디스킨', '니스킨', '학교 수영복', '잠수복',
     '전신수영복',
@@ -113,35 +142,24 @@ function btnbikini() {
     '보드쇼츠', '하이브리드 쇼츠',
   ];
 
-  var genderdice;
-  genderdice = gender[Math.floor(Math.random() * gender.length)];
-  var diceTotal = common.length + female.length + male.length;
-
-  if (genderdice == '공용') {
-    var bikinidice = common[Math.floor(Math.random() * common.length)];
-  } else if (genderdice == '남성') {
-    var bikinidice = male[Math.floor(Math.random() * male.length)];
-  } else if (genderdice == '여성') {
-    var bikinidice = female[Math.floor(Math.random() * female.length)];
-  }
+  var commonbikinidice = common[Math.floor(Math.random() * common.length)];
+  var malebikinidice = male[Math.floor(Math.random() * male.length)];
+  var femalebikinidice = female[Math.floor(Math.random() * female.length)];
 
   var btnresult = document.getElementById("btnresult");
-  var btntext = `오늘의 수영복은 <span class="color">${genderdice} - ${bikinidice}!</span> (${diceTotal}개)`;
+  var btntext = `
+    <p>오늘의 수영복</p>
+    <p style="font-size: 14pt;">공용 수영복: <span class="color">${commonbikinidice}!</span> (${common.length}개)</p>
+    <p style="font-size: 14pt;">여성용 수영복: <span class="color">${femalebikinidice}!</span> (${female.length}개)</p>
+    <p style="font-size: 14pt;">남성용 수영복: <span class="color">${malebikinidice}!</span> (${male.length}개)</p>
+  `;
   btnresult.innerHTML = btntext;
 } // 수영복
 
 function btnacc() {
-  var btnacc = [
-    '목도리', '머리장식', '반지', '목걸이', '귀걸이',
-    '팔찌', '브로치',
-  ];
-
-  var muffler = [
-    '니트 목도리', '넥 워머', '캐시미어 목도리',
-  ];
-
   var headDeco = [
-    '머리띠', '머리핀', '머리끈', '헤어밴드',
+    '머리띠', '머리핀', '머리끈', '헤어밴드', '비녀',
+    '댕기', '곱창밴드', '머리망', '헤어 브로치',
   ];
 
   var rings = [
@@ -177,54 +195,33 @@ function btnacc() {
     '염주',
   ];
 
-  var accdice;
-  accdice = btnacc[Math.floor(Math.random() * btnacc.length)];
-  var diceTotal = muffler.length + headDeco.length + rings.length + neckclace.length + earring.length + bracelet.length - 1;
+  var wearDeco = [
+    '브로치', '뱃지', '체인 브로치',
+  ];
 
-  if (accdice == '목도리') {
-    var mufflerdice = muffler[Math.floor(Math.random() * muffler.length)];
+  var headDecodice = headDeco[Math.floor(Math.random() * headDeco.length)];
+  var ringsdice = rings[Math.floor(Math.random() * rings.length)];
+  var neckclacedice = neckclace[Math.floor(Math.random() * neckclace.length)];
+  var earringdice = earring[Math.floor(Math.random() * earring.length)];
+  var braceletdice = bracelet[Math.floor(Math.random() * bracelet.length)];
+  var wearDecodice = wearDeco[Math.floor(Math.random() * wearDeco.length)];
 
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 장신구는 <span class="color">${mufflerdice}!</span> (${diceTotal}개)`;
-  } else if (accdice == '머리장식') {
-    var headDecodice = headDeco[Math.floor(Math.random() * headDeco.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 장신구는 <span class="color">${headDecodice}!</span> (${diceTotal}개)`;
-  } else if (accdice == '반지') {
-    var ringsdice = rings[Math.floor(Math.random() * rings.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 장신구는 <span class="color">${ringsdice}!</span> (${diceTotal}개)`;
-  } else if (accdice == '목걸이') {
-    var neckclacedice = neckclace[Math.floor(Math.random() * neckclace.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 장신구는 <span class="color">${neckclacedice}!</span> (${diceTotal}개)`;
-  } else if (accdice == '귀걸이') {
-    var earringdice = earring[Math.floor(Math.random() * earring.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 장신구는 <span class="color">${earringdice}!</span> (${diceTotal}개)`;
-  } else if (accdice == '팔찌') {
-    var braceletdice = bracelet[Math.floor(Math.random() * bracelet.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 장신구는 <span class="color">${braceletdice}!</span> (${diceTotal}개)`;
-  } else {
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 장신구는 <span class="color">${accdice}!</span> (${diceTotal}개)`;
-  }
-
-  // var btnresult = document.getElementById("btnresult");
-  // var btntext = `오늘의 장신구는 <span class="color">${accdice}!</span> (${diceTotal}개)`;
+  var btnresult = document.getElementById("btnresult");
+  var btntext = `
+    <p>오늘의 장신구</p>
+    <p style="font-size: 14pt;">머리 장식: <span class="color">${headDecodice}!</span> (${headDeco.length}개)</p>
+    <p style="font-size: 14pt;">반지: <span class="color">${ringsdice}!</span> (${rings.length}개)</p>
+    <p style="font-size: 14pt;">목걸이: <span class="color">${neckclacedice}!</span> (${neckclace.length}개)</p>
+    <p style="font-size: 14pt;">귀걸이: <span class="color">${earringdice}!</span> (${earring.length}개)</p>
+    <p style="font-size: 14pt;">팔찌: <span class="color">${braceletdice}!</span> (${bracelet.length}개)</p>
+    <p style="font-size: 14pt;">옷 장식: <span class="color">${wearDecodice}!</span> (${wearDeco.length}개)</p>
+  `;
   btnresult.innerHTML = btntext;
 } // 액세서리
 
 function btnextra() {
-  var btnextra = [
-    '모자', '가방', '양말', '장갑', '안경',
-    '시계', '발토시', '팔토시', '허리띠',
+  var muffler = [
+    '니트 목도리', '넥 워머', '캐시미어 목도리', '목토시',
   ];
 
   var hat = [
@@ -260,66 +257,53 @@ function btnextra() {
     '앵클 삭스', '타이츠', '스타킹', '니하이 스타일 스타킹', '가터벨트',
     '캣 가터', '버선', '무릎 버선', '수면 양말', '털 양말',
 
-    '발목 양말', '발가락 양말',
+    '발목 양말', '발가락 양말', '발토시',
   ];
 
   var gloves = [
     '면장갑', '가죽장갑', '비닐장갑', '고무장갑', '벙어리장갑',
     '털장갑', '목이 긴 장갑', '라텍스 장갑', '스키 장갑', '헬스 글러브',
     '드로잉 장갑', '골프 장갑', '등산 장갑', '방열 장갑', '복싱 글러브',
-    '오픈핑거 글러브',
+    '오픈핑거 글러브', '팔토시',
   ];
 
   var glasses = [
     '고글', '단안경', '무테안경', '반무테 안경', '뿔테안경',
-    '철테안경', '선글라스', '색안경', '3D 안경',
+    '철테안경', '선글라스', '색안경', '3D 안경', '바이저 마스크',
   ];
 
   var watch = [
     '디지털 시계', '스마트 워치', '아날로그 시계', '회중시계',
   ];
 
-  var extradice;
-  extradice = btnextra[Math.floor(Math.random() * btnextra.length)];
-  var diceTotal = hat.length + bag.length + socks.length + gloves.length + glasses.length + watch.length + 3;
+  var mask = [
+    '볼토', '가토', '모레타', '방진 마스크', '보건용 마스크',
+    '보온용 마스크', '조리용 마스크', '화재용 마스크', '방독면',
+    '잔니', '브리겔라', '아를레키노', '메디코 델타 페스테', '콜롬비나',
+    '오페라 가면',
+  ];
 
-  if (extradice == '모자') {
-    var hatdice = hat[Math.floor(Math.random() * hat.length)];
+  var mufflerdice = muffler[Math.floor(Math.random() * muffler.length)];
+  var hatdice = hat[Math.floor(Math.random() * hat.length)];
+  var bagdice = bag[Math.floor(Math.random() * bag.length)];
+  var socksdice = socks[Math.floor(Math.random() * socks.length)];
+  var glovesdice = gloves[Math.floor(Math.random() * gloves.length)];
+  var glassesdice = glasses[Math.floor(Math.random() * glasses.length)];
+  var watchdice = watch[Math.floor(Math.random() * watch.length)];
+  var maskdice = mask[Math.floor(Math.random() * mask.length)];
 
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 의류잡화는 <span class="color">${hatdice}!</span> (${diceTotal}개)`;
-  } else if (extradice == '가방') {
-    var bagdice = bag[Math.floor(Math.random() * bag.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 의류잡화는 <span class="color">${bagdice}!</span> (${diceTotal}개)`;
-  } else if (extradice == '양말') {
-    var socksdice = socks[Math.floor(Math.random() * socks.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 의류잡화는 <span class="color">${socksdice}!</span> (${diceTotal}개)`;
-  } else if (extradice == '장갑') {
-    var glovesdice = gloves[Math.floor(Math.random() * gloves.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 의류잡화는 <span class="color">${glovesdice}!</span> (${diceTotal}개)`;
-  } else if (extradice == '안경') {
-    var glassesdice = glasses[Math.floor(Math.random() * glasses.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 의류잡화는 <span class="color">${glassesdice}!</span> (${diceTotal}개)`;
-  } else if (extradice == '시계') {
-    var watchdice = watch[Math.floor(Math.random() * watch.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 의류잡화는 <span class="color">${watchdice}!</span> (${diceTotal}개)`;
-  } else {
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 의류잡화는 <span class="color">${extradice}!</span> (${diceTotal}개)`;
-  }
-
-  // var btnresult = document.getElementById("btnresult");
-  // var btntext = `오늘의 의류잡화는 <span class="color">${extradice}</span> (${diceTotal}개)`;
+  var btnresult = document.getElementById("btnresult");
+  var btntext = `
+    <p>오늘의 의류잡화</p>
+    <p style="font-size: 14pt;">목도리: <span class="color">${mufflerdice}!</span> (${muffler.length}개)</p>
+    <p style="font-size: 14pt;">모자: <span class="color">${hatdice}!</span> (${hat.length}개)</p>
+    <p style="font-size: 14pt;">가방: <span class="color">${bagdice}!</span> (${bag.length}개)</p>
+    <p style="font-size: 14pt;">양말: <span class="color">${socksdice}!</span> (${socks.length}개)</p>
+    <p style="font-size: 14pt;">장갑: <span class="color">${glovesdice}!</span> (${gloves.length}개)</p>
+    <p style="font-size: 14pt;">안경: <span class="color">${glassesdice}!</span> (${glasses.length}개)</p>
+    <p style="font-size: 14pt;">시계: <span class="color">${watchdice}!</span> (${watch.length}개)</p>
+    <p style="font-size: 14pt;">가면(마스크): <span class="color">${maskdice}!</span> (${mask.length}개)</p>
+  `;
   btnresult.innerHTML = btntext;
 } // 의류잡화
 
@@ -395,70 +379,29 @@ function btntradiclothing() {
   btnresult.innerHTML = btntext;
 } // 전통의상
 
-function btnclothes() {
-  var btnclothes = [
-    '원피스/드레스', '셔츠', '후드티셔츠', '티셔츠', '스웨터',
-    '가디건', '코트', '재킷', '조끼(베스트)', '팬츠',
-    '블라우스', '스커트', '세트옷',
+function btnskirt() {
+  var btnskirt = [
+    '타이트 스커트', 'A라인 스커트', 'H라인 스커트', '미디 스커트', '미니 스커트',
+    '나이프 플리츠 스커트', '박스 플리츠 스커트', '인버티드 플리츠 스커트', '아코디언 플리츠 스커트', '플레어 스커트',
+    '개더 스커트', '서큘러 스커트', '고어드 스커트', '티어드 스커트', '러플 스커트',
+    '요크 스커트', '랩 어라운드 스커트', '엠파이어 스커트', '맥시 / 롱스커트', '고고 스커트',
+    '디바이디드 스커트', '브롬 스틱 스커트', '버블 스커트', '사롱 스커트', '서스팬더 스커트',
+
+    '사야 스커트', '시스 스커트', '슬릿 스커트', '슬림 스커트', '오버 스커트',
+    '점퍼 스커트', '칼럼 스커트', '킬트 스커트', '코니컬 스커트', '튜닉 스커트',
+    '패널 스커트', '페그탑 스커트', '파라솔 스커트', '후프 스커트', '힙 히거 스커트',
+    '튤립 스커트', '파니에 스커트',
   ];
 
-  var dress = [
-    '애프터눈 드레스', '이브닝 드레스', '칵테일 드레스', '디너 드레스', '웨딩 드레스',
-    '들러리 드레스', '파티 드레스', '서머 드레스', '비치 드레스', '드레스',
-    '스웨터 드레스', '스묵 드레스', '칼라블록 드레스',
-  ];
+  var skirtdice = btnskirt[Math.floor(Math.random() * btnskirt.length)];
 
-  var shirt = [
-    '드레스 셔츠(와이셔츠)', '스포츠 셔츠', '아이비리그 셔츠(버튼 다운 셔츠)', '카우보이 셔츠', '폴로셔츠',
-    '하와이언 셔츠', '데님 셔츠', '사파리 셔츠',
-  ];
+  var btnresult = document.getElementById("btnresult");
+  var btntext = `오늘의 스커트는 <span class="color">${skirtdice}!</span> (${btnskirt.length}개)`;
+  btnresult.innerHTML = btntext;
+} // 스커트
 
-  var hoodie = [
-    '집업 후드티', '후드티', '크롭 후드티', '롱 후드티', '반팔 후드티',
-    '오버사이즈 후드티',
-  ];
-
-  var tshirt = [
-    '무지 티셔츠', '레글런 티셔츠', '단가라 티셔츠', '슬리브레스 티셔츠', '캡 슬리브 티셔츠',
-    '숏 슬리브 티셔츠', '3/4 슬리브 티셔츠', '롱 슬리브 티셔츠', '포켓 티셔츠', '폴라 티셔츠',
-    '반팔 티셔츠',
-  ];
-
-  var sweater = [
-    '무지 스웨터', '레글런 스웨터', '단가라 스웨터', '슬리브레스 스웨터', '캡 슬리브 스웨터',
-    '숏 슬리브 스웨터', '3/4 슬리브 스웨터', '롱 슬리브 스웨터', '포켓 스웨터', '폴라 스웨터',
-    '반팔 스웨터',
-  ];
-
-  var cardigan = [
-    '가디건', '루즈핏 가디건', '오픈 가디건', '롱 슬림핏 가디건', '박스 가디건',
-    '오버사이즈 가디건', '패턴 가디건', '프린트 가디건', '빈티지 가디건', '코트 가디건',
-    '단가라 가디건', '벨티드 가디건', '가디건 베스트', '크롭 가디건', '재킷 가디건',
-    '후드 가디건', '튜닉 가디건', '포켓 가디건',
-  ];
-
-  var coat = [
-    '체스터필드 코트 싱글', '체스터필드 코트 더블', '폴로코트', '브리티시 웜 코트', '박스 코트',
-    '레글런 코트', '맥 코트',
-  ];
-
-  var jacket = [
-    '피코트', '블레이저(정장 재킷 아님)', '라이더 재킷', '볼레로 재킷', '트렌치 코트',
-    '랩 코트', '스윙 코트', '베이비돌 재킷', '더플 코트', '밀리터리 재킷',
-    '블루종 재킷', '밴드 재킷', '데님 재킷', '파카', '퍼퍼(puffer)',
-    '케이프', '판초', '슈트 재킷', '싱글 브레스티드 테일러드 재킷', '더블 브레스티드 테일러드 재킷',
-    '디너 재킷', '턱시도 재킷', '벨보이 재킷', '노퍽 재킷', '사파리 재킷 ',
-
-    '샤넬 재킷', '페플럼 재킷', '다운 재킷',
-  ];
-
-  var vest = [
-    '우븐 베스트', '푸퍼 베스트', '털 베스트', '정장 베스트(칼라)', '정장 베스트(노칼라)',
-    '정장 베스트(더블)', '정장 베스트(U넥)', '데님 베스트', '플리스 베스트', '퀄티드 베스트',
-    '턱시도 베스트',
-  ];
-
-  var pants = [
+function btnpants() {
+  var btnpants = [
     '카고 팬츠', '니커즈 팬츠', '숏 팬츠', '진 팬츠', '버뮤다 팬츠',
     '벨 바텀 팬츠', '배기 팬츠', '가우초 팬츠', '부츠컷 팬츠', '와이드 팬츠',
     '슬랙스', '슬림 스트레이트 팬츠', '스키니 팬츠', '스키니진 팬츠', '핫팬츠',
@@ -471,25 +414,51 @@ function btnclothes() {
     '조거 팬츠', '트루저 팬츠', '스커트 팬츠',
   ];
 
-  var blouse = [
+  var pantsdice = btnpants[Math.floor(Math.random() * btnpants.length)];
+
+  var btnresult = document.getElementById("btnresult");
+  var btntext = `오늘의 바지는 <span class="color">${pantsdice}!</span> (${btnpants.length}개)`;
+  btnresult.innerHTML = btntext;
+} // 바지
+
+function btnblouse() {
+  var btnblouse = [
     '블루종 블라우스', '벌룬슬리브 블라우스', '새시 블라우스', '페전트 블라우스', '미디 블라우스',
     '뷔스티에 블라우스', '자보 블라우스', '시폰 블라우스', '블라우스', '플리티드 블라우스',
     '칼라리스 블라우스', '프릴 블라우스',
   ];
-  
-  var skirt = [
-    '타이트 스커트', 'A라인 스커트', 'H라인 스커트', '미디 스커트', '미니 스커트',
-    '나이프 플리츠 스커트', '박스 플리츠 스커트', '인버티드 플리츠 스커트', '아코디언 플리츠 스커트', '플레어 스커트',
-    '개더 스커트', '서큘러 스커트', '고어드 스커트', '티어드 스커트', '러플 스커트',
-    '요크 스커트', '랩 어라운드 스커트', '엠파이어 스커트', '맥시 / 롱스커트', '고고 스커트',
-    '디바이디드 스커트', '브롬 스틱 스커트', '버블 스커트', '사롱 스커트', '서스팬더 스커트',
 
-    '사야 스커트', '시스 스커트', '슬릿 스커트', '슬림 스커트', '오버 스커트',
-    '점퍼 스커트', '칼럼 스커트', '킬트 스커트', '코니컬 스커트', '튜닉 스커트',
-    '패널 스커트', '페그탑 스커트', '파라솔 스커트', '후프 스커트', '힙 히거 스커트',
-  ];
+  var blousedice = btnblouse[Math.floor(Math.random() * btnblouse.length)];
+  var collardice = fassionArray.collar[Math.floor(Math.random() * fassionArray.collar.length)];
+  var neckLinedice = fassionArray.neckLine[Math.floor(Math.random() * fassionArray.neckLine.length)];
 
-  var setclothes = [
+  var d2 = '12';
+  var destinyD2 = d2[Math.floor(Math.random() * d2.length)];
+
+  var diceTotal = ((btnblouse.length - 1) * fassionArray.neckLine.length) + ((btnblouse.length - 1) * fassionArray.collar.length);
+
+  if (destinyD2 == '1') {
+    if (blousedice == '칼라리스 블라우스') {
+      var btnresult = document.getElementById("btnresult");
+      var btntext = `오늘의 블라우스는 <span class="color">${blousedice}!</span> (${diceTotal}개)`;
+    } else {
+      var btnresult = document.getElementById("btnresult");
+      var btntext = `오늘의 블라우스는 <span class="color">${blousedice}(${neckLinedice})!</span> (${diceTotal}개)`;
+    }
+  } else if (destinyD2 == '2') {
+    if (blousedice == '칼라리스 블라우스') {
+      var btnresult = document.getElementById("btnresult");
+      var btntext = `오늘의 블라우스는 <span class="color">${blousedice}!</span> (${diceTotal}개)`;
+    } else {
+      var btnresult = document.getElementById("btnresult");
+      var btntext = `오늘의 블라우스는 <span class="color">${blousedice}(${collardice})!</span> (${diceTotal}개)`;
+    }
+  }
+  btnresult.innerHTML = btntext;
+} // 블라우스
+
+function btnsetclothes() {
+  var btnsetclothes = [
     '산타복', '우주복', '드레스', '바니걸 슈트', '방화복',
     '사제복', '웨딩 드레스', '부르마', '턱시도', '하우스메이드복',
     '정장', '가쿠란', '구속복', '관복', '수도복',
@@ -497,173 +466,178 @@ function btnclothes() {
     '교복',
   ];
 
-  var clothesdice;
-  clothesdice = btnclothes[Math.floor(Math.random() * btnclothes.length)];
+  var setclothesdice = btnsetclothes[Math.floor(Math.random() * btnsetclothes.length)];
 
-  var neckLine = [
-    '라운드 네크라인', 'U 네크라인', '스쿱 네크라인', '더치 네크라인', '호스슈 네크라인',
-    '키홀 네크라인', '슬릿 네크라인', 'V 네크라인', '트라페즈 네크라인', '오블롱 네크라인',
-    '헨리 네크라인', '턱드 네크라인', '스퀘어 네크라인', '보트 네크라인', '원 숄더 네크라인',
-    '스윗하트 네크라인', '오프 숄더 네크라인', '캐미솔 네크라인', '홀터 네크라인', '슈거백 네크라인(드로스트링 네크라인)',
-    '카울 네크라인', '서플리스 네크라인', '가디건 네크라인', '하이 네크라인', '데콜테 네크라인',
+  var btnresult = document.getElementById("btnresult");
+  var btntext = `오늘의 세트 의상은 <span class="color">${setclothesdice}!</span> (${btnsetclothes.length}개)`;
+  btnresult.innerHTML = btntext;
+} // 세트옷
 
-    '오블리크 네크라인', '스칼럽 네크라인', '다이아몬드 네크라인', '하이 네크라인', '터틀 네크라인',
-    '딥 스쿱 네크라인', '러플 네크라인', '딥 V 네크라인', '숄카라 네크라인', '오벌 네크라인',
-    '로 네크라인', '오프 네크라인', '베어드 톱 네크라인(이브닝 네크라인)', '오픈 프론트 네크라인', '플런징 네크라인(다이빙 네크라인)',
-    '스캘럽트 네트라인', '랩 오버 네크라인', '크류 네크라인', '플라워 네크라인',
+function btnjacket() {
+  var btnjacket = [
+    '피코트', '블레이저', '라이더 재킷', '볼레로 재킷', '트렌치 코트',
+    '랩 코트', '스윙 코트', '베이비돌 재킷', '더플 코트', '밀리터리 재킷',
+    '블루종 재킷', '밴드 재킷', '데님 재킷', '파카', '퍼퍼(puffer)',
+    '케이프', '판초', '슈트 재킷', '싱글 브레스티드 테일러드 재킷', '더블 브레스티드 테일러드 재킷',
+    '디너 재킷', '턱시도 재킷', '벨보이 재킷', '노퍽 재킷', '사파리 재킷 ',
+
+    '샤넬 재킷', '페플럼 재킷', '다운 재킷',
   ];
 
-  var collar = [
-    '하이넥 칼라', '만다린 칼라', '피터팬 칼라', '스탠드 칼라', '친 칼라',
-    '셔츠 칼라', '버튼 다운 칼라', '이탈리안 칼라', '컨버터블 칼라', '윙 칼라',
-    '스탠드 어웨이 칼라', '리퍼 칼라', '버서 칼라', '호스슈 칼라', '파 어웨이 칼라',
-    '이튼 칼라', '오브롱 칼라', '피크드 칼라', '피시 마우스 칼라', '테일러드 칼라',
-    '나폴레옹 칼라', '사이드 웨이 칼라', '숄 칼라(턱시도 칼라)', '보우 칼라', '세일러 칼라',
-    '케이프 칼라', '컷 어웨이 칼라', '노치드 라펠', '피크드 라펠', '더블 칼라',
-    '스탠드 업 칼라', '타이 칼라', '리본 칼라', '스톨 칼라', '스카프 칼라',
-    '넥밴드 칼라', '조니 칼라', '링 칼라', '프릴 칼라', '러프 칼라',
-    '러플드 칼라', '라바 칼라', '피슈 칼라', '스텐 칼라', '터틀넥 칼라',
-    '캐스케이팅 칼라', '모트 칼라', '리플드 칼라', '팬 칼라', '후드 칼라',
+  var jacketdice = btnjacket[Math.floor(Math.random() * btnjacket.length)];
 
-    '사이드웨이 칼라', '셰익스피어 칼라', '더치 칼라', '체스터필드 칼라', '베르타 칼라',
-    '첼시 칼라', '차이니즈 칼라', '퓨리턴 칼라', '푸시 보우 칼라',
+  var lapelWidth = [
+    '슬림', '레귤러', '와이드',
   ];
 
-  var silhouette = [
-    '시스 실루엣', '튜블러 실루엣', 'H 라인 실루엣', '트라페즈 실루엣', '엠파이어 실루엣',
-    '시프트 실루엣', '돔 실루엣', '미나렛 실루엣', '머메이드 실루엣', '버슬 실루엣',
-    '프린세스 실루엣', '피티드 실루엣', '크리놀린 실루엣', '박스 실루엣', '배럴 실루엣',
-    '코쿤 실루엣', 'O 라인 실루엣', 'T 라인 실루엣', 'Y 라인 실루엣', '벌룬 실루엣',
-    '볼 실루엣', '케이프 실루엣', '콜드 숄더 실루엣', '하이로우 실루엣', '맥시 실루엣',
-    '미디 실루엣', '마이크로 미니 실루엣', '미니 실루엣', '뉴룩 실루엣', '파고다 숄더 실루엣',
-    '페플럼 실루엣', '트레일 실루엣', '트럼펫 실루엣', '랩 실루엣', '바디콘 실루엣',
-    '베이비돌 실루엣', '슈미즈 실루엣', '드레이프트 실루엣', '스트레이트 실루엣', '스트레치 실루엣',
-    '앰플 실루엣', '와인 글래스 실루엣', '아워글라스 실루엣', '슬림 실루엣', '호블 실루엣',
-    '롱 토르소 실루엣', '포멀 실루엣', '플레어 실루엣', '텐트 실루엣', '피나포어 실루엣',
-
-    '파딩게일 실루엣', '셔츠 웨이스트 실루엣', '드롭 웨이스트 실루엣', '카프탄 실루엣',
+  var lapelShape = [
+    '노치트 라펠', '피그드 라펠', '숄 라펠', '클로버 리프 라펠', '피시 마우스 라펠',
+    '벨드 라펠',
   ];
 
-  var diceTotal = setclothes.length + jacket.length + (shirt.length * (collar.length - 1)) + hoodie.length +
-  (tshirt.length * neckLine.length) + (sweater.length * neckLine.length) + vest.length + pants.length + coat.length +
-  (neckLine.length * (blouse.length - 1)) + (collar.length * (blouse.length - 1)) + cardigan.length +
-  skirt.length + (dress.length * silhouette.length);
-
-  if (clothesdice == '세트옷') {
-    var setclothesdice = setclothes[Math.floor(Math.random() * setclothes.length)];
+  if (jacketdice == ('블레이저' || '슈트 재킷')) {
+    var widthDice = lapelWidth[Math.floor(Math.random() * lapelWidth.length)];
+    var shapeDice = lapelShape[Math.floor(Math.random() * lapelShape.length)];
 
     var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 의상은 <span class="color">${setclothesdice}!</span> (${diceTotal}개)`;
-  } else if (clothesdice == '재킷') {
-    var jacketdice = jacket[Math.floor(Math.random() * jacket.length)];
-
-    var lapelWidth = [
-      '슬림', '레귤러', '와이드',
-    ];
-    
-    var lapelShape = [
-      '노치트 라펠', '피그드 라펠', '숄 라펠', '클로버 리프 라펠', '피시 마우스 라펠',
-      '벨드 라펠',
-    ];
-
-    if (jacketdice == ('블레이저(정장 재킷 아님)' || '슈트 재킷')) {
-      var widthDice = lapelWidth[Math.floor(Math.random() * lapelWidth.length)];
-      var shapeDice = lapelShape[Math.floor(Math.random() * lapelShape.length)];
-
-      var btnresult = document.getElementById("btnresult");
-      var btntext = `오늘의 의상은 <span class="color">${jacketdice}(${widthDice} ${shapeDice})!</span> (${diceTotal}개)`;
-    }
-
+    var btntext = `오늘의 재킷은 <span class="color">${jacketdice}(${widthDice} ${shapeDice})!</span> (${btnjacket.length}개)`;
+  } else {
     var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 의상은 <span class="color">${jacketdice}!</span> (${diceTotal}개)`;
-  } else if (clothesdice == '원피스/드레스') {
-    var dressdice = dress[Math.floor(Math.random() * dress.length)];
-    var silhouettedice = silhouette[Math.floor(Math.random() * silhouette.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 의상은 <span class="color">${silhouettedice} ${dressdice}!</span> (${diceTotal}개)`;
-  } else if (clothesdice == '셔츠') {
-    var shirtdice = shirt[Math.floor(Math.random() * shirt.length)];
-    var collardice = collar[Math.floor(Math.random() * collar.length)];
-
-    if (shirtdice == '아이비리그 셔츠(버튼 다운 셔츠)') {
-      var btnresult = document.getElementById("btnresult");
-      var btntext = `오늘의 의상은 <span class="color">${shirtdice}!</span> (${diceTotal}개)`;
-    } else {
-      var btnresult = document.getElementById("btnresult");
-      var btntext = `오늘의 의상은 <span class="color">${collardice} ${shirtdice}!</span> (${diceTotal}개)`;
-    }
-  } else if (clothesdice == '후드티셔츠') {
-    var hoodiedice = hoodie[Math.floor(Math.random() * hoodie.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 의상은 <span class="color">${hoodiedice}!</span> (${diceTotal}개)`;
-  } else if (clothesdice == '티셔츠') {
-    var tshirtdice = tshirt[Math.floor(Math.random() * tshirt.length)];
-    var neckLinedice = neckLine[Math.floor(Math.random() * neckLine.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 의상은 <span class="color">${neckLinedice} ${tshirtdice}!</span> (${diceTotal}개)`;
-  } else if (clothesdice == '스웨터') {
-    var sweaterdice = sweater[Math.floor(Math.random() * sweater.length)];
-    var neckLinedice = neckLine[Math.floor(Math.random() * neckLine.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 의상은 <span class="color">${neckLinedice} ${sweaterdice}!</span> (${diceTotal}개)`;
-  } else if (clothesdice == '가디건') {
-    var cardigandice = cardigan[Math.floor(Math.random() * cardigan.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 의상은 <span class="color">${cardigandice}!</span> (${diceTotal}개)`;
-  } else if (clothesdice == '코트') {
-    var coatdice = coat[Math.floor(Math.random() * coat.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 의상은 <span class="color">${coatdice}!</span> (${diceTotal}개)`;
-  } else if (clothesdice == '조끼(베스트)') {
-    var vestdice = vest[Math.floor(Math.random() * vest.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 의상은 <span class="color">${vestdice}!</span> (${diceTotal}개)`;
-  } else if (clothesdice == '팬츠') {
-    var pantsdice = pants[Math.floor(Math.random() * pants.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 의상은 <span class="color">${pantsdice}!</span> (${diceTotal}개)`;
-  } else if (clothesdice == '블라우스') {
-    var blousedice = blouse[Math.floor(Math.random() * blouse.length)];
-    var collardice = collar[Math.floor(Math.random() * collar.length)];
-    var neckLinedice = neckLine[Math.floor(Math.random() * neckLine.length)];
-
-    var d2 = '12';
-    var destinyD2 = d2[Math.floor(Math.random() * d2.length)];
-
-    if (destinyD2 == '1') {
-      if (blousedice == '칼라리스 블라우스') {
-        var btnresult = document.getElementById("btnresult");
-        var btntext = `오늘의 의상은 <span class="color">${blousedice}!</span> (${diceTotal}개)`;
-      } else {
-        var btnresult = document.getElementById("btnresult");
-        var btntext = `오늘의 의상은 <span class="color">${neckLinedice} ${blousedice}!</span> (${diceTotal}개)`;
-      }
-    } else {
-      if (blousedice == '칼라리스 블라우스') {
-        var btnresult = document.getElementById("btnresult");
-        var btntext = `오늘의 의상은 <span class="color">${blousedice}!</span> (${diceTotal}개)`;
-      } else {
-        var btnresult = document.getElementById("btnresult");
-        var btntext = `오늘의 의상은 <span class="color">${collardice} ${blousedice}!</span> (${diceTotal}개)`;
-      }
-    }
-  } else if (clothesdice == '스커트') {
-    var skirtdice = skirt[Math.floor(Math.random() * skirt.length)];
-
-    var btnresult = document.getElementById("btnresult");
-    var btntext = `오늘의 의상은 <span class="color">${skirtdice}!</span> (${diceTotal}개)`;
+    var btntext = `오늘의 재킷은 <span class="color">${jacketdice}!</span> (${btnjacket.length}개)`;
   }
 
   btnresult.innerHTML = btntext;
-} // 의상
+} // 재킷
+
+function btnshirt() {
+  var btnshirt = [
+    '드레스 셔츠', '스포츠 셔츠', '아이비리그 셔츠', '카우보이 셔츠', '폴로셔츠',
+    '하와이언 셔츠', '데님 셔츠', '사파리 셔츠',
+  ];
+
+  var shirtdice = btnshirt[Math.floor(Math.random() * btnshirt.length)];
+  var collardice = fassionArray.collar[Math.floor(Math.random() * fassionArray.collar.length)];
+
+  if (shirtdice == '아이비리그 셔츠') {
+    var btnresult = document.getElementById("btnresult");
+    var btntext = `오늘의 셔츠는 <span class="color">${shirtdice}!</span> (${(btnshirt.length - 1) * fassionArray.collar.length}개)`;
+  } else {
+    var btnresult = document.getElementById("btnresult");
+    var btntext = `
+      오늘의 셔츠는 <span class="color">${shirtdice}(${collardice})!</span> (${(btnshirt.length - 1) * fassionArray.collar.length}개)
+    `;
+  }
+  btnresult.innerHTML = btntext;
+} // 셔츠
+
+function btntshirt() {
+  var btntshirt = [
+    '무지 티셔츠', '레글런 티셔츠', '단가라 티셔츠', '슬리브레스 티셔츠', '캡 슬리브 티셔츠',
+    '숏 슬리브 티셔츠', '3/4 슬리브 티셔츠', '롱 슬리브 티셔츠', '포켓 티셔츠', '폴라 티셔츠',
+    '반팔 티셔츠',
+  ];
+
+  var tshirtdice = btntshirt[Math.floor(Math.random() * btntshirt.length)];
+  var neckLinedice = fassionArray.neckLine[Math.floor(Math.random() * fassionArray.neckLine.length)];
+
+  var btnresult = document.getElementById("btnresult");
+  var btntext = `
+    오늘의 티셔츠는 <span class="color">${neckLinedice} ${tshirtdice}!</span> (${btntshirt.length * fassionArray.neckLine.length}개)
+  `;
+  btnresult.innerHTML = btntext;
+} // 티셔츠
+
+function btnhoodie() {
+  var btnhoodie = [
+    '집업 후드티', '후드티', '크롭 후드티', '롱 후드티', '반팔 후드티',
+    '오버사이즈 후드티',
+  ];
+
+  var hoodiedice = btnhoodie[Math.floor(Math.random() * btnhoodie.length)];
+
+  var btnresult = document.getElementById("btnresult");
+  var btntext = `오늘의 후드는 <span class="color">${hoodiedice}!</span> (${btnhoodie.length}개)`;
+  btnresult.innerHTML = btntext;
+} // 후드
+
+function btnvest() {
+  var btnvest = [
+    '우븐 베스트', '푸퍼 베스트', '털 베스트', '정장 베스트(칼라)', '정장 베스트(노칼라)',
+    '정장 베스트(더블)', '정장 베스트(U넥)', '데님 베스트', '플리스 베스트', '퀄티드 베스트',
+    '턱시도 베스트',
+  ];
+
+  var vestdice = btnvest[Math.floor(Math.random() * btnvest.length)];
+
+  var btnresult = document.getElementById("btnresult");
+  var btntext = `오늘의 조끼는 <span class="color">${vestdice}!</span> (${btnvest.length}개)`;
+  btnresult.innerHTML = btntext;
+} // 조끼
+
+function btnsweater() {
+  var btnsweater = [
+    '무지 스웨터', '레글런 스웨터', '단가라 스웨터', '슬리브레스 스웨터', '캡 슬리브 스웨터',
+    '숏 슬리브 스웨터', '3/4 슬리브 스웨터', '롱 슬리브 스웨터', '포켓 스웨터', '폴라 스웨터',
+    '반팔 스웨터',
+  ];
+
+  var sweaterdice = btnsweater[Math.floor(Math.random() * btnsweater.length)];
+  var neckLinedice = fassionArray.neckLine[Math.floor(Math.random() * fassionArray.neckLine.length)];
+
+  var btnresult = document.getElementById("btnresult");
+  var btntext = `
+    오늘의 스웨터는 <span class="color">${neckLinedice} ${sweaterdice}!</span> (${btnsweater.length * fassionArray.neckLine.length}개)
+  `;
+  btnresult.innerHTML = btntext;
+} // 스웨터
+
+function btncardigan() {
+  var btncardigan = [
+    '가디건', '루즈핏 가디건', '오픈 가디건', '롱 슬림핏 가디건', '박스 가디건',
+    '오버사이즈 가디건', '패턴 가디건', '프린트 가디건', '빈티지 가디건', '코트 가디건',
+    '단가라 가디건', '벨티드 가디건', '가디건 베스트', '크롭 가디건', '재킷 가디건',
+    '후드 가디건', '튜닉 가디건', '포켓 가디건',
+  ];
+
+  var cardigandice = btncardigan[Math.floor(Math.random() * btncardigan.length)];
+
+  var btnresult = document.getElementById("btnresult");
+  var btntext = `오늘의 가디건은 <span class="color">${cardigandice}!</span> (${btncardigan.length}개)`;
+  btnresult.innerHTML = btntext;
+} // 가디건
+
+function btncoat() {
+  var btncoat = [
+    '체스터필드 코트 싱글', '체스터필드 코트 더블', '폴로코트', '브리티시 웜 코트', '박스 코트',
+    '레글런 코트', '맥 코트',
+  ];
+
+  var coatdice = btncoat[Math.floor(Math.random() * btncoat.length)];
+
+  var btnresult = document.getElementById("btnresult");
+  var btntext = `오늘의 코트는 <span class="color">${coatdice}!</span> (${btncoat.length}개)`;
+  btnresult.innerHTML = btntext;
+} // 코트
+
+function btndress() {
+  var btndress = [
+    '애프터눈 드레스', '이브닝 드레스', '칵테일 드레스', '디너 드레스', '웨딩 드레스',
+    '들러리 드레스', '파티 드레스', '서머 드레스', '비치 드레스', '드레스',
+    '스웨터 드레스', '스묵 드레스', '칼라블록 드레스',
+  ];
+
+  var dressdice = btndress[Math.floor(Math.random() * btndress.length)];
+  var silhouettedice = fassionArray.silhouette[Math.floor(Math.random() * fassionArray.silhouette.length)];
+  var neckLinedice = fassionArray.neckLine[Math.floor(Math.random() * fassionArray.neckLine.length)];
+
+  var diceTotal = btndress.length * fassionArray.silhouette.length * fassionArray.neckLine.length;
+
+  var btnresult = document.getElementById("btnresult");
+  var btntext = `
+      오늘의 드레스는 <span class="color">${neckLinedice} ${dressdice}(${silhouettedice})!</span> (${diceTotal}개)
+    `;
+  btnresult.innerHTML = btntext;
+} // 드레스
 
 // ---------- 템플릿 ----------
 

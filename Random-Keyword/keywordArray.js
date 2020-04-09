@@ -192,13 +192,13 @@ function btnrandom() {
   var btntext = `
       오늘의 키워드는... 이거다!
       <div class="wordbox color">
-<p>${randomdice}! (${btnrandom.length}개)</p>
-          <p style="color: #333333; margin: 20px 0px; font-size: 16pt;">보너스</p>
-          <p style="font-size: 16pt;">${randomdice2}!</p>
-          <p style="font-size: 16pt;">${randomdice3}!</p>
-          <p style="font-size: 16pt;">${randomdice4}!</p>
-          <p style="font-size: 16pt;">${randomdice5}!</p>
-          <p style="font-size: 16pt;">${randomdice6}!</p>
+        <p>${randomdice}! (${btnrandom.length}개)</p>
+        <p style="color: #333333; margin: 20px 0px; font-size: 14pt;">보너스</p>
+        <p style="font-size: 14pt;">${randomdice2}!</p>
+        <p style="font-size: 14pt;">${randomdice3}!</p>
+        <p style="font-size: 14pt;">${randomdice4}!</p>
+        <p style="font-size: 14pt;">${randomdice5}!</p>
+        <p style="font-size: 14pt;">${randomdice6}!</p>
       </div>
   `;
   btnresult.innerHTML = btntext;
