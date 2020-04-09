@@ -354,6 +354,36 @@ function btnrondom6color() {
   btnresult.innerHTML = btntext;
 } // 랜덤 6색
 
+function btnjewels() {
+  var btnjewels = [];
+
+  var btnjewelsdice;
+  btnjewelsdice = btnjewels[Math.floor(Math.random() * btnjewels.length)];
+  var btnresult = document.getElementById("btnresult");
+  var btntext = `오늘의 단어는 <span class="color">${btnjewelsdice}!</span> (${btnjewels.length}개)`;
+  btnresult.innerHTML = btntext;
+} // 보석
+
+function btnflowers() {
+  var btnflowers = [];
+
+  var btnflowersdice;
+  btnflowersdice = btnflowers[Math.floor(Math.random() * btnflowers.length)];
+  var btnresult = document.getElementById("btnresult");
+  var btntext = `오늘의 단어는 <span class="color">${btnflowersdice}!</span> (${btnflowers.length}개)`;
+  btnresult.innerHTML = btntext;
+} // 꽃
+
+function btnanimals() {
+  var btnanimals = [];
+
+  var btnanimalsdice;
+  btnanimalsdice = btnanimals[Math.floor(Math.random() * btnanimals.length)];
+  var btnresult = document.getElementById("btnresult");
+  var btntext = `오늘의 단어는 <span class="color">${btnanimalsdice}!</span> (${btnanimals.length}개)`;
+  btnresult.innerHTML = btntext;
+} // 동물
+
 // ---------- 템플릿 ----------
 
 function word() {
@@ -362,6 +392,6 @@ function word() {
   var dice;
   dice = word[Math.floor(Math.random() * word.length)];
   var btnresult = document.getElementById("btnresult");
-  var btntext = '<span class="color">' + dice + " </span>" + "문구 (" + word.length + "개)";
+  var btntext = `오늘의 단어는 <span class="color">${dice}!</span> (${word.length}개)`;
   btnresult.innerHTML = btntext;
-}
+} // 항목

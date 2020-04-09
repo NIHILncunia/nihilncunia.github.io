@@ -244,6 +244,11 @@ function btnextra() {
     '장옥', '전모', '너울', '볼끼',
   ];
 
+  var manteau = [
+    '망토', '케이프', '털 망토', '숏 케이프', '롱 케이프',
+    '로브', '긴 로브',
+  ];
+
   var bag = [
     '토트백', '숄더백', '크로스백', '백팩', '클러치백',
     '쇼퍼백', '보스톤백', '버킷백', '바게트백', '호보백',
@@ -287,6 +292,7 @@ function btnextra() {
 
   var mufflerdice = muffler[Math.floor(Math.random() * muffler.length)];
   var hatdice = hat[Math.floor(Math.random() * hat.length)];
+  var manteaudice = manteau[Math.floor(Math.random() * manteau.length)];
   var bagdice = bag[Math.floor(Math.random() * bag.length)];
   var socksdice = socks[Math.floor(Math.random() * socks.length)];
   var glovesdice = gloves[Math.floor(Math.random() * gloves.length)];
@@ -299,6 +305,7 @@ function btnextra() {
     <p>오늘의 의류잡화</p>
     <p style="font-size: 14pt;">목도리: <span class="color">${mufflerdice}!</span> (${muffler.length}개)</p>
     <p style="font-size: 14pt;">모자: <span class="color">${hatdice}!</span> (${hat.length}개)</p>
+    <p style="font-size: 14pt;">망토: <span class="color">${manteaudice}!</span> (${manteau.length}개)</p>
     <p style="font-size: 14pt;">가방: <span class="color">${bagdice}!</span> (${bag.length}개)</p>
     <p style="font-size: 14pt;">양말: <span class="color">${socksdice}!</span> (${socks.length}개)</p>
     <p style="font-size: 14pt;">장갑: <span class="color">${glovesdice}!</span> (${gloves.length}개)</p>
@@ -483,7 +490,7 @@ function btnjacket() {
     '케이프', '판초', '슈트 재킷', '싱글 브레스티드 테일러드 재킷', '더블 브레스티드 테일러드 재킷',
     '디너 재킷', '턱시도 재킷', '벨보이 재킷', '노퍽 재킷', '사파리 재킷 ',
 
-    '샤넬 재킷', '페플럼 재킷', '다운 재킷',
+    '샤넬 재킷', '페플럼 재킷', '다운 재킷', '점퍼', '야구 점퍼',
   ];
 
   var jacketdice = btnjacket[Math.floor(Math.random() * btnjacket.length)];
