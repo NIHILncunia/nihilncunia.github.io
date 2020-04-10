@@ -617,6 +617,6 @@ function word() {
   var dice;
   dice = word[Math.floor(Math.random() * word.length)];
   var btnresult = document.getElementById("btnresult");
-  var btntext = '<span class="color">' + dice + " </span>" + "문구 (" + word.length + "개)";
+  var btntext = `오늘의 단어는 <span class="color">${dice}!</span> (${word.length}개)`;
   btnresult.innerHTML = btntext;
 } // 항목
