@@ -1,19 +1,20 @@
 function btnrace() {
   var race = [
-      '휴미안', '엘피안', '다르크엘피안', '디엘피안', '우르키안',
-      '듀아피안', '고블리안', '아스모디안', '고르고니안', '타이타니안',
-      '디아볼리안', '엘리오시안', '오우간', '리아피안', '머메디안',
-      '블라디안', '엘레멘티', '엔티안', '그렘리안', '오블리안',
-      '불카니안', '드라고니안', '드라큘리안', '락토니안', '디모니안',
-      '아스트리안', '엘리오스', '디아볼로스', '데미 셀레스티안',
-      '셀레스티안', '아르탈른', '안드로이드', '사이보그', '언데드',
-      '기어로비아', '고스티아', '이레귤러', '아크 아르탈른', '신룡',
-      '마수', '마룡', '신수', '몬스터',
+    '휴미안', '엘피안', '다르크엘피안', '디엘피안', '우르키안',
+    '듀아피안', '고블리안', '아스모디안', '고르고니안', '타이타니안',
+    '디아볼리안', '엘리오시안', '오우간', '리아피안', '머메디안',
+    '블라디안', '엘레멘티', '엔티안', '그렘리안', '오블리안',
+    '불카니안', '드라고니안', '드라큘리안', '락토니안', '디모니안',
+
+    '아스트리안', '엘리오스', '디아볼로스', '데미 셀레스티안',
+    '셀레스티안', '아르탈른', '안드로이드', '사이보그', '언데드',
+    '기어로비아', '고스티아', '이레귤러', '아크 아르탈른', '신룡',
+    '마수', '마룡', '신수', '몬스터',
   ];
   // 레이스라는 이름으로 배열을 만든다.
 
   var racedice;
-  racedice = race[Math.floor(Math.random()*race.length)];
+  racedice = race[Math.floor(Math.random() * race.length)];
   // 방금 변수로 지정한 배열에서 랜던감 값을 뽑아낸다.
 
   var btnresult = document.getElementById("btnresult");
@@ -28,30 +29,31 @@ function btnrace() {
 
 function btnclass() {
   var btnclass = [
-      '원소 마법사', '투사', '그림자 투사', '음악가', '사격수',
-      '궁사', '도적', '신성 기사', '기사', '약초사',
-      '갑옷장인(대장장이)', '정비사', '정화사', '사제', '암흑 마법사',
-      '신성 마법사', '소환 마법사', '무기 상인', '요리사', '강령술사',
-      '사령술사', '무투사(격투가)', '마법투사', '농부', '무법자',
-      '수도승', '살인청부업자', '신관', '점술사', '정령 마법사',
-      '이단심판관', '어부', '왕', '왕자', '공주',
-      '여왕', '황제', '여제', '용사', '퇴마사',
-      '장의사', '가수', '주술사', '마왕', '방패투사',
-      '갑옷 상인', '약초 상인', '잡품 상인', '무기장인(대장장이)', '자연숭배가',
+    '원소 마법사', '투사', '그림자 투사', '음악가', '사격수',
+    '궁사', '도적', '신성 기사', '기사', '약초사',
+    '갑옷장인(대장장이)', '정비사', '정화사', '사제', '암흑 마법사',
+    '신성 마법사', '소환 마법사', '무기 상인', '요리사', '강령술사',
+    '사령술사', '무투사(격투가)', '마법투사', '농부', '무법자',
+    '수도승', '살인청부업자', '신관', '점술사', '정령 마법사',
+    '이단심판관', '어부', '왕', '왕자', '공주',
+    '여왕', '황제', '여제', '용사', '퇴마사',
+    '장의사', '가수', '주술사', '마왕', '방패투사',
+    '갑옷 상인', '약초 상인', '잡품 상인', '무기장인(대장장이)', '자연숭배자',
 
-      '광투사', '야만투사', '정찰꾼', '해적', '산적',
-      '현상금 사냥꾼', '교주', '(무기를 사용하는)투사', '예언가', '암살자',
-      '암흑 기사', '인형술사', '건달', '병사', '노예',
-      '집사', '영매사', '암상인', '사서', '촌장',
-      '저격수', '장교', '의료사', '간호원', '신부(종교)',
+    '광투사', '야만투사', '정찰꾼', '해적', '산적',
+    '현상금 사냥꾼', '교주', '(무기를 사용하는)술사', '예언가', '암살자',
+    '암흑 기사', '인형술사', '건달', '병사', '노예',
+    '집사', '영매사', '암상인', '사서', '촌장',
+    '저격술사', '장교', '의료사', '간호원', '신부(종교)',
 
-      '사기꾼', '파계승', '학자', '마도학자', '음양사',
-      '항해사', '선장', '요리사', '교사', '세계의 수호자',
-      '수호자', '모험가', '해결사',
+    '사기꾼', '파계승', '학자', '마도학자', '음양사',
+    '항해사', '선장', '요리사', '교사', '세계의 수호자',
+    '수호자', '모험가', '해결사', '퇴역 장교', '사격술사',
+    '마기사', '암흑 기사', '검투사', '예언가',
   ];
 
   var classdice;
-  classdice = btnclass[Math.floor(Math.random()*btnclass.length)];
+  classdice = btnclass[Math.floor(Math.random() * btnclass.length)];
   var btnresult = document.getElementById("btnresult");
   var btntext = '오늘의 직업은 <span class="color">' + classdice + "!</span> (" + btnclass.length + "개)";
   btnresult.innerHTML = btntext;
@@ -162,7 +164,7 @@ function btnclothesSet() {
     '전신수영복', '스트링 비키니', '부르키니', '스포츠 비키니', '슬링 샷',
     '원피스', '모노키니', '비키니', '하이웨이스트 비키니', '프릴 비키니',
     '홀터넥 비키니', '탱크탑 비키니', '오프 숄더 비키니', '스커트 랩', '시스루 니트',
-    '튜브 탑 비키니', '하이레그', 
+    '튜브 탑 비키니', '하이레그',
   ];
   var Fshoes = [
     '맨발', '맨발 + 붕대를 감음', '맨발 + 한쪽 발에만 붕대를 감음', '모카신', '몽크',
@@ -180,7 +182,7 @@ function btnclothesSet() {
     '로퍼', '토오픈', 'T스트랩', '부티', '부츠',
     '글레디에이터 슈즈', '플립플랍', '샌들', '웨지 부티', '힐리스 힐',
     '사이드 오픈', '플랫', '포니 힐', '발렛 힐', '에스파드류',
-    '옥스퍼드', '드라이빙 슈즈', '도르세이', 
+    '옥스퍼드', '드라이빙 슈즈', '도르세이',
   ];
 
   var acc1 = [
@@ -219,30 +221,30 @@ function btnclothesSet() {
   ];
 
   var genderdice;
-  genderdice = gender[Math.floor(Math.random()*gender.length)];
+  genderdice = gender[Math.floor(Math.random() * gender.length)];
 
-  var outerdice = outer[Math.floor(Math.random()*outer.length)];
+  var outerdice = outer[Math.floor(Math.random() * outer.length)];
 
-  var Mtop1dice = Mtop1[Math.floor(Math.random()*Mtop1.length)];
-  var Mtop2dice = Mtop2[Math.floor(Math.random()*Mtop2.length)];
-  var Mbottom1dice = Mbottom1[Math.floor(Math.random()*Mbottom1.length)];
-  var Mbottom2dice = Mbottom2[Math.floor(Math.random()*Mbottom2.length)];
-  var Munderdice = Munder[Math.floor(Math.random()*Munder.length)];
-  var Mshoesdice = Mshoes[Math.floor(Math.random()*Mshoes.length)];
+  var Mtop1dice = Mtop1[Math.floor(Math.random() * Mtop1.length)];
+  var Mtop2dice = Mtop2[Math.floor(Math.random() * Mtop2.length)];
+  var Mbottom1dice = Mbottom1[Math.floor(Math.random() * Mbottom1.length)];
+  var Mbottom2dice = Mbottom2[Math.floor(Math.random() * Mbottom2.length)];
+  var Munderdice = Munder[Math.floor(Math.random() * Munder.length)];
+  var Mshoesdice = Mshoes[Math.floor(Math.random() * Mshoes.length)];
 
-  var Ftop1dice = Ftop1[Math.floor(Math.random()*Ftop1.length)];
-  var Ftop2dice = Ftop2[Math.floor(Math.random()*Ftop2.length)];
-  var Fbottom1dice = Fbottom1[Math.floor(Math.random()*Fbottom1.length)];
-  var Fbottom2dice = Fbottom2[Math.floor(Math.random()*Fbottom2.length)];
-  var Funderdice = Funder[Math.floor(Math.random()*Funder.length)];
-  var Fshoesdice = Fshoes[Math.floor(Math.random()*Fshoes.length)];
+  var Ftop1dice = Ftop1[Math.floor(Math.random() * Ftop1.length)];
+  var Ftop2dice = Ftop2[Math.floor(Math.random() * Ftop2.length)];
+  var Fbottom1dice = Fbottom1[Math.floor(Math.random() * Fbottom1.length)];
+  var Fbottom2dice = Fbottom2[Math.floor(Math.random() * Fbottom2.length)];
+  var Funderdice = Funder[Math.floor(Math.random() * Funder.length)];
+  var Fshoesdice = Fshoes[Math.floor(Math.random() * Fshoes.length)];
 
-  var acc1dice = acc1[Math.floor(Math.random()*acc1.length)];
-  var acc2dice = acc2[Math.floor(Math.random()*acc2.length)];
-  var extra1dice = extra1[Math.floor(Math.random()*extra1.length)];
-  var extra2dice = extra2[Math.floor(Math.random()*extra2.length)];
-  var keyword1dice = keyword1[Math.floor(Math.random()*keyword1.length)];
-  var keyword2dice = keyword2[Math.floor(Math.random()*keyword2.length)];
+  var acc1dice = acc1[Math.floor(Math.random() * acc1.length)];
+  var acc2dice = acc2[Math.floor(Math.random() * acc2.length)];
+  var extra1dice = extra1[Math.floor(Math.random() * extra1.length)];
+  var extra2dice = extra2[Math.floor(Math.random() * extra2.length)];
+  var keyword1dice = keyword1[Math.floor(Math.random() * keyword1.length)];
+  var keyword2dice = keyword2[Math.floor(Math.random() * keyword2.length)];
 
   var d2 = '0123456789';
   var destinyD2_1;
@@ -261,96 +263,96 @@ function btnclothesSet() {
 
   if (genderdice == '남성') {
 
-    destinyD2_1 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_2 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_3 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_4 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_5 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_6 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_7 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_8 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_9 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_10 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_11 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_12 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_13 = d2[Math.floor(Math.random()*d2.length)];
+    destinyD2_1 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_2 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_3 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_4 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_5 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_6 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_7 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_8 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_9 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_10 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_11 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_12 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_13 = d2[Math.floor(Math.random() * d2.length)];
 
     if (destinyD2_1 <= '1') {
       outerdice = '없음';
     } else if (destinyD2_1 >= '2') {
-      outerdice = outer[Math.floor(Math.random()*outer.length)];
+      outerdice = outer[Math.floor(Math.random() * outer.length)];
     }
 
     if (destinyD2_2 <= '1') {
       Mtop1dice = '없음';
     } else if (destinyD2_2 >= '2') {
-      Mtop1dice = Mtop1[Math.floor(Math.random()*Mtop1.length)];
+      Mtop1dice = Mtop1[Math.floor(Math.random() * Mtop1.length)];
     }
 
     if (destinyD2_3 <= '1') {
       Mtop2dice = '없음';
     } else if (destinyD2_3 >= '2') {
-      Mtop2dice = Mtop2[Math.floor(Math.random()*Mtop2.length)];
+      Mtop2dice = Mtop2[Math.floor(Math.random() * Mtop2.length)];
     }
 
     if (destinyD2_4 <= '1') {
       Mbottom1dice = '없음';
     } else if (destinyD2_4 >= '2') {
-      Mbottom1dice = Mbottom1[Math.floor(Math.random()*Mbottom1.length)];
+      Mbottom1dice = Mbottom1[Math.floor(Math.random() * Mbottom1.length)];
     }
 
     if (destinyD2_5 <= '1') {
       Mbottom2dice = '없음';
     } else if (destinyD2_5 >= '2') {
-      Mbottom2dice = Mbottom2[Math.floor(Math.random()*Mbottom2.length)];
+      Mbottom2dice = Mbottom2[Math.floor(Math.random() * Mbottom2.length)];
     }
 
     if (destinyD2_6 <= '1') {
       Munderdice = '없음';
     } else if (destinyD2_6 >= '2') {
-      Munderdice = Munder[Math.floor(Math.random()*Munder.length)];
+      Munderdice = Munder[Math.floor(Math.random() * Munder.length)];
     }
 
     if (destinyD2_7 <= '1') {
       Mshoesdice = '없음';
     } else if (destinyD2_7 >= '2') {
-      Mshoesdice = Mshoes[Math.floor(Math.random()*Mshoes.length)];
+      Mshoesdice = Mshoes[Math.floor(Math.random() * Mshoes.length)];
     }
 
     if (destinyD2_8 <= '1') {
       acc1dice = '없음';
     } else if (destinyD2_8 >= '2') {
-      acc1dice = acc1[Math.floor(Math.random()*acc1.length)];
+      acc1dice = acc1[Math.floor(Math.random() * acc1.length)];
     }
 
     if (destinyD2_9 <= '1') {
       acc2dice = '없음';
     } else if (destinyD2_9 >= '2') {
-      acc2dice = acc2[Math.floor(Math.random()*acc2.length)];
+      acc2dice = acc2[Math.floor(Math.random() * acc2.length)];
     }
 
     if (destinyD2_10 <= '1') {
       extra1dice = '없음';
     } else if (destinyD2_10 >= '2') {
-      extra1dice = extra1[Math.floor(Math.random()*extra1.length)];
+      extra1dice = extra1[Math.floor(Math.random() * extra1.length)];
     }
 
     if (destinyD2_11 <= '1') {
       extra2dice = '없음';
     } else if (destinyD2_11 >= '2') {
-      extra2dice = extra2[Math.floor(Math.random()*extra2.length)];
+      extra2dice = extra2[Math.floor(Math.random() * extra2.length)];
     }
 
     if (destinyD2_12 <= '1') {
       keyword1dice = '없음';
     } else if (destinyD2_12 >= '2') {
-      keyword1dice = keyword1[Math.floor(Math.random()*keyword1.length)];
+      keyword1dice = keyword1[Math.floor(Math.random() * keyword1.length)];
     }
 
     if (destinyD2_13 <= '1') {
       keyword2dice = '없음';
     } else if (destinyD2_13 >= '2') {
-      keyword2dice = keyword2[Math.floor(Math.random()*keyword2.length)];
+      keyword2dice = keyword2[Math.floor(Math.random() * keyword2.length)];
     }
 
     var btntext = `
@@ -373,96 +375,96 @@ function btnclothesSet() {
     `;
   } else if (genderdice == '여성') {
 
-    destinyD2_1 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_2 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_3 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_4 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_5 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_6 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_7 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_8 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_9 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_10 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_11 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_12 = d2[Math.floor(Math.random()*d2.length)];
-    destinyD2_13 = d2[Math.floor(Math.random()*d2.length)];
+    destinyD2_1 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_2 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_3 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_4 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_5 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_6 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_7 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_8 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_9 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_10 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_11 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_12 = d2[Math.floor(Math.random() * d2.length)];
+    destinyD2_13 = d2[Math.floor(Math.random() * d2.length)];
 
     if (destinyD2_1 <= '1') {
       outerdice = '없음';
     } else if (destinyD2_1 >= '2') {
-      outerdice = outer[Math.floor(Math.random()*outer.length)];
+      outerdice = outer[Math.floor(Math.random() * outer.length)];
     }
 
     if (destinyD2_2 <= '1') {
       Ftop1dice = '없음';
     } else if (destinyD2_2 >= '2') {
-      Ftop1dice = Ftop1[Math.floor(Math.random()*Ftop1.length)];
+      Ftop1dice = Ftop1[Math.floor(Math.random() * Ftop1.length)];
     }
 
     if (destinyD2_3 <= '1') {
       Ftop2dice = '없음';
     } else if (destinyD2_3 >= '2') {
-      Ftop2dice = Ftop2[Math.floor(Math.random()*Ftop2.length)];
+      Ftop2dice = Ftop2[Math.floor(Math.random() * Ftop2.length)];
     }
 
     if (destinyD2_4 <= '1') {
       Fbottom1dice = '없음';
     } else if (destinyD2_4 >= '2') {
-      Fbottom1dice = Fbottom1[Math.floor(Math.random()*Fbottom1.length)];
+      Fbottom1dice = Fbottom1[Math.floor(Math.random() * Fbottom1.length)];
     }
 
     if (destinyD2_5 <= '1') {
       Fbottom2dice = '없음';
     } else if (destinyD2_5 >= '2') {
-      Fbottom2dice = Fbottom2[Math.floor(Math.random()*Fbottom2.length)];
+      Fbottom2dice = Fbottom2[Math.floor(Math.random() * Fbottom2.length)];
     }
 
     if (destinyD2_6 <= '1') {
       Funderdice = '없음';
     } else if (destinyD2_6 >= '2') {
-      Funderdice = Funder[Math.floor(Math.random()*Funder.length)];
+      Funderdice = Funder[Math.floor(Math.random() * Funder.length)];
     }
 
     if (destinyD2_7 <= '1') {
       Fshoesdice = '없음';
     } else if (destinyD2_7 >= '2') {
-      Fshoesdice = Fshoes[Math.floor(Math.random()*Fshoes.length)];
+      Fshoesdice = Fshoes[Math.floor(Math.random() * Fshoes.length)];
     }
 
     if (destinyD2_8 <= '1') {
       acc1dice = '없음';
     } else if (destinyD2_8 >= '2') {
-      acc1dice = acc1[Math.floor(Math.random()*acc1.length)];
+      acc1dice = acc1[Math.floor(Math.random() * acc1.length)];
     }
 
     if (destinyD2_9 <= '1') {
       acc2dice = '없음';
     } else if (destinyD2_9 >= '2') {
-      acc2dice = acc2[Math.floor(Math.random()*acc2.length)];
+      acc2dice = acc2[Math.floor(Math.random() * acc2.length)];
     }
 
     if (destinyD2_10 <= '1') {
       extra1dice = '없음';
     } else if (destinyD2_10 >= '2') {
-      extra1dice = extra1[Math.floor(Math.random()*extra1.length)];
+      extra1dice = extra1[Math.floor(Math.random() * extra1.length)];
     }
 
     if (destinyD2_11 <= '1') {
       extra2dice = '없음';
     } else if (destinyD2_11 >= '2') {
-      extra2dice = extra2[Math.floor(Math.random()*extra2.length)];
+      extra2dice = extra2[Math.floor(Math.random() * extra2.length)];
     }
 
     if (destinyD2_12 <= '1') {
       keyword1dice = '없음';
     } else if (destinyD2_12 >= '2') {
-      keyword1dice = keyword1[Math.floor(Math.random()*keyword1.length)];
+      keyword1dice = keyword1[Math.floor(Math.random() * keyword1.length)];
     }
 
     if (destinyD2_13 <= '1') {
       keyword2dice = '없음';
     } else if (destinyD2_13 >= '2') {
-      keyword2dice = keyword2[Math.floor(Math.random()*keyword2.length)];
+      keyword2dice = keyword2[Math.floor(Math.random() * keyword2.length)];
     }
 
     var btntext = `
@@ -494,11 +496,77 @@ function btnwhatIllust() {
   ];
 
   var whatIllustdice;
-  whatIllustdice = btnwhatIllust[Math.floor(Math.random()*btnwhatIllust.length)];
+  whatIllustdice = btnwhatIllust[Math.floor(Math.random() * btnwhatIllust.length)];
   var btnresult = document.getElementById("btnresult");
   var btntext = `오늘의 그림은... 어디보자... 이게 좋겠군! <span class="color">${whatIllustdice}!</span> (${btnwhatIllust.length}개)`;
   btnresult.innerHTML = btntext;
 } // 어떤 그림을 그릴까
+
+function btnNihilbackstory() {
+  var 어디 = [
+    '어딘가의 폐허', '어딘가의 깊은 숲 속', '어딘가의 산골', '어딘가의 호화로운 저택', '어딘가의 왕실',
+    '어딘가의 어두운 곳', '어딘가의 신전', '어딘가의 바닷가', '어딘가의 장소', '어딘가의 고대 유적',
+    '어딘가의 평원', '어딘가의 초원', '어딘가의 던전', '어딘가의 감옥', '어딘가의 실험실',
+    '어딘가의 고원', '어딘가의 협곡', '어딘가의 치열한 전장', '어딘가의 골목길', '어딘가의 촌락',
+    '어딘가의 술집', '이 세상이 아닌 곳', '어딘가의 길거리', '어딘가의 행성', '어딘가의 은하계',
+
+    '우주의 어딘가', '어딘가의 유흥가', '어딘가의 건물 지하', '어딘가의 상가', '어딘가의 상단',
+    '어딘가의 황야', '어딘가의 연구실', '기억나지 않는 곳', '어딘가의 수용소', '어딘가의 작은 마을',
+    '어딘가의 도시', '어딘지 모르는 곳', '시공의 바깥', '어딘가의 대륙', '대육 너머의 어딘가',
+    '어딘가의 다른 나라', '지금은 없는 어딘가',
+  ];
+
+  var 목적 = [
+    '고대의 지식을', '누군가의 복수를', '삶의 의미를 찾기', '스스로를 증명하기', '짜릿한 모험을',
+    '어떤 사람을 찾기', '잃어버린 누군가를 찾기', '돈을 벌기', '심심함을 달래기', '보물을 찾기',
+    '어떠한 물건을 찾기', '누군가의 야망을 막기', '삶의 원수를 찾기', '어떠한 사명을 완수하기', '어떠한 장소를 찾기',
+    '원래 있던 곳으로 돌아가기', '자신이 어떤 사람인지 알기', '잃어버린 기억을 찾기', '명령을 수행하기', '자신이 있을 곳을 찾기',
+    '사람을 죽이기', '자신의 운명을 확인하기', '운명의 짝을 찾기', '고향을 구하기', '만병통치약을 찾기',
+
+    '전설의 무기를 찾기', '전설의 약초를 찾기', '세계를 지키기', '힘을 얻기', '자신의 죄를 속죄하기',
+    '누군가의 유언을 전하기', '가족의 유언을 지키기',
+  ];
+
+  var 누구 = [
+    '원소 마법사', '투사', '그림자 투사', '음악가', '사격수',
+    '궁사', '도적', '신성 기사', '기사', '약초사',
+    '갑옷장인(대장장이)', '정비사', '정화사', '사제', '암흑 마법사',
+    '신성 마법사', '소환 마법사', '무기 상인', '요리사', '강령술사',
+    '사령술사', '무투사(격투가)', '마법투사', '농부', '무법자',
+    '수도승', '살인청부업자', '신관', '점술사', '정령 마법사',
+    '이단심판관', '어부', '왕', '왕자', '공주',
+    '여왕', '황제', '여제', '용사', '퇴마사',
+    '장의사', '가수', '주술사', '마왕', '방패투사',
+    '갑옷 상인', '약초 상인', '잡품 상인', '무기장인(대장장이)', '자연숭배자',
+
+    '광투사', '야만투사', '정찰꾼', '해적', '산적',
+    '현상금 사냥꾼', '교주', '(무기를 사용하는)술사', '예언가', '암살자',
+    '암흑 기사', '인형술사', '건달', '병사', '노예',
+    '집사', '영매사', '암상인', '사서', '촌장',
+    '저격술사', '장교', '의료사', '간호원', '신부(종교)',
+
+    '사기꾼', '파계승', '학자', '마도학자', '음양사',
+    '항해사', '선장', '요리사', '교사', '세계의 수호자',
+    '수호자', '모험가', '해결사', '퇴역 장교', '사격술사',
+    '마기사', '암흑 기사', '검투사', '예언가',
+  ];
+
+  var placedice = 어디[Math.floor(Math.random() * 어디.length)];
+  var objectdice = 목적[Math.floor(Math.random() * 목적.length)];
+  var whodice = 누구[Math.floor(Math.random() * 누구.length)];
+
+  var diceTotal = 어디.length * 목적.length * 누구.length;
+
+  var btnresult = document.getElementById("btnresult");
+  var btntext = `
+    <p style="font-size: 14pt;">
+      당신의 캐릭터는 <span class="color">${placedice}</span>에서 왔습니다. 그는
+      <span class="color">${objectdice}</span> 위해 여행을 시작한
+      <span class="color">${whodice}</span>입니다. (${diceTotal}개)
+    </p>
+  `;
+  btnresult.innerHTML = btntext;
+} // 백스토리
 
 // ---------- 템플릿 ----------
 
