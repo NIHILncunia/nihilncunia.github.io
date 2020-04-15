@@ -19,7 +19,8 @@ module.exports = {
     },
     "plugins": [
         "import",
-        "react-hooks"
+        "react-hooks",
+        "eslint-plugin-html",
     ],
     "rules": {
         "no-console": 0,

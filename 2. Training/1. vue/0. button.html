@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!--굳이 웹팩이나 바벨이 없어도 이런식으로 뷰를 사용할 수도 있다.-->
+  <title>Vue 0. 좋아요 버튼 누르기</title>
+</head>
+<body>
+  <div id="root">
+    <div v-if="liked">좋아요 눌렀음.</div>
+    <!--간단하게 조건을 넣어서 당장에는 불필요한 요소를 화면에서 숨길 수 있다.-->
+    <!-- v-if가 있고, 다른 태그에 v-else를 넣으면 조건에 반대되는 경우를 남길 수 있다. -->
+    <button v-on:click="onClickButton">Like</button>
+    <!--v-on을 해야 버튼에 메소드를 담을 수 있다.-->
+  </div>
+</body>
+<script>
+  const app = new Vue({
+    el: '#root',
+    // root를 통제한다.
+    data: {
+      liked: false,
+    }, // liked라는 데이터를 만들어주고 버튼을 누르면 true가 되게 한다.
+    methods: {
+      onClickButton() {
+        if (this.liked == false) {
+          this.liked = true;
+        } else {
+          this.liked = false;
+        } // liked가 false일때에는 true가 되게 하고 true일 때에는 false가 되게 한다.
+      }
+    }, // 메소드는 여기에 들어간다.
+  });
+</script>
+</html>
