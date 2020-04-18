@@ -193,7 +193,7 @@ function btnrandom() {
       오늘의 키워드는... 이거다!
       <div class="wordbox color">
         <p>${randomdice}! (${btnrandom.length}개)</p>
-        <p style="color: #333333; margin: 20px 0px; font-size: 14pt;">보너스</p>
+        <p style="color: #333333; margin: 20px 0; font-size: 14pt;">보너스</p>
         <p style="font-size: 14pt;">${randomdice2}!</p>
         <p style="font-size: 14pt;">${randomdice3}!</p>
         <p style="font-size: 14pt;">${randomdice4}!</p>
@@ -1396,6 +1396,147 @@ function btnzodiac() {
   `;
   btnresult.innerHTML = btntext;
 } // 별자리
+
+function btnplayingCard() {
+	var card = [
+		'스페이드', '하트', '클로버', '다이아몬드', '조커',
+		'조커',
+	];
+	var number = [
+		'A(에이스)', '2', '3', '4', '5',
+		'6', '7', '8', '9', '10',
+		'J(잭)', 'Q(퀸)', 'K(킹)',
+	];
+
+	var carddice;
+	var numberdice;
+
+	carddice = card[Math.floor(Math.random() * card.length)];
+
+	if (carddice === '조커') {
+		var cardselector = `조커`;
+	} else {
+		numberdice = number[Math.floor(Math.random() * number.length)];
+		var cardselector = `${carddice} ${numberdice}`;
+	}
+
+	var btnresult = document.getElementById("btnresult");
+	var btntext = `오늘의 카드는 <span class="color">${cardselector}!</span> (${((card.length - 2) * number.length) + 2}개)`;
+	btnresult.innerHTML = btntext;
+} // 플레잉 카드
+
+function btn5playingCard() {
+	var card = [
+		'스페이드 A(에이스)', '스페이드 2', '스페이드 3', '스페이드 4', '스페이드 5',
+		'스페이드 6', '스페이드 7', '스페이드 8', '스페이드 9', '스페이드 10',
+		'스페이드 J(잭)', '스페이드 Q(퀸)', '스페이드 K(킹)', '하트 A(에이스)', '하트 2',
+		'하트 3', '하트 4', '하트 5', '하트 6', '하트 7',
+		'하트 8', '하트 9', '하트 10', '하트 J(잭)', '하트 Q(퀸)',
+
+		'하트 K(킹)', '클로버 A(에이스)', '클로버 2', '클로버 3', '클로버 4',
+		'클로버 5', '클로버 6', '클로버 7', '클로버 8', '클로버 9',
+		'클로버 10', '클로버 J(잭)', '클로버 Q(퀸)', '클로버 K(킹)', '다이아몬드 A(에이스)',
+		'다이아몬드 2', '다이아몬드 3', '다이아몬드 4', '다이아몬드 5', '다이아몬드 6',
+		'다이아몬드 7', '다이아몬드 8', '다이아몬드 9', '다이아몬드 10', '다이아몬드 J(잭)',
+
+		'다이아몬드 Q(퀸)', '다이아몬드 K(킹)', '조커', '조커',
+	];
+
+	var carddice;
+	var box = [];
+	var anotherBox = [];
+
+	for (var i = 0; i < 5; i++) {
+		carddice = card[Math.floor(Math.random() * card.length)];
+		if (anotherBox.includes(carddice)) {
+			anotherBox.push(carddice);
+			i -= 1;
+		} else {
+			if (box.includes(carddice)) {
+				anotherBox.push(carddice);
+				i -= 1;
+			} else {
+				box.push(carddice);
+			}
+		}
+	}
+
+	var btnresult = document.getElementById("btnresult");
+	var btntext = `
+		<p>오늘의 카드 5장 (${card.length}개)</p>
+		<p style="font-size: 14pt;"><span class="color">${box[0]}!</span></p>
+		<p style="font-size: 14pt;"><span class="color">${box[1]}!</span></p>
+		<p style="font-size: 14pt;"><span class="color">${box[2]}!</span></p>
+		<p style="font-size: 14pt;"><span class="color">${box[3]}!</span></p>
+		<p style="font-size: 14pt;"><span class="color">${box[4]}!</span></p>
+	`;
+	btnresult.innerHTML = btntext;
+} // 플레잉 카드 5장
+
+function btnmajorTarot() {
+	var direction = [
+		'정방향', '역방향',
+	];
+
+	var directiondice = direction[Math.floor(Math.random() * direction.length)];
+	
+	var MajorTarot = [
+		'00 The Fool (광대)',
+		'01 The Magician (마술사)',
+		'02 The High Priestess (여교황)',
+		'03 The Empress (여제)',
+		'04 The Emperor (황제)',
+		'05 The Hierophant (교황)',
+		'06 The Lovers (연인)',
+		'07 The Chariot (전차)',
+		'08 Strength (힘)',
+		'09 The Hermit (은둔자)',
+		'10 Wheel of Fortune (운명의 수레바퀴)',
+		'11 Justice (정의)',
+		'12 The Hanged Man (매달린 사람)',
+		'13 Death (죽음)',
+		'14 Temperance (절제)',
+		'15 The Devil (악마)',
+		'16 The Tower (탑)',
+		'17 The Star (별)',
+		'18 The Moon (달)',
+		'19 The Sun (태양)',
+		'20 Judgement (심판)',
+		'21 The World (세계)',
+	];
+	
+	var MajorTarotdice = MajorTarot[Math.floor(Math.random() * MajorTarot.length)];
+
+	var btnresult = document.getElementById("btnresult");
+	var btntext = `
+		<p>당신의 운명이 보입니다... (${direction.length * MajorTarot.length}개)</p>
+		<p style="font-size: 14pt;"><span class="color">(${directiondice})</span></p>
+		<p style="font-size: 14pt;"><span class="color">${MajorTarotdice}!</span></p>
+	`;
+	btnresult.innerHTML = btntext;
+} // 메이저 아르카나
+
+function btnminorTarot() {
+	var suits = [
+		'wands (막대기)', 'chalice (성배)', 'swords (검)', 'coins (동전)'
+	];
+
+	var suitsdice = suits[Math.floor(Math.random() * suits.length)];
+
+	var card = [
+		'1', '2', '3', '4', '5',
+		'6', '7', '8', '9', '10',
+		'Page', 'Knight', 'Queen', 'King',
+	];
+
+	var carddice = card[Math.floor(Math.random() * card.length)];
+
+	var btnresult = document.getElementById("btnresult");
+	var btntext = `당신의 운명이 보입니다... (${card.length * suits.length}개)<br/>
+		<span style="font-size: 14pt;" class="color">${suitsdice} - ${carddice}!</span><br/>
+	`;
+	btnresult.innerHTML = btntext;
+} // 마이너 아르카나
 
 // ---------- 템플릿 ----------
 
