@@ -9,10 +9,10 @@
 
 body {
   padding: 10px;
-  text-align: center;
+  text-align: justify;
 }
 
-#btn-erea p {
+#btn-erea span {
   font-size: 14pt;
   font-weight: 900;
   margin: 5px 0px;

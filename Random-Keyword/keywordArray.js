@@ -1532,11 +1532,23 @@ function btnminorTarot() {
 	var carddice = card[Math.floor(Math.random() * card.length)];
 
 	var btnresult = document.getElementById("btnresult");
-	var btntext = `당신의 운명이 보입니다... (${card.length * suits.length}개)<br/>
-		<span style="font-size: 14pt;" class="color">${suitsdice} - ${carddice}!</span><br/>
+	var btntext = `
+		<p>당신의 운명이 보입니다... (${card.length * suits.length}개)</p>
+		<p style="font-size: 14pt;"><span class="color">${suitsdice} - ${carddice}!</span></p>
 	`;
 	btnresult.innerHTML = btntext;
 } // 마이너 아르카나
+
+function btntime() {
+
+	var hourdice = Math.floor(Math.random() * 23);
+	var miniutedice = Math.floor(Math.random() * 59);
+	var seconddice = Math.floor(Math.random() * 59);
+
+	var btnresult = document.getElementById("btnresult");
+	var btntext = `오늘의 시간은 <span class="color">${hourdice}시 ${miniutedice}분 ${seconddice}초!</span> (24시간 기준)`;
+	btnresult.innerHTML = btntext;
+} // 시간
 
 // ---------- 템플릿 ----------
 
