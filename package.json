@@ -22,7 +22,8 @@
     "react-dom": "^16.13.1",
     "styled-components": "^5.1.0",
     "styled-jsx": "^3.2.5",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vuex": "^3.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
