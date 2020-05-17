@@ -86,6 +86,7 @@ function btnbodytype() {
     '길쭉한 얼굴인', '날씬한', '동그란 얼굴인', '뚱뚱한', '마른', '말라 비틀어진',
     '머리가 작은', '머리가 큰', '몸매가 에스라인인(여캐)', '무유(여캐 가슴크기)', '미유(여캐 가슴크기)',
     '뱃살이 나온', '보통', '브이라인 얼굴인', '빈유(여캐 가슴크기)', '상체가 긴',
+
     '약간 근육이 있는', '육감적인', '짧막한 얼굴인', '초유(여캐 가슴크기)', '통통한',
     '팔이 긴', '평유(여캐 가슴크기)', '폭유(여캐 가슴크기)', '하체가 긴', '한쪽 다리가 짧은',
     '한쪽 팔이 짧은', '허약한', '짧은 꼬리가 달린', '긴 꼬리가 달린', '귀가 긴',
@@ -551,14 +552,14 @@ function btnsuperpower() {
     '타인의 능력을 강탈할 수 있는', '타인에게 능력을 부여할 수 있는', '타인의 능력을 복사할 수 있는', '문을 통해 다른 곳으로 이동할 수 있는',
     '능력과 능력을 합성할 수 있는', '타인의 모습으로 변할 수 있는', '동물로 변할 수 있는', '식물과 대화를 할 수 있는', '식물의 말을 들을 수 있는',
     '눈을 마주치면 기억을 읽는', '눈을 마주치면 마음을 읽을 수 있는', '우주에서도 숨을 쉴 수 있는', '물 속에서 숨을 쉴 수 있는',
-    '어둠 속에서도 밝게 볼 수 있는', '누군가와 합체할 수 있는', '눈에서 레이버 빔이 투사되는', '차가운 입김을 불 수 있는', '몸이 아주 단단한',
+    '어둠 속에서도 밝게 볼 수 있는', '누군가와 합체할 수 있는', '눈에서 레이저 빔이 투사되는', '차가운 입김을 불 수 있는', '몸이 아주 단단한',
     '타인의 움직임을 예측할 수 있는', '기척을 숨길 수 있는', '피를 원하는 형태로 바꿀 수 있는', '죽음에 가까워지면 더욱 강해지는', '타인의 능력을 알 수 있는',
 
     '순간적으로 상처를 회복하는', '체내의 뼈를 변형할 수 있는', '꺼지지 않는 불꽃을 다루는', '상상하는 것을 에너지로 구현하는', '블랙홀을 열 수 있는',
     '특별한 힘이 깃든 갑옷을 입는', '가면을 쓰면 강해지는', '불꽃을 발사할 수 있는', '몸을 고무로 만들 수 있는', '멀리 볼 수 있는',
     '아주 작은 소리까지 들을 수 있는', '파장을 감지할 수 있는', '아주 희미한 향까지 맡을 수 있는', '고통을 느끼지 않는', '타인의 5감을 반전시키는',
     '싸울수록 점점 강해지는', '물건 안에 무언가를 가둘 수 있는', '햇빛에 노출되면 강해지는', '달빛에 노출되면 강해지는', '재채기를 하면 인격이 바뀌는',
-    '타인에게 빙의할 수 있는', '음식을 섭취하지 않아도 생존할 수 있는', '큰 소리를 내서 음파를 방출하는'
+    '타인에게 빙의할 수 있는', '음식을 섭취하지 않아도 생존할 수 있는', '큰 소리를 내서 음파를 방출하는', '죽으면 특정 과거로 이동하는',
   ];
 
   var superpowerdice;
@@ -687,6 +688,99 @@ function btnbackstory() {
   `;
   btnresult.innerHTML = btntext;
 } // 백스토리
+
+function btnheight() {
+	var number = Math.floor(Math.random() * 14);
+
+	var threedice;
+
+	if (number <= 1) {
+		threedice = 'minus';
+	} else if (number >= 13) {
+		threedice = 'plus';
+	} else {
+		threedice = 'middle';
+	}
+
+	switch (threedice) {
+		case 'minus':
+			var heighttext = '100cm 미만';
+			break;
+		case 'middle':
+			var height = Math.floor(Math.random() * 90);
+			var heighttext = `${100 + height}cm`;
+			break;
+		case 'plus':
+			var heighttext = '190cm 초과';
+			break;
+	}
+
+	var btnresult = document.getElementById("btnresult");
+	var btntext = `오늘의 신장은 <span class="color">${heighttext}!</span> (100cm- ~ 190cm+)`;
+	btnresult.innerHTML = btntext;
+} // 신장
+
+function btnweight() {
+	var number = Math.floor(Math.random() * 14);
+
+	var threedice;
+
+	if (number <= 1) {
+		threedice = 'minus';
+	} else if (number >= 13) {
+		threedice = 'plus';
+	} else {
+		threedice = 'middle';
+	}
+
+	switch (threedice) {
+		case 'minus':
+			var weighttext = '50kg 미만';
+			break;
+		case 'middle':
+			var weight = Math.floor(Math.random() * 70);
+			var weighttext = `${50 + weight}kg`;
+			break;
+		case 'plus':
+			var weighttext = '120kg 초과';
+			break;
+	}
+
+	var btnresult = document.getElementById("btnresult");
+	var btntext = `오늘의 체중은 <span class="color">${weighttext}!</span> (50kg- ~ 120kg+)`;
+	btnresult.innerHTML = btntext;
+} // 체중
+
+function btnage() {
+	var number = Math.floor(Math.random() * 14);
+
+	var threedice;
+
+	if (number <= 1) {
+		threedice = 'minus';
+	} else if (number >= 13) {
+		threedice = 'plus';
+	} else {
+		threedice = 'normal';
+	}
+
+	switch (threedice) {
+		case 'minus':
+			var agetext = '10세 미만';
+			break;
+		case 'normal':
+			var age = Math.floor(Math.random() * 100);
+			var agetext = `${10 + age}세`;
+			break;
+		case 'plus':
+			var agetext = '110세 초과';
+			break;
+	}
+
+	var btnresult = document.getElementById("btnresult");
+	var btntext = `오늘의 나이는 <span class="color">${agetext}!</span> (10세- ~ 110세+)`;
+	btnresult.innerHTML = btntext;
+} // 나이
 
 // ---------- 템플릿 ----------
 
