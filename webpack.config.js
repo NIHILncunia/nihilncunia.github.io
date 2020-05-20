@@ -8,12 +8,12 @@ module.exports = {
   // name: 'word-relay-dev',
   // 이름이다. 사실 별 다른 기능은 가지지 않는다.
 
-  // mode: 'development',
-  mode: 'production',
+  mode: 'development',
+  // mode: 'production',
   // 모드는 두가지가 있다. 디벨로먼트(개발)와 프로덕션(배포)이다.
 
-  // devtool: 'eval',
-  devtool: 'hidden-source-map',
+  devtool: 'eval',
+  // devtool: 'hidden-source-map',
   // 빠르게 작업하게 한다.
 
   resolve: {
@@ -26,7 +26,8 @@ module.exports = {
     // app: path.join(__dirname, './1.development/main.js'),
 	  // app: path.join(__dirname, './1.development/TicTacToeEventBus/main.js'),
 	  // app: path.join(__dirname, './1.development/TicTacToeVuex/main.js'),
-	  app: path.join(__dirname, './1.development/8.MineSweeper/main.js'),
+	  // app: path.join(__dirname, './1.development/8.MineSweeper/main.js'),
+	  app: path.join(__dirname, './1.development/9.Vue-router/main.js'),
   },
 
   module: {
