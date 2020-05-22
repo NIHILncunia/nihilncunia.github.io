@@ -67,17 +67,11 @@ function btnrondomcolor() {
 
   var btnresult = document.getElementById("btnresult");
   var btntext = `
-        오늘의 색상은... 이거다!
-        <table>
-            <tbody>
-                <tr>
-                    <td class="colorplate2" style="background:${colorCode};"></td>
-                </tr>
-                <tr>
-                    <td class="colorcode">${colorCode}</td>
-                </tr>
-            </tbody>
-        </table>
+        오늘의 색상은... 이거다!<br />
+        <div class="colorbox">
+	        <div class="colorplate2" style="background:${colorCode};"></div>
+	        <div class="colorcode">${colorCode}</div>
+				</div>
     `;
   btnresult.innerHTML = btntext;
 } // 랜덤 색상
@@ -123,27 +117,31 @@ function btnrondom6color() {
 
   var btnresult = document.getElementById("btnresult");
   var btntext = `
-        오늘의 색상은... 이거다!
-        <table>
-            <tbody>
-                <tr>
-                    <td class="colorplate2" style="background:${colorCode1};"></td>
-                    <td class="colorplate2" style="background:${colorCode2};"></td>
-                    <td class="colorplate2" style="background:${colorCode3};"></td>
-                    <td class="colorplate2" style="background:${colorCode4};"></td>
-                    <td class="colorplate2" style="background:${colorCode5};"></td>
-                    <td class="colorplate2" style="background:${colorCode6};"></td>
-                </tr>
-                <tr>
-                    <td class="colorcode">${colorCode1}</td>
-                    <td class="colorcode">${colorCode2}</td>
-                    <td class="colorcode">${colorCode3}</td>
-                    <td class="colorcode">${colorCode4}</td>
-                    <td class="colorcode">${colorCode5}</td>
-                    <td class="colorcode">${colorCode6}</td>
-                </tr>
-            </tbody>
-        </table>
+        오늘의 색상은... 이거다!<br />
+        <div class="colorbox">
+	        <div class="colorplate2" style="background:${colorCode1};"></div>
+	        <div class="colorcode">${colorCode1}</div>
+				</div>
+				<div class="colorbox">
+	        <div class="colorplate2" style="background:${colorCode2};"></div>
+	        <div class="colorcode">${colorCode2}</div>
+				</div>
+				<div class="colorbox">
+	        <div class="colorplate2" style="background:${colorCode3};"></div>
+	        <div class="colorcode">${colorCode3}</div>
+				</div>
+				<div class="colorbox">
+	        <div class="colorplate2" style="background:${colorCode4};"></div>
+	        <div class="colorcode">${colorCode4}</div>
+				</div>
+				<div class="colorbox">
+	        <div class="colorplate2" style="background:${colorCode5};"></div>
+	        <div class="colorcode">${colorCode5}</div>
+				</div>
+				<div class="colorbox">
+	        <div class="colorplate2" style="background:${colorCode6};"></div>
+	        <div class="colorcode">${colorCode6}</div>
+				</div>
     `;
   btnresult.innerHTML = btntext;
 } // 랜덤 6색
