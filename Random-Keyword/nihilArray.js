@@ -280,7 +280,7 @@ function btnclothesSet() {
   var destinyD2_12;
   var destinyD2_13;
 
-  if (genderdice == '남성' || '보이시한 여성') {
+  if (genderdice == '남성' || '보이쉬한 여성') {
 
     destinyD2_1 = d2[Math.floor(Math.random() * d2.length)];
     destinyD2_2 = d2[Math.floor(Math.random() * d2.length)];
