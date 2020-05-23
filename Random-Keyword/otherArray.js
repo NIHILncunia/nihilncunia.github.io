@@ -74,7 +74,7 @@ function btnrondomcolor() {
 				</div>
     `;
   btnresult.innerHTML = btntext;
-} // 랜덤 색상
+} // 1 랜덤색상
 
 function btnrondom6color() {
   var letters = '0123456789ABCDEF';
@@ -144,7 +144,7 @@ function btnrondom6color() {
 				</div>
     `;
   btnresult.innerHTML = btntext;
-} // 랜덤 6색
+} // 6 랜덤색상
 
 function btnjewels() {
   var btnjewels = [
@@ -1341,6 +1341,40 @@ function btntime() {
 	var btntext = `오늘의 시간은 <span class="color">${hourdice}시 ${miniutedice}분 ${seconddice}초!</span> (24시간 기준)`;
 	btnresult.innerHTML = btntext;
 } // 시간
+
+function btnrondomhopecolor() {
+	var word = [];
+
+	var hopenumber = prompt('색깔의 개수를 입력하세요.');
+	hopenumber = parseInt(hopenumber);
+
+	var letters = '0123456789ABCDEF';
+	var btntext = '오늘의 색상은... 이거다!<br />';
+	var colorbox = [];
+	var resultbox = [];
+
+	for (var k = 0; k < hopenumber; k++) {
+		colorbox[k] = '#';
+		var color = colorbox[k];
+		for (var i = 0; i < 6; i++) {
+			var color = color + letters[Math.floor(Math.random() * 16)];
+			var colorCode = color;
+			if (colorCode.length === 7) {
+				resultbox.push(colorCode);
+			}
+		}
+
+		btntext = btntext + `
+			<div class="colorbox">
+	      <div class="colorplate2" style="background:${resultbox[k]};"></div>
+	      <div class="colorcode">${resultbox[k]}</div>
+			</div>
+		`;
+	}
+
+	var btnresult = document.getElementById("btnresult");
+	btnresult.innerHTML = btntext;
+} // 원하는 개수의 랜덤색상
 
 // ---------- 템플릿 ----------
 
