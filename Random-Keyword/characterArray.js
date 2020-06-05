@@ -650,6 +650,8 @@ function btnbackstory() {
 
 	  '새로운 국가를 개척하기', '새로운 대륙을 탐사하기', '새로운 땅을 찾기', '새로운 종족을 찾기', '유적을 찾기',
 	  '붙잡힌 동료를 구하기', '붙잡힌 가족을 구하기', '붙잡힌 친구를 구하기', '죽을 곳을 찾기', '죽기',
+	  '악당이 되기', '악의 세력에 가담하기', '도적단에 합류하기', '살기', '용사가 되기',
+	  '학문을 깨우치기', '추적자에게서 도망치기',
   ];
 
   var 누구 = [
@@ -782,29 +784,45 @@ function btnweight() {
 } // 체중
 
 function btnage() {
-	var number = Math.floor(Math.random() * 14);
+	var number = Math.floor(Math.random() * 15);
 
 	var threedice;
 
 	if (number <= 1) {
 		threedice = 'minus';
-	} else if (number >= 13) {
+		console.log(`${1} ${number} ${threedice}`);
+	} else if (number === 13) {
 		threedice = 'plus';
+		console.log(`${3} ${number} ${threedice}`);
+	} else if (number >= 14) {
+		threedice = 'extraplus';
+		console.log(`${4} ${number} ${threedice}`);
 	} else {
 		threedice = 'normal';
+		console.log(`${2} ${number} ${threedice}`);
 	}
 
 	switch (threedice) {
 		case 'minus':
-			var agetext = '10세 미만';
+			var agetext = '10세 이하';
 			break;
 		case 'normal':
 			var age = Math.floor(Math.random() * 100);
 			var agetext = `${10 + age}세`;
 			break;
 		case 'plus':
-			var agetext = '110세 초과';
+			var agetext = '110세 이상';
 			break;
+		case 'extraplus':
+			var extraplusArray = [
+				'120세 이상', '140세 이상', '160세 이상', '180세 이상', '200세 이상',
+				'220세 이상', '240세 이상', '260세 이상', '280세 이상', '300세 이상',
+				'320세 이상', '340세 이상', '360세 이상', '380세 이상', '400세 이상',
+				'500세 이상', '600세 이상', '700세 이상', '800세 이상', '900세 이상',
+			];
+
+			var extraplusOne = extraplusArray[Math.floor(Math.random() * extraplusArray.length)];
+			var agetext = extraplusOne;
 	}
 
 	var btnresult = document.getElementById("btnresult");
