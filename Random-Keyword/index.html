@@ -18,45 +18,74 @@
 
 <body>
   <div id="infobox">
-	  <p style="font-size: 18pt;">버전: 2.15.5</p>
+	  <p style="font-size: 18pt;">버전: 2.16.5</p>
     <p style="font-size: 18pt;">제작: 니힐(<a href="https://www.instagram.com/nihil_illust/">인스타</a>)</p>
-    <p>얼마 없는 실력으로 만든 페이지입니다. 만들고나서 보니 타인도 이것을 사용하면 좋을 것 같다는 생각에 범용적으로 사용할 수 있게 업데이트를 하고 있습니다. 캐릭터를 그릴 때에, 혹은 어떠한 설정을 할 때에 있어서 가끔 디자인이 생각이 나지 않거나 소재가 없어서 막막했던 적이 있었을 겁니다. 이 페이지는 그런 때에 사용하기 좋습니다. 각각의 버튼을 누르면 관련된 키워드가 출력됩니다. 종족 버튼을 누르면 어떤 종족을 그리면 좋을 지에 대해서 결정을 대신 해주는 겁니다. 각 버튼은 서로 연계해서 사용해도 됩니다. 물론 결과는 랜덤이기 때문에 키워드간의 조합은 알아서 판단하셔서 사용하시면 됩니다. 이 페이지는 지속적으로 업데이트 되고 있습니다. 제가 단어를 추가할 때마다 여기에도 자동적으로 추가됩니다.</p>
+    <p>얼마 없는 실력으로 만든 페이지입니다. 만들고나서 보니 타인도 이것을 사용하면 좋을 것 같다는 생각에 범용적으로 사용할 수 있게 업데이트를 하고 있습니다. 캐릭터를 그릴 때에, 혹은 어떠한 설정을 할 때에 있어서 가끔 디자인이 생각이 나지 않거나 소재가 없어서 막막했던 적이 있었을 겁니다. 이 페이지는 그런 때에 사용하기 좋습니다. 각각의 버튼을 누르면 관련된 키워드가 출력됩니다. 종족 버튼을 누르면 어떤 종족을 그리면 좋을 지에 대해서 결정을 대신 해주는 겁니다. 각 버튼은 서로 연계해서 사용해도 됩니다. 물론 결과는 랜덤이기 때문에 키워드간의 조합은 알아서 판단하셔서 사용하시면 됩니다. 이 페이지는 지속적으로 업데이트 되고 있습니다. 제가 단어를 추가할 때마다 여기에도 자동적으로 추가됩니다. 버튼에 커서를 가져다대면 설명이 나오니 확인해보시면 좋습니다.</p>
   </div>
   <div id="btn-erea">
     <span>니힐 최적화 키워드</span>
-    <input type="button" value="뭘 그릴까요?" id="btn-whatIllust" onclick="btnwhatIllust()" />
-    <input type="button" value="종족" id="btn-race" onclick="btnrace()" />
-    <input type="button" value="직업" id="btn-class" onclick="btnclass()" />
-	  <input type="button" value="소속" id="btn-group" onclick="btngroup()" />
-    <input type="button" value="배경 스토리" id="btn-nihilbackstory" onclick="btnNihilbackstory()" />
-	  <input type="button" value="의상 조합" id="btn-clothesSet" onclick="btnclothesSet()" />
+    <input type="button" value="뭘 그릴까요?" id="btn-whatIllust" onclick="btnwhatIllust()"
+           title="정말 뭘 그리면 좋을지 모를때 누르면 점지해줍니다." />
+    <input type="button" value="종족" id="btn-race" onclick="btnrace()"
+           title="니힐 전용 종족 키워드입니다." />
+    <input type="button" value="직업" id="btn-class" onclick="btnclass()"
+           title="니힐 전용 직업 키워드입니다." />
+	  <input type="button" value="소속" id="btn-group" onclick="btngroup()"
+	         title="니힐 전용 조직 키워드입니다." />
+    <input type="button" value="배경 스토리" id="btn-nihilbackstory" onclick="btnNihilbackstory()"
+           title="니힐 전용 배경 스토리 키워드입니다." />
+	  <input type="button" value="의상 조합" id="btn-clothesSet" onclick="btnclothesSet()"
+	         title="니힐 전용, 여러가지 창작물에 등장했던 패턴을 모아 모아 랜덤하게 지정해주는 버튼입니다." />
 	  <br />
     <span>캐릭 정보 키워드</span>
-    <input type="button" value="배경 스토리" id="btn-backstory" onclick="btnbackstory()" />
-    <input type="button" value="역할" id="btn-characterType" onclick="btncharacterType()" />
-    <input type="button" value="유형" id="btn-characterImage" onclick="btncharacterImage()" />
-    <input type="button" value="종족" id="btn-race2" onclick="btnrace2()" />
-    <input type="button" value="신분" id="btn-status" onclick="btnstatus()" />
-    <input type="button" value="직업" id="btn-class2" onclick="btnclass2()" />
-    <input type="button" value="국적" id="btn-nationality2" onclick="btnnationality()" />
-    <input type="button" value="성별" id="btn-Gender" onclick="btngender()" />
-    <input type="button" value="헤어스타일" id="btn-hair" onclick="btnhair()" />
-    <input type="button" value="긍정성격" id="btn-personality1" onclick="btnpersonality1()" />
-    <input type="button" value="부정성격" id="btn-personality2" onclick="btnpersonality2()" />
-    <input type="button" value="성향(D&D)" id="btn-Alignment" onclick="btnAlignment()" />
-	  <input type="button" value="나이" id="btn-age" onclick="btnage()" />
-    <input type="button" value="체형" id="btn-body-type" onclick="btnbodytype()" />
-	  <input type="button" value="신장" id="btn-height" onclick="btnheight()" />
-	  <input type="button" value="체중" id="btn-weight" onclick="btnweight()" />
-    <input type="button" value="속성" id="btn-attribute" onclick="btnattribute()" />
-    <input type="button" value="무기" id="btn-weapon" onclick="btnweapon()" />
-    <input type="button" value="방패" id="btn-shield" onclick="btnshield()" />
-    <input type="button" value="갑옷" id="btn-armor" onclick="btnarmor()" />
-    <input type="button" value="초능력" id="btn-superpower" onclick="btnsuperpower()" />
+    <input type="button" value="배경 스토리" id="btn-backstory" onclick="btnbackstory()"
+           title="캐릭터의 배경스토리를 어느정도 정해주는 버튼입니다." />
+    <input type="button" value="역할" id="btn-characterType" onclick="btncharacterType()"
+           title="캐릭터의 역할 구분을 해줍니다. 컨셉 잡기에 좀 더 도움이 됩니다." />
+    <input type="button" value="유형" id="btn-characterImage" onclick="btncharacterImage()"
+           title="캐릭터의 유형입니다. 컨셉 그 자체를 던져줍니다." />
+    <input type="button" value="종족" id="btn-race2" onclick="btnrace2()"
+           title="여러가지 창작물에 나오는 종족을 때려박았습니다. 그 중 하나를 정해줍니다." />
+    <input type="button" value="신분" id="btn-status" onclick="btnstatus()"
+           title="캐릭터의 신분을 정해줍니다. 천민부터 황족까지 존재합니다." />
+    <input type="button" value="직업" id="btn-class2" onclick="btnclass2()"
+           title="캐릭터의 직업을 정해줍니다. 컨셉 잡는데에 도움이 됩니다." />
+    <input type="button" value="국적" id="btn-nationality2" onclick="btnnationality()"
+           title="현존하는 모든 국가를 넣었습니다. 현실 기반 캐릭일 때 도움 됩니다. ( 사실 안됨 )" />
+    <input type="button" value="성별" id="btn-Gender" onclick="btngender()"
+           title="캐릭터의 성별을 정해줍니다. 결국에는 두가지중 하나죠." />
+    <input type="button" value="헤어스타일" id="btn-hair" onclick="btnhair()"
+           title="헤어스타일을 정해주는데 데이터가 부족합니다." />
+    <input type="button" value="긍정성격" id="btn-personality1" onclick="btnpersonality1()"
+           title="캐릭터의 긍정적 성격을 정해줍니다. 부정적 성격과 같이 지정해주면 더 입체적인 캐릭터가 됩니다." />
+    <input type="button" value="부정성격" id="btn-personality2" onclick="btnpersonality2()"
+           title="캐릭터의 부정적 성격을 정해줍니다. 긍정적 성격과 같이 지정해주면 더 입체적인 캐릭터가 됩니다." />
+    <input type="button" value="성향(D&D)" id="btn-Alignment" onclick="btnAlignment()"
+           title="캐릭터의 성향에 도움이 되는 성향 키워드를 던져줍니다. DND에서 가져왔습니다." />
+	  <input type="button" value="나이" id="btn-age" onclick="btnage()"
+           title="캐릭터의 나이를 정해줍니다. 정말 랜덤입니다." />
+    <input type="button" value="체형" id="btn-body-type" onclick="btnbodytype()"
+           title="캐릭터의 신체적 특징을 정해줍니다. 요상한 것도 있습니다." />
+	  <input type="button" value="신장" id="btn-height" onclick="btnheight()"
+           title="캐릭터의 키를 정해줍니다." />
+	  <input type="button" value="체중" id="btn-weight" onclick="btnweight()"
+           title="캐릭터의 체중을 정해줍니다." />
+    <input type="button" value="속성" id="btn-attribute" onclick="btnattribute()"
+           title="캐릭터의 속성을 정해줍니다. 디자인 컨셉에 도움이 됩니다." />
+    <input type="button" value="무기" id="btn-weapon" onclick="btnweapon()"
+           title="캐릭터에게 무슨 무기를 들려줄지 모를때 사용합니다." />
+    <input type="button" value="방패" id="btn-shield" onclick="btnshield()"
+           title="방패를 쥐어줍니다. 역사상에 존재했던 다양한 방패를 넣었습니다." />
+    <input type="button" value="갑옷" id="btn-armor" onclick="btnarmor()"
+           title="갑옷을 입혀줍니다. 선택된 키워드의 갑옷을 그대로 입혀도 되지만 보통은 변화를 줍니다." />
+    <input type="button" value="초능력" id="btn-superpower" onclick="btnsuperpower()"
+           title="초능력을 정해줍니다. 계속 추가되는 중입니다." />
 	  <br />
     <span>의류 키워드</span>
-    <input type="button" value="패션스타일" id="btn-fashion" onclick="btnfashion()" />
-    <input type="button" value="세트의상" id="btn-setclothes" onclick="btnsetclothes()" />
+    <input type="button" value="패션스타일" id="btn-fashion" onclick="btnfashion()"
+           title="현존하는 패션스타일읠 종류를 넣었습니다. 그 중 하나가 나옵니다. 컨셉에 도움이 됩니다." />
+    <input type="button" value="세트의상" id="btn-setclothes" onclick="btnsetclothes()"
+           title="한벌옷으로 분류되는 것들을 넣어놨습니다. 데이터가 부족합니다." />
     <input type="button" value="재킷" id="btn-jacket" onclick="btnjacket()" />
     <input type="button" value="코트" id="btn-coat" onclick="btncoat()" />
     <input type="button" value="셔츠" id="btn-shirt" onclick="btnshirt()" />
@@ -79,27 +108,42 @@
     <input type="button" value="전통의상" id="btn-tradiclothing" onclick="btntradiclothing()" />
 	  <br />
     <span>특정 주제 키워드</span>
-    <input type="button" value="악기" id="btn-instrument" onclick="btninstrument()" />
-    <input type="button" value="보석" id="btn-jewels" onclick="btnjewels()" />
-    <input type="button" value="꽃" id="btn-flowers" onclick="btnflowers()" />
-    <input type="button" value="동물" id="btn-animals" onclick="btnanimals()" />
-    <input type="button" value="별자리" id="btn-zodiac" onclick="btnzodiac()" />
+    <input type="button" value="악기" id="btn-instrument" onclick="btninstrument()"
+           title="여러가지 악기중에서 하나를 던져줍니다." />
+    <input type="button" value="보석" id="btn-jewels" onclick="btnjewels()"
+           title="여러가지 보석중 하나를 던져줍니다." />
+    <input type="button" value="꽃" id="btn-flowers" onclick="btnflowers()"
+           title="여러가지 꽃중 하나를 던져줍니다. 세상에 꽃 너무 많아서 개인적인 기준으로 이뻐보이는 것들 넣었습니다." />
+    <input type="button" value="동물" id="btn-animals" onclick="btnanimals()"
+           title="실재하는 동물들을 넣었습니다." />
+    <input type="button" value="별자리" id="btn-zodiac" onclick="btnzodiac()"
+           title="88개의 별자리 중에서 하나를 던져줍니다." />
 
-	  <input type="button" value="플레잉 카드" id="btn-playingCard" onclick="btnplayingCard()" />
-	  <input type="button" value="플레잉 카드 5장" id="btn-5playingCard" onclick="btn5playingCard()" />
-	  <input type="button" value="메이저 아르카나" id="btn-majorTarot" onclick="btnmajorTarot()" />
-	  <input type="button" value="마이너 아르카나" id="btn-minorTarot" onclick="btnminorTarot()" />
+	  <input type="button" value="플레잉 카드" id="btn-playingCard" onclick="btnplayingCard()"
+           title="트럼프카드 한장을 골라줍니다." />
+	  <input type="button" value="플레잉 카드 5장" id="btn-5playingCard" onclick="btn5playingCard()"
+           title="다섯장을 골라줍니다. 로얄 스트레이트 플러쉬 나오면 운 좋은겁니다." />
+	  <input type="button" value="메이저 아르카나" id="btn-majorTarot" onclick="btnmajorTarot()"
+           title="타로카드 중 메이저 아르카나에 해당하는 키워드를 던져줍니다." />
+	  <input type="button" value="마이너 아르카나" id="btn-minorTarot" onclick="btnminorTarot()"
+           title="타로카드 중 마이너 아르카나에 해당하는 키워드를 던져줍니다." />
 
-	  <input type="button" value="날짜(월/일)" id="btn-date" onclick="btndate()" />
-	  <input type="button" value="시간(시/분)" id="btn-time" onclick="btntime()" />
+	  <input type="button" value="날짜(월/일)" id="btn-date" onclick="btndate()"
+           title="랜덤한 날짜입니다." />
+	  <input type="button" value="시간(시/분)" id="btn-time" onclick="btntime()"
+           title="랜덤한 시간입니다." />
 	  <br />
 	  <span>색상</span>
-    <input type="button" value="1 랜덤색상" id="btn-randomcolor" onclick="btnrondomcolor()" />
-    <input type="button" value="6 랜덤색상" id="btn-random6color" onclick="btnrondom6color()" />
-	  <input type="button" value="원하는 개수의 랜덤색상" id="btn-randomhopecolor" onclick="btnrondomhopecolor()" />
+    <input type="button" value="1 랜덤색상" id="btn-randomcolor" onclick="btnrondomcolor()"
+           title="색상 한가지를 랜덤하게 던져줍니다." />
+    <input type="button" value="6 랜덤색상" id="btn-random6color" onclick="btnrondom6color()"
+           title="6가지의 색상을 랜덤하게 던져줍니다." />
+	  <input type="button" value="원하는 개수의 랜덤색상" id="btn-randomhopecolor" onclick="btnrondomhopecolor()"
+           title="1개나 6개 이외의 개수의 색이 필요할때 사용합니다. 지정한 만큼 던져줍니다." />
 	  <br />
     <span>무작위 단어</span>
-    <input type="button" value="랜덤 키워드" id="btn-random" onclick="btnrandom()" />
+    <input type="button" value="랜덤 키워드" id="btn-random" onclick="btnrandom()"
+           title="캐릭터 외형, 배경 설정 등의 구상에 도움이 될 수 있는 여러가지 키워드입니다."/>
   </div>
   <hr />
   <div id="btnresult">아무 버튼이나 누르세요.</div>
