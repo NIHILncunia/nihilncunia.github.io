@@ -1,5 +1,5 @@
-function btnrandom() {
-	var btnrandom = [
+var keywordObject = {
+	btnrandom: [
 		'가루', '목욕 가운', '영혼', '악당', '가죽 벨트',
 		'가면', '가발(색상 자유)', '가방', '가슴붕대',	'가시',
 		'가죽', '가죽 장갑', '각력이 센', '각목', '갓',
@@ -181,39 +181,76 @@ function btnrandom() {
 		'쓰레기더미', '신체 불구', '성불구', '하드 디스크', '플로피 디스크',
 		'방어구', '묵주', '교단', '종교인', '사이비 종교',
 		'이빨', '짐승의 이빨', '송곳니', '짐승의 송곳니', '짐승 귀',
-
 		'음란한', '변태같은', '신사', '기사도', '불치병',
-		'전염병',
-  ];
+		'전염병', '야채', '야채,채소/스타후르츠', '야채,채소/블림빙', '야채,채소/잠부',
+		'야채,채소/오미자', '야채,채소/끌렝깽', '야채,채소/사워', '야채,채소/도라지', '야채,채소/고추',
+		'야채,채소/연근', '야채,채소/우엉', '야채,채소/양파', '야채,채소/호박', '야채,채소/깻잎',
+		'야채,채소/옥수수', '야채,채소/청경채', '야채,채소/배추', '야채,채소/시금치', '야채,채소/부추',
+
+		'야채,채소/가지', '야채,채소/파란고추', '야채,채소/실파', '야채,채소/대파', '야채,채소/미나리',
+		'야채,채소/애호박', '야채,채소/단호박', '야채,채소/오이', '야채,채소/당근', '야채,채소/감자',
+		'야채,채소/고구마', '야채,채소/버섯', '야채,채소/양송이', '야채,채소/느타리 버섯', '야채,채소/표고버섯',
+		'야채,채소/말린버섯', '야채,채소/무', '야채,채소/단무지', '야채,채소/피클', '야채,채소/무청',
+		'야채,채소/상추', '야채,채소/양배추', '야채,채소/양상추', '야채,채소/버질', '야채,채소/마늘',
+		'야채,채소/생강', '야채,채소/순무', '야채,채소/브로콜리', '야채,채소/인삼', '야채,채소/쑥갓',
+		'야채,채소/피망', '과일/석류', '과일/딸기', '과일/머루', '과일/블루베리',
+		'과일/야자', '과일/다래', '과일/사과', '과일/자두', '과일/모과',
+		'과일/대추', '과일/코코넛', '과일/산딸기', '과일/오렌지', '과일/수박',
+		'과일/무화과', '과일/자몽', '과일/체리', '과일/유자', '과일/리치',
+
+		'과일/단감', '과일/슈가애플', '과일/메론', '과일/버찌', '과일/거봉',
+		'과일/두리안', '과일/베리', '과일/파인애플', '과일/매실', '과일/복숭아',
+		'과일/바나나', '과일/포도', '과일/파파야', '과일/홍시', '과일/한라봉',
+		'과일/망고', '과일/망고스틴', '과일/구아바', '과일/아보카도', '과일/살구',
+		'과일/레몬', '과일/키위', '돈', '화폐', '정장',
+
+		'주사기', '가운', '정사면체', '정육면체', '도형/팔각형',
+		'도형/다각형', '도형/육각형', '도형/오각형', '도형/삼각형', '도형/사각형',
+		'도형/원', '아이스크림', '외투', '단검', '쌍검',
+		'도끼', '검', '커피',
+	],
+};
+
+function btnrandom() {
 
   var randomdice;
-  var randomdice2;
-  var randomdice3;
-  var randomdice4;
-  var randomdice5;
-  var randomdice6;
 
-  randomdice = btnrandom[Math.floor(Math.random() * btnrandom.length)];
-  randomdice2 = btnrandom[Math.floor(Math.random() * btnrandom.length)];
-  randomdice3 = btnrandom[Math.floor(Math.random() * btnrandom.length)];
-  randomdice4 = btnrandom[Math.floor(Math.random() * btnrandom.length)];
-  randomdice5 = btnrandom[Math.floor(Math.random() * btnrandom.length)];
-  randomdice6 = btnrandom[Math.floor(Math.random() * btnrandom.length)];
+  randomdice = keywordObject.btnrandom[Math.floor(Math.random() * keywordObject.btnrandom.length)];
   var btnresult = document.getElementById("btnresult");
-  var btntext = `
-      오늘의 키워드는... 이거다!
-      <div class="wordbox color">
-        <p>${randomdice}! (${btnrandom.length}개)</p>
-        <p style="color: #333333; margin: 20px 0; font-size: 14pt;">보너스</p>
-        <p style="font-size: 14pt;">${randomdice2}!</p>
-        <p style="font-size: 14pt;">${randomdice3}!</p>
-        <p style="font-size: 14pt;">${randomdice4}!</p>
-        <p style="font-size: 14pt;">${randomdice5}!</p>
-        <p style="font-size: 14pt;">${randomdice6}!</p>
-      </div>
-  `;
+  var btntext = `오늘의 단어는 <span class="color">${randomdice}!</span> (${keywordObject.btnrandom.length}개)`;
   btnresult.innerHTML = btntext;
 } // 랜덤 키워드
+
+function btnrandom5() {
+	var wordbox = [];
+	var overlapbox = [];
+	var randomdice;
+
+	for (var i = 0; i < 5; i++) {
+		randomdice = keywordObject.btnrandom[Math.floor(Math.random() * keywordObject.btnrandom.length)];
+		if (wordbox.length === 0) {
+			wordbox.push(randomdice);
+		} else {
+			if (wordbox.includes(randomdice)) {
+				overlapbox.push(randomdice);
+				i -= 1;
+			} else {
+				wordbox.push(randomdice);
+			}
+		}
+	}
+
+	var btnresult = document.getElementById("btnresult");
+	var btntext = `
+		오늘의 단어는... (${keywordObject.btnrandom.length}개)<br/>
+		단어 1 => <span class="color">${wordbox[0]}!</span><br/>
+		단어 2 => <span class="color">${wordbox[1]}!</span><br/>
+		단어 3 => <span class="color">${wordbox[2]}!</span><br/>
+		단어 4 => <span class="color">${wordbox[3]}!</span><br/>
+		단어 5 => <span class="color">${wordbox[4]}!</span>
+	`;
+	btnresult.innerHTML = btntext;
+} // 랜덤 키워드 5개
 
 // ---------- 템플릿 ----------
 

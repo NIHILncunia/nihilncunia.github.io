@@ -790,16 +790,12 @@ function btnage() {
 
 	if (number <= 1) {
 		threedice = 'minus';
-		console.log(`${1} ${number} ${threedice}`);
 	} else if (number === 13) {
 		threedice = 'plus';
-		console.log(`${3} ${number} ${threedice}`);
 	} else if (number >= 14) {
 		threedice = 'extraplus';
-		console.log(`${4} ${number} ${threedice}`);
 	} else {
 		threedice = 'normal';
-		console.log(`${2} ${number} ${threedice}`);
 	}
 
 	switch (threedice) {

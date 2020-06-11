@@ -1172,11 +1172,8 @@ function btnzodiac() {
   var zodiacdice;
   zodiacdice = btnzodiac[Math.floor(Math.random() * btnzodiac.length)];
 
-
-
   if (-1 != zodiacdice.indexOf('황도')) {
     var submessage = `<p style="font-size: 14pt;">당신에게서 <span class="color">특별한 기운</span>이 느껴집니다..!</p>`;
-    console.log(-1 == zodiacdice.indexOf('황도'));
   } else {
     var submessage = ``;
   }
