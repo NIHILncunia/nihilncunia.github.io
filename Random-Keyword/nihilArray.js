@@ -69,10 +69,11 @@ function btnclothesSet() {
     '코트 기반', '기다란 휘장을 목에 두름', '로브 기반', '가운 기반', '점퍼 기반',
     '케이프', '롱 케이프', '숏 케이프', '강화복', '강화 외골격', '롱 가디건 기반',
 	  '롱 점퍼', '크롭 가디건', '크롭 점퍼', '크롭 망토', '크롭 로브',
+	  '없음', '없음', '없음',
   ];
 
   // 남성
-  var Mtop1 = [
+  var Mtop = [
     '셔츠 기반', '티셔츠 기반', '스웨터 기반', '후드티 기반', '복대 기반',
     '맨몸', '복부 붕대', '가슴 보호구', '어깨 보호구', '팔 보호구',
     '한쪽 팔 어깨 + 팔 보호구', '양팔 붕대', '한쪽 팔 붕대', '가슴 + 어깨 보호구', '갑옷 상의 풀세트',
@@ -81,28 +82,15 @@ function btnclothesSet() {
 
 	  '어깨 노출이 있는 셔츠 기반', '허리 노출이 있는 셔츠 기반', '가슴 노출이 있는 셔츠 기반', '어깨 노출이 있는 티셔츠 기반', '허리 노출이 있는 티셔츠 기반',
 	  '가슴 노출이 있는 티셔츠 기반', '어깨 노출이 있는 스웨터 기반', '허리 노출이 있는 스웨터 기반', '가슴 노출이 있는 스웨터 기반', '어깨 노출이 있는 후드티 기반',
-	  '허리 노출이 있는 후드티 기반', '가슴 노출이 있는 후드티 기반',
+	  '허리 노출이 있는 후드티 기반', '가슴 노출이 있는 후드티 기반', '긴 티셔츠 기반', '짧은 티셔츠 기반', '긴 셔츠 기반',
+	  '짧은 셔츠 기반', '긴 스웨터 기반', '짧은 스웨터 기반', '긴 후드티 기반', '짧은 후드티 기반',
+	  '없음', '없음', '없음', '없음',
   ];
-  var Mtop2 = [
-    '셔츠 기반', '티셔츠 기반', '스웨터 기반', '후드티 기반', '복대 기반',
-    '맨몸', '복부 붕대', '가슴 보호구', '어깨 보호구', '팔 보호구',
-    '한쪽 팔 어깨 + 팔 보호구', '양팔 붕대', '한쪽 팔 붕대', '가슴 + 어깨 보호구', '갑옷 상의 풀세트',
-    '소매만 있는 의상', '한쪽 소매만 있는 의상', '민소매 기반', '민소매 + 팔토시', '민소매 + 한쪽 팔토시',
-    '목 보호대', '목 보호대 + 복대', '목토시', '상의 + 케이프', '한벌옷',
-
-	  '어깨 노출이 있는 셔츠 기반', '허리 노출이 있는 셔츠 기반', '가슴 노출이 있는 셔츠 기반', '어깨 노출이 있는 티셔츠 기반', '허리 노출이 있는 티셔츠 기반',
-	  '가슴 노출이 있는 티셔츠 기반', '어깨 노출이 있는 스웨터 기반', '허리 노출이 있는 스웨터 기반', '가슴 노출이 있는 스웨터 기반', '어깨 노출이 있는 후드티 기반',
-	  '허리 노출이 있는 후드티 기반', '가슴 노출이 있는 후드티 기반',
-  ];
-  var Mbottom1 = [
+  var Mbottom = [
     '긴바지 기반', '반바지 기반', '한쪽이 짧은 바지 기반', '아주 짧은 바지 기반', '허리 보호구',
     '다리 보호구', '허벅지 보호구', '한쪽만 다리 보호구', '한쪽만 허벅지 보호구', '허벅지 보호구 + 한쪽 다리 보호구',
-    '바지 + 천쪼가리', '천쪼가리만 착용', '다리에 붕대', '발토시',
-  ];
-  var Mbottom2 = [
-    '긴바지 기반', '반바지 기반', '한쪽이 짧은 바지 기반', '아주 짧은 바지 기반', '허리 보호구',
-    '다리 보호구', '허벅지 보호구', '한쪽만 다리 보호구', '한쪽만 허벅지 보호구', '허벅지 보호구 + 한쪽 다리 보호구',
-    '바지 + 천쪼가리', '천쪼가리만 착용', '다리에 붕대', '발토시',
+    '바지 + 천쪼가리', '천쪼가리만 착용', '다리에 붕대', '발토시', '털이 붙어있는 바지',
+	  '없음', '없음', '없음', '없음',
   ];
   var Munder = [
     '브리프', '드로어즈', '트렁크', '훈도시', 'T백',
@@ -110,7 +98,7 @@ function btnclothesSet() {
     '스트링', '작스트랩', '니플 패드', '니플 밴드', '전신수영복',
     '삼각 수영복', '사각 수영복', '5부 수영복', '9부 수영복', '트렁크',
     '보드쇼츠', '하이브리드 쇼츠', '니스킨', '학교 수영복', '잠수복',
-    '래시가드', '바디스킨',
+    '래시가드', '바디스킨', '없음', '없음', '없음',
   ];
   var Mshoes = [
     '운동화', '슬리퍼', '샌들', '롱 부츠', '부츠',
@@ -124,11 +112,12 @@ function btnclothesSet() {
     '오페라 펌프', '윙 팁', '플레인 팁', '스플릿 토', '스커트 토',
     '브로그', '더블 몽크 스트랩', '스트레이트 팁', '보트 슈즈', '슬립 온 슈즈',
 
-    '어글리 슈즈', '스니커즈', '발모랄', '원피스 뱀프',
+    '어글리 슈즈', '스니커즈', '발모랄', '원피스 뱀프', '없음',
+	  '없음', '없음', '없음', '없음',
   ];
 
   // 여성
-  var Ftop1 = [
+  var Ftop = [
     '셔츠 기반', '티셔츠 기반', '스웨터 기반', '후드티 기반', '블라우스 기반',
     '복대 기반', '맨몸', '복부 붕대', '가슴 보호구', '어깨 보호구',
     '팔 보호구', '한쪽 팔 어깨 + 팔 보호구', '양팔 붕대', '한쪽 팔 붕대', '가슴 + 어깨 보호구',
@@ -139,32 +128,17 @@ function btnclothesSet() {
 	  '가슴 노출이 있는 셔츠 기반', '어깨 노출이 있는 티셔츠 기반', '허리 노출이 있는 티셔츠 기반', '가슴 노출이 있는 티셔츠 기반', '어깨 노출이 있는 스웨터 기반',
 	  '허리 노출이 있는 스웨터 기반', '가슴 노출이 있는 스웨터 기반', '어깨 노출이 있는 후드티 기반', '허리 노출이 있는 후드티 기반', '가슴 노출이 있는 후드티 기반',
 	  '어깨 노출이 있는 블라우스 기반', '허리 노출이 있는 블라우스 기반', '가슴 노출이 있는 블라우스 기반', '어깨 노출이 있는 드레스 기반', '허리 노출이 있는 드레스 기반',
-	  '가슴 노출이 있는 드레스 기반',
-  ];
-  var Ftop2 = [
-    '셔츠 기반', '티셔츠 기반', '스웨터 기반', '후드티 기반', '블라우스 기반',
-    '복대 기반', '맨몸', '복부 붕대', '가슴 보호구', '어깨 보호구',
-    '팔 보호구', '한쪽 팔 어깨 + 팔 보호구', '양팔 붕대', '한쪽 팔 붕대', '가슴 + 어깨 보호구',
-    '갑옷 상의 풀세트', '소매만 있는 의상', '한쪽 소매만 있는 의상', '민소매 기반', '민소매 + 팔토시',
-    '민소매 + 한쪽 팔토시', '목 보호대', '목 보호대 + 복대', '드레스 기반',
+	  '가슴 노출이 있는 드레스 기반', '긴 티셔츠 기반', '짧은 티셔츠 기반', '긴 셔츠 기반', '짧은 셔츠 기반',
 
-    '목토시', '상의 + 케이프', '한벌옷', '어깨 노출이 있는 셔츠 기반', '허리 노출이 있는 셔츠 기반',
-	  '가슴 노출이 있는 셔츠 기반', '어깨 노출이 있는 티셔츠 기반', '허리 노출이 있는 티셔츠 기반', '가슴 노출이 있는 티셔츠 기반', '어깨 노출이 있는 스웨터 기반',
-	  '허리 노출이 있는 스웨터 기반', '가슴 노출이 있는 스웨터 기반', '어깨 노출이 있는 후드티 기반', '허리 노출이 있는 후드티 기반', '가슴 노출이 있는 후드티 기반',
-	  '어깨 노출이 있는 블라우스 기반', '허리 노출이 있는 블라우스 기반', '가슴 노출이 있는 블라우스 기반', '어깨 노출이 있는 드레스 기반', '허리 노출이 있는 드레스 기반',
-	  '가슴 노출이 있는 드레스 기반',
+	  '긴 스웨터 기반', '짧은 스웨터 기반', '긴 후드티 기반', '짧은 후드티 기반', '긴 블라우스 기반',
+	  '짧은 블라우스 기반', '없음', '없음', '없음', '없음',
   ];
-  var Fbottom1 = [
+  var Fbottom = [
     '긴바지 기반', '반바지 기반', '한쪽이 짧은 바지 기반', '아주 짧은 바지 기반', '허리 보호구',
     '다리 보호구', '허벅지 보호구', '한쪽만 다리 보호구', '한쪽만 허벅지 보호구', '허벅지 보호구 + 한쪽 다리 보호구',
     '바지 + 천쪼가리', '천쪼가리만 착용', '스커트 기반', '롱 스커트 기반', '미니 스커트 기반',
-    '다리에 붕대', '발토시',
-  ];
-  var Fbottom2 = [
-    '긴바지 기반', '반바지 기반', '한쪽이 짧은 바지 기반', '아주 짧은 바지 기반', '허리 보호구',
-    '다리 보호구', '허벅지 보호구', '한쪽만 다리 보호구', '한쪽만 허벅지 보호구', '허벅지 보호구 + 한쪽 다리 보호구',
-    '바지 + 천쪼가리', '천쪼가리만 착용', '스커트 기반', '롱 스커트 기반', '미니 스커트 기반',
-    '다리에 붕대', '발토시',
+    '다리에 붕대', '발토시', '털이 붙어있는 바지', '털이 붙어있는 스커트', '없음',
+	  '없음', '없음', '없음',
   ];
   var Funder = [
     '슈미즈', '콤비네이션', '스트랩리스 브래지어', '발코니 브래지어', '플런지 브래지어',
@@ -183,7 +157,8 @@ function btnclothesSet() {
     '전신수영복', '스트링 비키니', '부르키니', '스포츠 비키니', '슬링 샷',
     '원피스', '모노키니', '비키니', '하이웨이스트 비키니', '프릴 비키니',
     '홀터넥 비키니', '탱크탑 비키니', '오프 숄더 비키니', '스커트 랩', '시스루 니트',
-    '튜브 탑 비키니', '하이레그',
+    '튜브 탑 비키니', '하이레그', '없음', '없음', '없음',
+	  '없음',
   ];
   var Fshoes = [
     '맨발', '맨발 + 붕대를 감음', '맨발 + 한쪽 발에만 붕대를 감음', '모카신', '몽크',
@@ -201,307 +176,187 @@ function btnclothesSet() {
     '로퍼', '토오픈', 'T스트랩', '부티', '부츠',
     '글레디에이터 슈즈', '플립플랍', '샌들', '웨지 부티', '힐리스 힐',
     '사이드 오픈', '플랫', '포니 힐', '발렛 힐', '에스파드류',
-    '옥스퍼드', '드라이빙 슈즈', '도르세이',
+    '옥스퍼드', '드라이빙 슈즈', '도르세이', '없음', '없음',
+	  '없음', '없음',
   ];
 
-  var acc1 = [
+  var acc = [
     '목걸이', '귀걸이', '팔찌', '발찌', '반지',
     '브로치', '머리띠', '머리핀', '비녀', '댕기',
     '곱창밴드', '헤어 브로치', '머리망', '염주', '묵주',
-  ];
-  var acc2 = [
-    '목걸이', '귀걸이', '팔찌', '발찌', '반지',
-    '브로치', '머리띠', '머리핀', '비녀', '댕기',
-    '곱창밴드', '헤어 브로치', '머리망', '염주', '묵주',
+	  '없음', '없음',
   ];
 
-  var extra1 = [
+  var extra = [
     '헤어밴드', '모자', '목도리', '장갑', '양말',
     '디지털 시계', '회중시계', '아날로그 시계', '가방', '문신',
-    '흉터',
-  ];
-  var extra2 = [
-    '헤어밴드', '모자', '목도리', '장갑', '양말',
-    '디지털 시계', '회중시계', '아날로그 시계', '가방', '문신',
-    '흉터',
+    '흉터', '없음', '없음',
   ];
 
-  var keyword1 = [
+  var keyword = [
     '보석', '망사', '트임', '사각형', '자수 장식',
     '구형', '삼각형', '육각형', '도형', '고리',
     '패턴', '사슬', '벨트', '리본', '프릴',
     '휘장', '레이스', '날개', '해골', '송곳니',
-  ];
-  var keyword2 = [
-    '보석', '망사', '트임', '사각형', '자수 장식',
-    '구형', '삼각형', '육각형', '도형', '고리',
-    '패턴', '사슬', '벨트', '리본', '프릴',
-    '휘장', '레이스', '날개', '해골', '송곳니',
+	  '털', '없음', '없음',
   ];
 
-  var genderdice;
-  genderdice = gender[Math.floor(Math.random() * gender.length)];
+  var genderdice = gender[Math.floor(Math.random() * gender.length)];
 
-  var outerdice = outer[Math.floor(Math.random() * outer.length)];
+	var outerdice = outer[Math.floor(Math.random() * outer.length)];
+	var accdice;
+	var extradice;
+	var keyworddice;
 
-  var Mtop1dice = Mtop1[Math.floor(Math.random() * Mtop1.length)];
-  var Mtop2dice = Mtop2[Math.floor(Math.random() * Mtop2.length)];
-  var Mbottom1dice = Mbottom1[Math.floor(Math.random() * Mbottom1.length)];
-  var Mbottom2dice = Mbottom2[Math.floor(Math.random() * Mbottom2.length)];
-  var Munderdice = Munder[Math.floor(Math.random() * Munder.length)];
-  var Mshoesdice = Mshoes[Math.floor(Math.random() * Mshoes.length)];
+  var Mtopbox = [];
+  var Mbottombox = [];
+	var Ftopbox = [];
+	var Fbottombox = [];
+  var accbox = [];
+  var extrabox = [];
+  var keywordbox = [];
+  var overlapbox = [];
 
-  var Ftop1dice = Ftop1[Math.floor(Math.random() * Ftop1.length)];
-  var Ftop2dice = Ftop2[Math.floor(Math.random() * Ftop2.length)];
-  var Fbottom1dice = Fbottom1[Math.floor(Math.random() * Fbottom1.length)];
-  var Fbottom2dice = Fbottom2[Math.floor(Math.random() * Fbottom2.length)];
-  var Funderdice = Funder[Math.floor(Math.random() * Funder.length)];
-  var Fshoesdice = Fshoes[Math.floor(Math.random() * Fshoes.length)];
-
-  var acc1dice = acc1[Math.floor(Math.random() * acc1.length)];
-  var acc2dice = acc2[Math.floor(Math.random() * acc2.length)];
-  var extra1dice = extra1[Math.floor(Math.random() * extra1.length)];
-  var extra2dice = extra2[Math.floor(Math.random() * extra2.length)];
-  var keyword1dice = keyword1[Math.floor(Math.random() * keyword1.length)];
-  var keyword2dice = keyword2[Math.floor(Math.random() * keyword2.length)];
-
-  var d2 = '0123456789';
-  var destinyD2_1;
-  var destinyD2_2;
-  var destinyD2_3;
-  var destinyD2_4;
-  var destinyD2_5;
-  var destinyD2_6;
-  var destinyD2_7;
-  var destinyD2_8;
-  var destinyD2_9;
-  var destinyD2_10;
-  var destinyD2_11;
-  var destinyD2_12;
-  var destinyD2_13;
+  for (var c = 0; c < 2; c++) {
+	  accdice = acc[Math.floor(Math.random() * acc.length)];
+	  if (accbox.length === 0) {
+	  	accbox.push(accdice);
+	  } else {
+	  	if (accbox.includes(accdice)) {
+	  		overlapbox.push(accdice);
+	  		c -= 1;
+		  } else {
+			  accbox.push(accdice);
+		  }
+	  }
+  }
+  for (var d = 0; d < 2; d++) {
+	  extradice = extra[Math.floor(Math.random() * extra.length)];
+	  if (extrabox.length === 0) {
+	  	extrabox.push(extradice);
+	  } else {
+	  	if (extrabox.includes(extradice)) {
+	  		overlapbox.push(extradice);
+	  		d -= 1;
+		  } else {
+			  extrabox.push(extradice);
+		  }
+	  }
+  }
+  for (var e = 0; e < 2; e++) {
+	  keyworddice = keyword[Math.floor(Math.random() * keyword.length)];
+	  if (keywordbox.length === 0) {
+		  keywordbox.push(keyworddice);
+	  } else {
+	  	if (keywordbox.includes(keyworddice)) {
+	  		overlapbox.push(keyworddice);
+	  		e -= 1;
+	  	} else {
+			  keywordbox.push(keyworddice);
+		  }
+	  }
+  }
 
   if (genderdice == '남성' || '보이쉬한 여성') {
+	  var Mtopdice;
+    var Mbottomdice;
+    var Munderdice = Munder[Math.floor(Math.random() * Munder.length)];
+    var Mshoesdice = Mshoes[Math.floor(Math.random() * Mshoes.length)];
 
-    destinyD2_1 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_2 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_3 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_4 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_5 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_6 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_7 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_8 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_9 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_10 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_11 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_12 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_13 = d2[Math.floor(Math.random() * d2.length)];
-
-    if (destinyD2_1 <= '1') {
-      outerdice = '없음';
-    } else if (destinyD2_1 >= '2') {
-      outerdice = outer[Math.floor(Math.random() * outer.length)];
+    for (var a = 0; a < 2; a++) {
+	    Mtopdice = Mtop[Math.floor(Math.random() * Mtop.length)];
+	    if (Mtopbox.length === 0) {
+		    Mtopbox.push(Mtopdice);
+	    } else {
+	    	if (Mtopbox.includes(Mtopdice)) {
+			    overlapbox.push(Mtopdice);
+			    a -= 1;
+		    } else {
+			    Mtopbox.push(Mtopdice);
+		    }
+	    }
     }
-
-    if (destinyD2_2 <= '1') {
-      Mtop1dice = '없음';
-    } else if (destinyD2_2 >= '2') {
-      Mtop1dice = Mtop1[Math.floor(Math.random() * Mtop1.length)];
-    }
-
-    if (destinyD2_3 <= '1') {
-      Mtop2dice = '없음';
-    } else if (destinyD2_3 >= '2') {
-      Mtop2dice = Mtop2[Math.floor(Math.random() * Mtop2.length)];
-    }
-
-    if (destinyD2_4 <= '1') {
-      Mbottom1dice = '없음';
-    } else if (destinyD2_4 >= '2') {
-      Mbottom1dice = Mbottom1[Math.floor(Math.random() * Mbottom1.length)];
-    }
-
-    if (destinyD2_5 <= '1') {
-      Mbottom2dice = '없음';
-    } else if (destinyD2_5 >= '2') {
-      Mbottom2dice = Mbottom2[Math.floor(Math.random() * Mbottom2.length)];
-    }
-
-    if (destinyD2_6 <= '1') {
-      Munderdice = '없음';
-    } else if (destinyD2_6 >= '2') {
-      Munderdice = Munder[Math.floor(Math.random() * Munder.length)];
-    }
-
-    if (destinyD2_7 <= '1') {
-      Mshoesdice = '없음';
-    } else if (destinyD2_7 >= '2') {
-      Mshoesdice = Mshoes[Math.floor(Math.random() * Mshoes.length)];
-    }
-
-    if (destinyD2_8 <= '1') {
-      acc1dice = '없음';
-    } else if (destinyD2_8 >= '2') {
-      acc1dice = acc1[Math.floor(Math.random() * acc1.length)];
-    }
-
-    if (destinyD2_9 <= '1') {
-      acc2dice = '없음';
-    } else if (destinyD2_9 >= '2') {
-      acc2dice = acc2[Math.floor(Math.random() * acc2.length)];
-    }
-
-    if (destinyD2_10 <= '1') {
-      extra1dice = '없음';
-    } else if (destinyD2_10 >= '2') {
-      extra1dice = extra1[Math.floor(Math.random() * extra1.length)];
-    }
-
-    if (destinyD2_11 <= '1') {
-      extra2dice = '없음';
-    } else if (destinyD2_11 >= '2') {
-      extra2dice = extra2[Math.floor(Math.random() * extra2.length)];
-    }
-
-    if (destinyD2_12 <= '1') {
-      keyword1dice = '없음';
-    } else if (destinyD2_12 >= '2') {
-      keyword1dice = keyword1[Math.floor(Math.random() * keyword1.length)];
-    }
-
-    if (destinyD2_13 <= '1') {
-      keyword2dice = '없음';
-    } else if (destinyD2_13 >= '2') {
-      keyword2dice = keyword2[Math.floor(Math.random() * keyword2.length)];
+    for (var b = 0; b < 2; b++) {
+	    Mbottomdice = Mbottom[Math.floor(Math.random() * Mbottom.length)];
+	    if (Mbottombox.length === 0) {
+		    Mbottombox.push(Mbottomdice);
+	    } else {
+		    if (Mbottombox.includes(Mbottomdice)) {
+			    overlapbox.push(Mbottomdice);
+			    b -= 1;
+		    } else {
+			    Mbottombox.push(Mbottomdice);
+		    }
+	    }
     }
 
     var btntext = `
       <p>캐릭터의 성별은 <span class="color">${genderdice}!</span></p>
       <p style="font-size: 14pt;">아래의 결과는 그저 가능성일 뿐, 알아서 조합해서 사용한다.</p><br />
       <p style="font-size: 14pt;">외투: <span class="color">${outerdice}!</span> (${outer.length}개)</p>
-      <p style="font-size: 14pt;">상의 1: <span class="color">${Mtop1dice}!</span> (${Mtop1.length}개)</p>
-      <p style="font-size: 14pt;">상의 2: <span class="color">${Mtop2dice}!</span> (${Mtop2.length}개)</p>
-      <p style="font-size: 14pt;">하의 1: <span class="color">${Mbottom1dice}!</span> (${Mbottom1.length}개)</p>
-      <p style="font-size: 14pt;">하의 2: <span class="color">${Mbottom2dice}!</span> (${Mbottom2.length}개)</p>
+      <p style="font-size: 14pt;">상의 1: <span class="color">${Mtopbox[0]}!</span> (${Mtop.length}개)</p>
+      <p style="font-size: 14pt;">상의 2: <span class="color">${Mtopbox[1]}!</span> (${Mtop.length}개)</p>
+      <p style="font-size: 14pt;">하의 1: <span class="color">${Mbottombox[0]}!</span> (${Mbottom.length}개)</p>
+      <p style="font-size: 14pt;">하의 2: <span class="color">${Mbottombox[1]}!</span> (${Mbottom.length}개)</p>
       <p style="font-size: 14pt;">속옷: <span class="color">${Munderdice}!</span> (${Munder.length}개)</p>
       <p style="font-size: 14pt;">신발: <span class="color">${Mshoesdice}!</span> (${Mshoes.length}개)</p>
-      <p style="font-size: 14pt;">액세서리 1: <span class="color">${acc1dice}!</span> (${acc1.length}개)</p>
-      <p style="font-size: 14pt;">액세서리 2: <span class="color">${acc2dice}!</span> (${acc2.length}개)</p>
-      <p style="font-size: 14pt;">잡화 1: <span class="color">${extra1dice}!</span> (${extra1.length}개)</p>
-      <p style="font-size: 14pt;">잡화 2: <span class="color">${extra2dice}!</span> (${extra2.length}개)</p>
-      <p style="font-size: 14pt;">키워드 1: <span class="color">${keyword1dice}!</span> (${keyword1.length}개)</p>
-      <p style="font-size: 14pt;">키워드 2: <span class="color">${keyword2dice}!</span> (${keyword2.length}개)</p>
+      <p style="font-size: 14pt;">액세서리 1: <span class="color">${accbox[0]}!</span> (${acc.length}개)</p>
+      <p style="font-size: 14pt;">액세서리 2: <span class="color">${accbox[1]}!</span> (${acc.length}개)</p>
+      <p style="font-size: 14pt;">잡화 1: <span class="color">${extrabox[0]}!</span> (${extra.length}개)</p>
+      <p style="font-size: 14pt;">잡화 2: <span class="color">${extrabox[1]}!</span> (${extra.length}개)</p>
+      <p style="font-size: 14pt;">키워드 1: <span class="color">${keywordbox[0]}!</span> (${keyword.length}개)</p>
+      <p style="font-size: 14pt;">키워드 2: <span class="color">${keywordbox[1]}!</span> (${keyword.length}개)</p>
       
     `;
   } else if (genderdice == '여성' || '걸리쉬한 남성') {
+    var Ftopdice;
+    var Fbottomdice;
+    var Funderdice = Funder[Math.floor(Math.random() * Funder.length)];
+    var Fshoesdice = Fshoes[Math.floor(Math.random() * Fshoes.length)];
 
-    destinyD2_1 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_2 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_3 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_4 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_5 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_6 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_7 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_8 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_9 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_10 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_11 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_12 = d2[Math.floor(Math.random() * d2.length)];
-    destinyD2_13 = d2[Math.floor(Math.random() * d2.length)];
-
-    if (destinyD2_1 <= '1') {
-      outerdice = '없음';
-    } else if (destinyD2_1 >= '2') {
-      outerdice = outer[Math.floor(Math.random() * outer.length)];
+    for (var f = 0; f < 2; f++) {
+	    Ftopdice = Ftop[Math.floor(Math.random() * Ftop.length)];
+	    if (Ftopbox.length === 0) {
+	    	Ftopbox.push(Ftopdice);
+	    } else {
+	    	if (Ftopbox.includes(Ftopdice)) {
+	    		overlapbox.push(Ftopdice);
+	    		f -= 1;
+		    } else {
+			    Ftopbox.push(Ftopdice);
+		    }
+	    }
     }
-
-    if (destinyD2_2 <= '1') {
-      Ftop1dice = '없음';
-    } else if (destinyD2_2 >= '2') {
-      Ftop1dice = Ftop1[Math.floor(Math.random() * Ftop1.length)];
-    }
-
-    if (destinyD2_3 <= '1') {
-      Ftop2dice = '없음';
-    } else if (destinyD2_3 >= '2') {
-      Ftop2dice = Ftop2[Math.floor(Math.random() * Ftop2.length)];
-    }
-
-    if (destinyD2_4 <= '1') {
-      Fbottom1dice = '없음';
-    } else if (destinyD2_4 >= '2') {
-      Fbottom1dice = Fbottom1[Math.floor(Math.random() * Fbottom1.length)];
-    }
-
-    if (destinyD2_5 <= '1') {
-      Fbottom2dice = '없음';
-    } else if (destinyD2_5 >= '2') {
-      Fbottom2dice = Fbottom2[Math.floor(Math.random() * Fbottom2.length)];
-    }
-
-    if (destinyD2_6 <= '1') {
-      Funderdice = '없음';
-    } else if (destinyD2_6 >= '2') {
-      Funderdice = Funder[Math.floor(Math.random() * Funder.length)];
-    }
-
-    if (destinyD2_7 <= '1') {
-      Fshoesdice = '없음';
-    } else if (destinyD2_7 >= '2') {
-      Fshoesdice = Fshoes[Math.floor(Math.random() * Fshoes.length)];
-    }
-
-    if (destinyD2_8 <= '1') {
-      acc1dice = '없음';
-    } else if (destinyD2_8 >= '2') {
-      acc1dice = acc1[Math.floor(Math.random() * acc1.length)];
-    }
-
-    if (destinyD2_9 <= '1') {
-      acc2dice = '없음';
-    } else if (destinyD2_9 >= '2') {
-      acc2dice = acc2[Math.floor(Math.random() * acc2.length)];
-    }
-
-    if (destinyD2_10 <= '1') {
-      extra1dice = '없음';
-    } else if (destinyD2_10 >= '2') {
-      extra1dice = extra1[Math.floor(Math.random() * extra1.length)];
-    }
-
-    if (destinyD2_11 <= '1') {
-      extra2dice = '없음';
-    } else if (destinyD2_11 >= '2') {
-      extra2dice = extra2[Math.floor(Math.random() * extra2.length)];
-    }
-
-    if (destinyD2_12 <= '1') {
-      keyword1dice = '없음';
-    } else if (destinyD2_12 >= '2') {
-      keyword1dice = keyword1[Math.floor(Math.random() * keyword1.length)];
-    }
-
-    if (destinyD2_13 <= '1') {
-      keyword2dice = '없음';
-    } else if (destinyD2_13 >= '2') {
-      keyword2dice = keyword2[Math.floor(Math.random() * keyword2.length)];
-    }
+	  for (var g = 0; g < 2; g++) {
+		  Fbottomdice = Fbottom[Math.floor(Math.random() * Fbottom.length)];
+		  if (Fbottombox.length === 0) {
+			  Fbottombox.push(Fbottomdice);
+		  } else {
+		  	if (Fbottombox.includes(Fbottomdice)) {
+		  		overlapbox.push(Fbottomdice);
+		  		g -= 1;
+			  } else {
+				  Fbottombox.push(Fbottomdice);
+			  }
+		  }
+	  }
 
     var btntext = `
       <p>캐릭터의 성별은 <span class="color">${genderdice}!</span></p>
       <p style="font-size: 14pt;">아래의 결과는 그저 가능성일 뿐, 알아서 조합해서 사용한다.</p><br />
       <p style="font-size: 14pt;">외투: <span class="color">${outerdice}!</span> (${outer.length}개)</p>
-      <p style="font-size: 14pt;">상의 1: <span class="color">${Ftop1dice}!</span> (${Ftop1.length}개)</p>
-      <p style="font-size: 14pt;">상의 2: <span class="color">${Ftop2dice}!</span> (${Ftop2.length}개)</p>
-      <p style="font-size: 14pt;">하의 1: <span class="color">${Fbottom1dice}!</span> (${Fbottom1.length}개)</p>
-      <p style="font-size: 14pt;">하의 2: <span class="color">${Fbottom2dice}!</span> (${Fbottom2.length}개)</p>
+      <p style="font-size: 14pt;">상의 1: <span class="color">${Ftopbox[0]}!</span> (${Ftop.length}개)</p>
+      <p style="font-size: 14pt;">상의 2: <span class="color">${Ftopbox[1]}!</span> (${Ftop.length}개)</p>
+      <p style="font-size: 14pt;">하의 1: <span class="color">${Fbottombox[0]}!</span> (${Fbottom.length}개)</p>
+      <p style="font-size: 14pt;">하의 2: <span class="color">${Fbottombox[1]}!</span> (${Fbottom.length}개)</p>
       <p style="font-size: 14pt;">속옷: <span class="color">${Funderdice}!</span> (${Funder.length}개)</p>
       <p style="font-size: 14pt;">신발: <span class="color">${Fshoesdice}!</span> (${Fshoes.length}개)</p>
-      <p style="font-size: 14pt;">액세서리 1: <span class="color">${acc1dice}!</span> (${acc1.length}개)</p>
-      <p style="font-size: 14pt;">액세서리 2: <span class="color">${acc2dice}!</span> (${acc2.length}개)</p>
-      <p style="font-size: 14pt;">잡화 1: <span class="color">${extra1dice}!</span> (${extra1.length}개)</p>
-      <p style="font-size: 14pt;">잡화 2: <span class="color">${extra2dice}!</span> (${extra2.length}개)</p>
-      <p style="font-size: 14pt;">키워드 1: <span class="color">${keyword1dice}!</span> (${keyword1.length}개)</p>
-      <p style="font-size: 14pt;">키워드 2: <span class="color">${keyword2dice}!</span> (${keyword2.length}개)</p>
+      <p style="font-size: 14pt;">액세서리 1: <span class="color">${accbox[0]}!</span> (${acc.length}개)</p>
+      <p style="font-size: 14pt;">액세서리 2: <span class="color">${accbox[1]}!</span> (${acc.length}개)</p>
+      <p style="font-size: 14pt;">잡화 1: <span class="color">${extrabox[0]}!</span> (${extra.length}개)</p>
+      <p style="font-size: 14pt;">잡화 2: <span class="color">${extrabox[1]}!</span> (${extra.length}개)</p>
+      <p style="font-size: 14pt;">키워드 1: <span class="color">${keywordbox[0]}!</span> (${keyword.length}개)</p>
+      <p style="font-size: 14pt;">키워드 2: <span class="color">${keywordbox[1]}!</span> (${keyword.length}개)</p>
     `;
   }
 
@@ -511,7 +366,9 @@ function btnclothesSet() {
 
 function btnwhatIllust() {
   var btnwhatIllust = [
-    '팬아트를 그려라', '리퀘스트를 받아라', '세계관 캐릭터를 그려라', '오늘은 그림을 그리지 말고 쉬도록 하라', '랜덤 디자인을 해라',
+    '팬아트를 그려라', '리퀘스트를 그려라', '세계관 캐릭터를 그려라', '오늘은 쉬도록 하라', '랜덤 디자인을 해라',
+	  '판타지 디자인을 해라', 'SF 디자인을 해라', '몬스터 디자인을 해라', '데일리 디자인을 해라', '좀 더 생각해봐야겠다',
+	  '세계관 캐릭터 리메이크를 해라',
   ];
 
   var whatIllustdice;
@@ -554,7 +411,8 @@ function btnNihilbackstory() {
 	  '새로운 국가를 개척하기', '새로운 대륙을 탐사하기', '새로운 땅을 찾기', '새로운 종족을 찾기', '유적을 찾기',
 	  '붙잡힌 동료를 구하기', '붙잡힌 가족을 구하기', '붙잡힌 친구를 구하기', '죽을 곳을 찾기', '죽기',
 	  '악당이 되기', '악의 세력에 가담하기', '도적단에 합류하기', '수호자가 되기', '살기',
-	  '학문을 깨우치기', '추적자에게서 도망치기',
+	  '학문을 깨우치기', '추적자에게서 도망치기', '바이러스를 퍼뜨리기', '위험한 유물을 파괴하기', '원수의 비밀을 찾기',
+	  '자신의 비밀을 알아내기', '세상에 퍼진 바이러스를 바로잡기', '악을 타파하기',
   ];
 
   var 누구 = [
@@ -591,18 +449,23 @@ function btnNihilbackstory() {
 	  '마룡', '신수', '몬스터',
   ];
 
+  var 성별 = [
+  	'남성', '여성', '보이쉬한 여성', '걸리쉬한 남성',
+  ];
+
   var placedice = 어디[Math.floor(Math.random() * 어디.length)];
   var objectdice = 목적[Math.floor(Math.random() * 목적.length)];
   var whodice = 누구[Math.floor(Math.random() * 누구.length)];
+  var genderdice = 성별[Math.floor(Math.random() * 성별.length)];
 
-  var diceTotal = 어디.length * 목적.length * 누구.length;
+  var diceTotal = 어디.length * 목적.length * 누구.length * 성별.length;
 
   var btnresult = document.getElementById("btnresult");
   var btntext = `
     <p style="font-size: 14pt;">
       당신의 캐릭터는 <span class="color">${placedice}</span>에서 왔습니다. 그는
       <span class="color">${objectdice}</span> 위해 여행을 시작한
-      <span class="color">${whodice}</span>입니다. (${diceTotal}개)
+      <span class="color">${genderdice} ${whodice}</span>입니다. (${diceTotal}개)
     </p>
   `;
   btnresult.innerHTML = btntext;
@@ -615,6 +478,7 @@ function btngroup() {
 		'안티 노른', '매드 스펠즈', '블러드 라인', '데모닉 오더', '북방 레지스탕스',
 		'수호자 연합', '정화기관', '까마귀 마녀단', '해골 교단', '명신교단',
 		'파나믹 교단', '기계황신교', '기계신교', '신비교', '나티레네 교단',
+		'종족연합', '반 종족연합',
 	];
 
 	var groupworddice = groupword[Math.floor(Math.random() * groupword.length)];
@@ -697,6 +561,15 @@ function btngroup() {
 		case '나티레네 교단':
 			groupDesc = '물의 여신 나티레네를 섬기는 교단. 나티레네의 수족들인 물의 정령과 계약을 하기도 한다.';
 			break;
+		case '종족연합':
+			groupDesc = '수많은 종족들이 하나의 뜻을 이루기 위해 일으킨 연합. 이레귤러를 이 땅에서 몰아내려고 한다.';
+			break;
+		case '반 종족연합':
+			groupDesc = '종족연합이 탄생하자 이레귤러들이 자신들의 수하들을 결집시켜 형성한 이레귤러 집단.';
+			break;
+		case '':
+			groupDesc = '';
+			break;
 	}
 
 	var btnresult = document.getElementById("btnresult");
@@ -706,6 +579,125 @@ function btngroup() {
 	`;
 	btnresult.innerHTML = btntext;
 } // 소속
+
+function btnhome() {
+	var area = [
+		'드라스 섬', '발라큐라 섬', '바르기스 대륙', '유센티아 대륙', '철벽섬',
+		'조각섬', '하얀 숲', '검은 협곡', '썩은 고원', '리자루스 제도',
+		'이름 미정 섬',
+	];
+
+	var areadice = area[Math.floor(Math.random() * area.length)];
+
+	if (areadice === '드라스 섬') {
+		var drassCity = [
+			'스톤마운틴 마을', '산디아스 마을',
+		];
+		var Citydice = drassCity[Math.floor(Math.random() * drassCity.length)];
+		var btntext = `오늘의 출신지는 <span class="color">${areadice}/${Citydice}!</span>`;
+	} else if (areadice === '발라큐라 섬') {
+		var vallacuaCity = [
+			'빌레 마을', '발라큐아 마을', '헤르날 마을',
+		];
+		var Citydice = vallacuaCity[Math.floor(Math.random() * vallacuaCity.length)];
+		var btntext = `오늘의 출신지는 <span class="color">${areadice}/${Citydice}!</span>`;
+	} else if (areadice === '바르기스 대륙') {
+		var bargissCity = [
+			'오드론 마을', '레네토스 마을', '로가리아 마을', '모르제 마을', '사라마 마을',
+			'레보네스 항구', '바르기스 마을', '사이리아 마을', '디에스티 마을', '메세니움 마을',
+			'라보레누스 마을', '베리나르 마을',
+		];
+		var Citydice = bargissCity[Math.floor(Math.random() * bargissCity.length)];
+		var btntext = `오늘의 출신지는 <span class="color">${areadice}/${Citydice}!</span>`;
+	} else if (areadice === '이름 미정 섬') {
+		var nonameCity = [
+			'바르메스 항구', '키아니르 마을',
+		];
+		var Citydice = nonameCity[Math.floor(Math.random() * nonameCity.length)];
+		var btntext = `오늘의 출신지는 <span class="color">${areadice}/${Citydice}!</span>`;
+	} else if (areadice === '유센티아 대륙') {
+		var ucentiaNation = [
+			'고르고니아 제국', '신 제국', '강철 제국', '드라코니르 왕국', '대제국 알세이아',
+			'비점령 지역',
+		];
+		var Nationdice = ucentiaNation[Math.floor(Math.random() * ucentiaNation.length)];
+		if (Nationdice === '고르고니아 제국') {
+			var gorgoniaCity = [
+				'수도 딜나르스', '텔슈타인 마을', '엘제이스 항구', '르나힘 마을', '마람키아 마을',
+				'타미움 마을', '레란타 마을', '네아제른 요새', '엘덴타인 마을', '마샤 마을',
+				'살로우 마을', '아스카플론 마을', '드라네이스 마을', '마그라스 마을', '에레디온 요새',
+				'스바티아 요새',
+			];
+			var Citydice = gorgoniaCity[Math.floor(Math.random() * gorgoniaCity.length)];
+			var btntext = `오늘의 출신지는 <span class="color">${areadice}/${Nationdice}/${Citydice}!</span>`;
+		} else if (Nationdice === '신 제국') {
+			var sinCity = [
+				'수도 엘카르스', '샤샤스 마을', '브키아 마을', '베르피 마을', '쉐누아 마을',
+				'발카니아 요새', '오즈린 요새', '쟈그로 마을', '딜리키아 마을', '아트레닐 마을',
+				'노르제아 마을', '드라베이츠 마을', '마일레누스 마을', '드라그메른 마을', '드람노르 마을',
+			];
+			var Citydice = sinCity[Math.floor(Math.random() * sinCity.length)];
+			var btntext = `오늘의 출신지는 <span class="color">${areadice}/${Nationdice}/${Citydice}!</span>`;
+		} else if (Nationdice === '강철 제국') {
+			var blackironCity = [
+				'수도 데로무스', '로스네이크 요새', '게르힘 마을', '리에니스 마을', '샤하리스 마을',
+				'라글레스 마을', '하르니디움 마을', '록사리아 마을', '에르페디 마을', '아스톤 요새',
+				'모레슬리 요새',
+			];
+			var Citydice = blackironCity[Math.floor(Math.random() * blackironCity.length)];
+			var btntext = `오늘의 출신지는 <span class="color">${areadice}/${Nationdice}/${Citydice}!</span>`;
+		} else if (Nationdice === '드라코니르 왕국') {
+			var draconirCity = [
+				'수도 베마로스', '마르보레스 마을', '브로시아 마을', '페데일 마을', '뎀버튼 요새',
+				'아즈마르 요새',
+			];
+			var Citydice = draconirCity[Math.floor(Math.random() * draconirCity.length)];
+			var btntext = `오늘의 출신지는 <span class="color">${areadice}/${Nationdice}/${Citydice}!</span>`;
+		} else if (Nationdice === '대제국 알세이아') {
+			var alseiaCity = [
+				'수도 유센티아',
+			];
+			var Citydice = alseiaCity[Math.floor(Math.random() * alseiaCity.length)];
+			var btntext = `오늘의 출신지는 <span class="color">${areadice}/${Nationdice}/${Citydice}!</span>`;
+		} else if (Nationdice === '비점령 지역') {
+			var ucentiaCity = [
+				'가슈트렘 마을', '엘피디온 마을', '메드린 마을', '우르고스 마을', '네델로스 마을',
+				'스크렛 마을', '가르텐시아 마을', '바드웬 마을', '스파로스 요새(레드 마운틴)', '데크레헴 요새',
+				'코르코스 마을', '아즈토네아 마을', '엘메우스 고성',
+			];
+			var Citydice = ucentiaCity[Math.floor(Math.random() * ucentiaCity.length)];
+			var btntext = `오늘의 출신지는 <span class="color">${areadice}/${Citydice}!</span>`;
+		}
+	} else if (areadice === '철벽섬') {
+		var fortressCity = [
+			'레아닌 항구', '북방 레지스탕스 철벽의 요새', '엑세르노 마을', '카라미스 마을',
+		];
+		var Citydice = fortressCity[Math.floor(Math.random() * fortressCity.length)];
+		var btntext = `오늘의 출신지는 <span class="color">${areadice}/${Citydice}!</span>`;
+	} else if (areadice === '조각섬') {
+		var fragmentCity = [
+			'미구현..',
+		];
+		var Citydice = fragmentCity[Math.floor(Math.random() * fragmentCity.length)];
+		var btntext = `오늘의 출신지는 <span class="color">${areadice}/${Citydice}!</span>`;
+	} else if (areadice === '하얀 숲') {
+		var btntext = `오늘의 출신지는 <span class="color">${areadice}!</span>`;
+	} else if (areadice === '검은 협곡') {
+		var btntext = `오늘의 출신지는 <span class="color">${areadice}!</span>`;
+	} else if (areadice === '썩은 고원') {
+		var btntext = `오늘의 출신지는 <span class="color">${areadice}!</span>`;
+	} else if (areadice === '리자루스 제도') {
+		var lizarusCity = [
+			'그론길스 마을', '고른시아 마을', '리자루스 마을', '파르타니엄 마을',
+		];
+		var Citydice = lizarusCity[Math.floor(Math.random() * lizarusCity.length)];
+		var btntext = `오늘의 출신지는 <span class="color">${areadice}/${Citydice}!</span>`;
+	}
+
+	var btnresult = document.getElementById("btnresult");
+
+	btnresult.innerHTML = btntext;
+} // 출신지
 
 // ---------- 템플릿 ----------
 

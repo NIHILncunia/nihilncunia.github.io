@@ -18,9 +18,8 @@
 
 <body>
   <div id="infobox">
-	  <p style="font-size: 18pt;">버전: 2.18.0</p>
-    <p style="font-size: 18pt;">제작: 니힐(<a href="https://www.instagram.com/nihil_illust/">인스타</a>)</p>
-    <p>얼마 없는 실력으로 만든 페이지입니다. 만들고나서 보니 타인도 이것을 사용하면 좋을 것 같다는 생각에 범용적으로 사용할 수 있게 업데이트를 하고 있습니다. 캐릭터를 그릴 때에, 혹은 어떠한 설정을 할 때에 있어서 가끔 디자인이 생각이 나지 않거나 소재가 없어서 막막했던 적이 있었을 겁니다. 이 페이지는 그런 때에 사용하기 좋습니다. 각각의 버튼을 누르면 관련된 키워드가 출력됩니다. 종족 버튼을 누르면 어떤 종족을 그리면 좋을 지에 대해서 결정을 대신 해주는 겁니다. 각 버튼은 서로 연계해서 사용해도 됩니다. 물론 결과는 랜덤이기 때문에 키워드간의 조합은 알아서 판단하셔서 사용하시면 됩니다. 이 페이지는 지속적으로 업데이트 되고 있습니다. 제가 단어를 추가할 때마다 여기에도 자동적으로 추가됩니다. 버튼에 커서를 가져다대면 설명이 나오니 확인해보시면 좋습니다.</p>
+	  <p style="font-size: 18pt;">버전: 2.19.0 / 제작: 니힐(<a href="https://www.instagram.com/nihil_illust/">인스타</a>)</p>
+    <p>이 페이지는 그림을 그리는 사람 혹은 창작을 하는 사람 모두에게 도움이 되었으면 하여 만든 페이지입니다. 캐릭터를 그릴 때나 글을 쓸 때, 혹은 어떠한 설정을 구성할 때에 있어서 가끔 디자인이 생각이 나지 않거나 소재가 없어서 막막했던 적이 있었을 겁니다. 이 페이지는 그런 때에 사용하기 좋습니다. 각각의 버튼을 누르면 관련된 키워드가 출력됩니다. 종족 버튼을 누르면 어떤 종족을 그리면(혹은 만들면) 좋을 지에 대해서 결정을 대신 해주는 겁니다. 버튼에 커서를 가져다대면 설명이 나오니 확인해보시면 좋습니다. 캐릭터 디자인 키워드 같은 경우, 각 버튼은 서로 연계해서 사용해도 됩니다. 물론 결과는 랜덤이기 때문에 키워드간의 조합은 알아서 판단하셔서 사용하시면 됩니다. 그대로 사용해도 좋지만, 영감을 받는다는 생각으로만 이용하시는 게 정신건강에 좋을지도 모릅니다.</p>
   </div>
   <div id="btn-erea">
     <span>니힐 최적화 키워드</span>
@@ -32,12 +31,16 @@
            title="니힐 전용 직업 키워드입니다." />
 	  <input type="button" value="소속" id="btn-group" onclick="btngroup()"
 	         title="니힐 전용 조직 키워드입니다." />
+	  <input type="button" value="출신지" id="btn-home" onclick="btnhome()"
+	         title="니힐 전용 캐릭터 출신지 키워드입니다." />
     <input type="button" value="배경 스토리" id="btn-nihilbackstory" onclick="btnNihilbackstory()"
            title="니힐 전용 배경 스토리 키워드입니다." />
 	  <input type="button" value="의상 조합" id="btn-clothesSet" onclick="btnclothesSet()"
 	         title="니힐 전용, 여러가지 창작물에 등장했던 패턴을 모아 모아 랜덤하게 지정해주는 버튼입니다." />
 	  <br />
-    <span>캐릭 정보 키워드</span>
+    <span>캐릭터 디자인 키워드</span>
+	  <input type="button" value="장르" id="btn-genre" onclick="btngenre()"
+	         title="장르를 정해줍니다. 장르는 디자인에 도움이 됩니다." />
     <input type="button" value="배경 스토리" id="btn-backstory" onclick="btnbackstory()"
            title="캐릭터의 배경스토리를 어느정도 정해주는 버튼입니다." />
     <input type="button" value="역할" id="btn-characterType" onclick="btncharacterType()"

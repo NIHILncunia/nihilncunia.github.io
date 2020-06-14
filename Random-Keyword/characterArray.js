@@ -651,7 +651,8 @@ function btnbackstory() {
 	  '새로운 국가를 개척하기', '새로운 대륙을 탐사하기', '새로운 땅을 찾기', '새로운 종족을 찾기', '유적을 찾기',
 	  '붙잡힌 동료를 구하기', '붙잡힌 가족을 구하기', '붙잡힌 친구를 구하기', '죽을 곳을 찾기', '죽기',
 	  '악당이 되기', '악의 세력에 가담하기', '도적단에 합류하기', '살기', '용사가 되기',
-	  '학문을 깨우치기', '추적자에게서 도망치기',
+	  '학문을 깨우치기', '추적자에게서 도망치기', '바이러스를 퍼뜨리기', '위험한 유물을 파괴하기', '원수의 비밀을 찾기',
+	  '자신의 비밀을 알아내기', '세상에 퍼진 바이러스를 바로잡기', '악을 타파하기',
   ];
 
   var 누구 = [
@@ -704,18 +705,23 @@ function btnbackstory() {
 	  '지구인', '기계 생명체',
   ];
 
+	var 성별 = [
+		'남성', '여성', '보이쉬한 여성', '걸리쉬한 남성',
+	];
+
   var placedice = 어디[Math.floor(Math.random() * 어디.length)];
   var objectdice = 목적[Math.floor(Math.random() * 목적.length)];
   var whodice = 누구[Math.floor(Math.random() * 누구.length)];
+	var genderdice = 성별[Math.floor(Math.random() * 성별.length)];
 
-  var diceTotal = 어디.length * 목적.length * 누구.length;
+	var diceTotal = 어디.length * 목적.length * 누구.length * 성별.length;
 
-  var btnresult = document.getElementById("btnresult");
-  var btntext = `
+	var btnresult = document.getElementById("btnresult");
+	var btntext = `
     <p style="font-size: 14pt;">
       당신의 캐릭터는 <span class="color">${placedice}</span>에서 왔습니다. 그는
       <span class="color">${objectdice}</span> 위해 여행을 시작한
-      <span class="color">${whodice}</span>입니다. (${diceTotal}개)
+      <span class="color">${genderdice} ${whodice}</span>입니다. (${diceTotal}개)
     </p>
   `;
   btnresult.innerHTML = btntext;
@@ -825,6 +831,27 @@ function btnage() {
 	var btntext = `오늘의 나이는 <span class="color">${agetext}!</span> (10세- ~ 110세+)`;
 	btnresult.innerHTML = btntext;
 } // 나이
+
+function btngenre() {
+	var genre = [
+		'SF', 'SF/스페이스 오페라', 'SF/스팀펑크', 'SF/디젤펑크', 'SF/사이버펑크',
+		'SF/포스트 아포칼립스', '포스트 아포칼립스/좀비 아포칼립스', '포스트 아포칼립스/에일리언 아포칼립스', '포스트 아포칼립스/뉴클리어 아포칼립스', '포스트 아포칼립스/판데믹 아포칼립스',
+		'포스트 아포칼립스/EMP 아포칼립스', 'SF/디스토피아', '판타지', '판타지/어반 판타지', '판타지/다크 판타지',
+		'판타지/로맨스 판타지', '판타지/게임 판타지', '판타지/하이 판타지', '판타지/로우 판타지', '무협',
+		'배틀물', '배틀물/이능력 배틀물', '배틀물/대리 몬스터물', '배틀물/미소녀 배틀물', '배틀물/두뇌 배틀',
+
+		'법정물', '추리물', '로맨스물', '이세계물', '마법 소녀물',
+		'치유물', '메카물', '루프물', '피카레스크', '히어로물',
+		'TS물', '개그물', '일상물', '밀리터리물', '전기물',
+		'학원물', '시간여행물', '스릴러', '느와르', '첩보물',
+	];
+
+	var genredice = genre[Math.floor(Math.random() * genre.length)];
+
+	var btnresult = document.getElementById("btnresult");
+	var btntext = `오늘의 장르는 <span class="color">${genredice}!</span> (${genre.length}개)`;
+	btnresult.innerHTML = btntext;
+} // 장르
 
 // ---------- 템플릿 ----------
 

@@ -110,7 +110,7 @@ var keywordObject = {
 		'무서운', '겁에 질린', '혈안', '태블릿 PC', '두려움이 없는',
 		'젖은', '기뻐하는', '즐거워하는', '끔찍한', '기괴한',
 
-		'완장', '동전', '트럼프', '속임수', '마그마',
+		'완장', '동전', '트럼프 카드', '속임수', '마그마',
 		'용암', '화염', '불', '물', '눈 결정',
 		'돌', '돌덩이', '바위', '암석/현무암', '암석/화강암',
 		'꽃잎', '이파리', '창조', '섬광', '길잡이',
@@ -208,7 +208,19 @@ var keywordObject = {
 		'도형/다각형', '도형/육각형', '도형/오각형', '도형/삼각형', '도형/사각형',
 		'도형/원', '아이스크림', '외투', '단검', '쌍검',
 		'도끼', '검', '커피', '이종족', '우주적 존재',
-		'신',
+		'신', '크래커', '크래킹', '해커', '해킹',
+
+		'보안카드', '자물쇠', '트럼프 카드', '열쇠', '혁명가',
+		'승리자', '패배자', '승리', '패배', '굴복',
+		'오만', '자만', '색욕', '나태', '절망',
+		'반란', '혁명', '힘이 약한', '힘이 센', '날렵한',
+		'재빠른', '매력', '지혜', '지능', '건강',
+
+		'민첩', '근력', '무의식', '랜덤', '과일/배',
+		'과일/카카오', '과일/아로니아', '과일/감', '나쁜', '못된',
+		'착한', '선한', '사악한', '수호하는', '보호하는',
+		'보호', '수호자', '정의', '천사', '악마',
+		'마귀',
 	],
 };
 
@@ -244,11 +256,11 @@ function btnrandom5() {
 	var btnresult = document.getElementById("btnresult");
 	var btntext = `
 		오늘의 단어는... (${keywordObject.btnrandom.length}개)<br/>
-		단어 1 => <span class="color">${wordbox[0]}!</span><br/>
-		단어 2 => <span class="color">${wordbox[1]}!</span><br/>
-		단어 3 => <span class="color">${wordbox[2]}!</span><br/>
-		단어 4 => <span class="color">${wordbox[3]}!</span><br/>
-		단어 5 => <span class="color">${wordbox[4]}!</span>
+		<p style="font-size: 14pt">단어 1 => <span class="color">${wordbox[0]}!</span></p>
+		<p style="font-size: 14pt">단어 2 => <span class="color">${wordbox[1]}!</span></p>
+		<p style="font-size: 14pt">단어 3 => <span class="color">${wordbox[2]}!</span></p>
+		<p style="font-size: 14pt">단어 4 => <span class="color">${wordbox[3]}!</span></p>
+		<p style="font-size: 14pt">단어 5 => <span class="color">${wordbox[4]}!</span></p>
 	`;
 	btnresult.innerHTML = btntext;
 } // 랜덤 키워드 5개
