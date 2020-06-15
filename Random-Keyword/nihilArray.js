@@ -29,7 +29,7 @@ function btnrace() {
 
 function btnclass() {
   var btnclass = [
-    '원소 마법사', '투사', '그림자 투사', '음악가', '사격수',
+    '원소 마법사', '투사', '그림자 투사', '음악가', '과학자',
     '궁사', '도적', '신성 기사', '기사', '약초사',
     '갑옷장인(대장장이)', '정비사', '정화사', '사제', '암흑 마법사',
     '신성 마법사', '소환 마법사', '무기 상인', '요리사', '강령술사',
@@ -50,6 +50,7 @@ function btnclass() {
     '항해사', '선장', '요리사', '교사', '세계의 수호자',
     '수호자', '모험가', '해결사', '퇴역 장교', '사격술사',
     '마기사', '암흑 기사', '검투사', '예언가', '영웅',
+	  '마도과학자',
   ];
 
   var classdice;
@@ -605,7 +606,8 @@ function btnhome() {
 		var bargissCity = [
 			'오드론 마을', '레네토스 마을', '로가리아 마을', '모르제 마을', '사라마 마을',
 			'레보네스 항구', '바르기스 마을', '사이리아 마을', '디에스티 마을', '메세니움 마을',
-			'라보레누스 마을', '베리나르 마을',
+			'라보레누스 마을', '베리나르 마을', '테라우스 고성', '블루 스피어 서부캠프', '레드 마운딘 남부기지',
+			'레드 마운틴 북부기지', '블루 스피어 동부캠프',
 		];
 		var Citydice = bargissCity[Math.floor(Math.random() * bargissCity.length)];
 		var btntext = `오늘의 출신지는 <span class="color">${areadice}/${Citydice}!</span>`;
@@ -626,7 +628,7 @@ function btnhome() {
 				'수도 딜나르스', '텔슈타인 마을', '엘제이스 항구', '르나힘 마을', '마람키아 마을',
 				'타미움 마을', '레란타 마을', '네아제른 요새', '엘덴타인 마을', '마샤 마을',
 				'살로우 마을', '아스카플론 마을', '드라네이스 마을', '마그라스 마을', '에레디온 요새',
-				'스바티아 요새',
+				'스바티아 요새', '레드 마운틴 고르고니아 서부기지', '레드 마운틴 고르고니아 동부기지',
 			];
 			var Citydice = gorgoniaCity[Math.floor(Math.random() * gorgoniaCity.length)];
 			var btntext = `오늘의 출신지는 <span class="color">${areadice}/${Nationdice}/${Citydice}!</span>`;
@@ -649,7 +651,7 @@ function btnhome() {
 		} else if (Nationdice === '드라코니르 왕국') {
 			var draconirCity = [
 				'수도 베마로스', '마르보레스 마을', '브로시아 마을', '페데일 마을', '뎀버튼 요새',
-				'아즈마르 요새',
+				'아즈마르 요새', '에레니르 마을',
 			];
 			var Citydice = draconirCity[Math.floor(Math.random() * draconirCity.length)];
 			var btntext = `오늘의 출신지는 <span class="color">${areadice}/${Nationdice}/${Citydice}!</span>`;
@@ -663,7 +665,8 @@ function btnhome() {
 			var ucentiaCity = [
 				'가슈트렘 마을', '엘피디온 마을', '메드린 마을', '우르고스 마을', '네델로스 마을',
 				'스크렛 마을', '가르텐시아 마을', '바드웬 마을', '스파로스 요새(레드 마운틴)', '데크레헴 요새',
-				'코르코스 마을', '아즈토네아 마을', '엘메우스 고성',
+				'코르코스 마을', '아즈토네아 마을', '엘메우스 고성', '올가우스 고성', '고르네우스 고성',
+				'제비우스 고성',
 			];
 			var Citydice = ucentiaCity[Math.floor(Math.random() * ucentiaCity.length)];
 			var btntext = `오늘의 출신지는 <span class="color">${areadice}/${Citydice}!</span>`;
@@ -688,7 +691,7 @@ function btnhome() {
 		var btntext = `오늘의 출신지는 <span class="color">${areadice}!</span>`;
 	} else if (areadice === '리자루스 제도') {
 		var lizarusCity = [
-			'그론길스 마을', '고른시아 마을', '리자루스 마을', '파르타니엄 마을',
+			'그론길스 마을', '고른시아 마을', '리자루스 마을', '파르타니엄 마을', '나르피아 마을',
 		];
 		var Citydice = lizarusCity[Math.floor(Math.random() * lizarusCity.length)];
 		var btntext = `오늘의 출신지는 <span class="color">${areadice}/${Citydice}!</span>`;

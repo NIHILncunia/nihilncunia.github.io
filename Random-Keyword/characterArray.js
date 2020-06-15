@@ -15,7 +15,8 @@ function btnrace2() {
     '오우거', '하프 엘프', '요괴', '괴인', '마수',
     '괴수', '그렘린', '인형 캐릭터', '저승사자', '마신',
 	  '코볼트', '사티로스(반인간 반염소)', '세이렌', '요괴', '반요',
-	  '지구인', '기계 생명체',
+	  '지구인', '기계 생명체', '켄타우로스', '우드 엘프', '드로우(다크 엘프)',
+	  '아수라', '나가(뱀)',
   ];
 
   var race2dice;
@@ -54,11 +55,13 @@ function btnclass2() {
     '시장', '서포터', '길드 안내원', '해부학자', '백수',
     '수호자', '엑소시스트', '전령', '닌자', '떠돌이',
     '부랑자', '사령술사', '원소술사', '킥복서', '음양사',
-
     '카발리어', '창기병', '바바리안', '광전사', '석국병',
     '현자', '흑마법사', '흑기사', '마법사', '궁사',
     '포병', '보병', '스트리머', '건달', '깡패',
     '모험가', '해결사', '역병의사', '매드 사이언티스트', '퇴역 군인',
+	  '소방관', '경찰관', '검사(법조계)', '탐정', '판사',
+
+	  '판관', '스포츠 선수',
   ];
 
   var class2dice;
@@ -356,12 +359,16 @@ function btncharacterType() {
     '조연/악역', '조연/반동인물', '주연/스승', '조연/스승', '주연/라이벌',
     '조연/라이벌', '엑스트라', '주연/선역', '조연/선역', '주연/아군',
     '조연/아군', '주연/적', '조연/적', '주연의 연인', '조연의 연인',
+	  '선역/선역의 연인', '선역/악역의 연인', '선역/선역의 스승', '선역/악역의 스승', '선역/선역의 라이벌',
+
+	  '선역/악역의 라이벌', '악역/선역의 라이벌', '악역/악역의 라이벌', '악역/선역의 연인', '악역/악역의 연인',
+	  '악역/선역의 스승', '악역/악역의 스승',
   ];
 
   var characterTypedice;
   characterTypedice = btncharacterType[Math.floor(Math.random() * btncharacterType.length)];
   var btnresult = document.getElementById("btnresult");
-  var btntext = '오늘의 캐릭터 유형은 <span class="color">' + characterTypedice + "!</span> (" + btncharacterType.length + "개)";
+	var btntext = `오늘의 캐릭터 유형은 <span class="color">${characterTypedice}!</span> (${btncharacterType.length}개)`;
   btnresult.innerHTML = btntext;
 } // 캐릭터 역할
 
