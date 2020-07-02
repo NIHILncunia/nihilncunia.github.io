@@ -298,6 +298,15 @@ var keywordObject = {
 		'첩보원', '고대의 기록', '머리가 나쁜', '머리가 좋은', '똑똑한',
 
 		'현명한', '졸렬', '졸렬한', '비겁한', '용기',
+		'매서운 눈매', '날카로운 눈매', '부드러운 눈매', '사악한 미소', '환한 미소',
+		'희미한 미소', '초가을', '초겨울', '초여름', '늦봄',
+		'온풍', '냉풍', '야만적인', '야만인', '눈동자 색',
+	],
+	eyeColor: [
+		'빨간색 눈동자', '검은색 눈동자', '파란색 눈동자', '금색 눈동자', '흰색 눈동자',
+		'은색 눈동자', '녹색 눈동자', '보라색 눈동자', '노란색 눈동자', '청록색 눈동자',
+		'하늘색 눈동자', '주황색 눈동자', '남색 눈동자', '연두색 눈동자', '회색 눈동자',
+		'핑크색 눈동자', '다홍색 눈동자', '시안색 눈동자', '마젠타색 눈동자',
 	],
 };
 
@@ -305,9 +314,20 @@ function btnrandom() {
 
   var randomdice;
 
-  randomdice = keywordObject.btnrandom[Math.floor(Math.random() * keywordObject.btnrandom.length)];
+	var totalDice = (keywordObject.btnrandom.length - 1) + keywordObject.eyeColor.length;
+
+	function keywordTree() {
+		randomdice = keywordObject.btnrandom[Math.floor(Math.random() * keywordObject.btnrandom.length)];
+		if (randomdice === '눈동자 색') {
+			randomdice = keywordObject.eyeColor[Math.floor(Math.random() * keywordObject.eyeColor.length)];
+			return randomdice;
+		}
+		return randomdice;
+	} // 가능성
+
+  randomdice = keywordTree();
   var btnresult = document.getElementById("btnresult");
-  var btntext = `오늘의 단어는 <span class="color">${randomdice}!</span> (${keywordObject.btnrandom.length}개)`;
+  var btntext = `오늘의 단어는 <span class="color">${randomdice}!</span> (${totalDice}개)`;
   btnresult.innerHTML = btntext;
 } // 랜덤 키워드
 
@@ -316,8 +336,19 @@ function btnrandom5() {
 	var overlapbox = [];
 	var randomdice;
 
-	for (var i = 0; i < 5; i++) {
+	var totalDice = (keywordObject.btnrandom.length - 1) + keywordObject.eyeColor.length;
+
+	function keywordTree() {
 		randomdice = keywordObject.btnrandom[Math.floor(Math.random() * keywordObject.btnrandom.length)];
+		if (randomdice === '눈동자 색') {
+			randomdice = keywordObject.eyeColor[Math.floor(Math.random() * keywordObject.eyeColor.length)];
+			return randomdice;
+		}
+		return randomdice;
+	} // 가능성
+
+	for (var i = 0; i < 5; i++) {
+		randomdice = keywordTree();
 		if (wordbox.length === 0) {
 			wordbox.push(randomdice);
 		} else {
@@ -332,7 +363,7 @@ function btnrandom5() {
 
 	var btnresult = document.getElementById("btnresult");
 	var btntext = `
-		오늘의 단어는... (${keywordObject.btnrandom.length}개)<br/>
+		오늘의 단어는... (${totalDice}개)<br/>
 		<p style="font-size: 14pt">단어 1 => <span class="color">${wordbox[0]}!</span></p>
 		<p style="font-size: 14pt">단어 2 => <span class="color">${wordbox[1]}!</span></p>
 		<p style="font-size: 14pt">단어 3 => <span class="color">${wordbox[2]}!</span></p>
